@@ -23,7 +23,7 @@ definePageMeta({
 </script>
 
 <template>
-  <main class="container">
+  <main class="container lg:mt-8">
     <section class="flex items-center pt-4">
       <button class="absolute my-auto ml-5 text-primary" @click="$router.back()">
         <Icon name="ri:arrow-left-line" class="text-4xl font-bold text-accent" />
@@ -33,7 +33,13 @@ definePageMeta({
       </h1>
     </section>
 
-    <section class="my-4 pb-16 lg:grid lg:grid-cols-2 lg:gap-8">
+    <section
+      class="my-4 pb-16 lg:grid lg:gap-8"
+      :class="{
+        'lg:grid-cols-1': category.sections.length < 2,
+        'lg:grid-cols-2': category.sections.length > 1,
+      }"
+    >
       <div v-for="section in category.sections" :key="section.title">
         <SectionBanner :section="section" />
         <SectionItems :items="section.items" />

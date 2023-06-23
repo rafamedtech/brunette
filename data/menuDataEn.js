@@ -40,12 +40,36 @@ export default [
           {
             name: 'Wings',
             description: 'Buffalo / BBQ',
-            price: '10pz $175 <br /> 20pz $315',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: '10pz ',
+                price: '$175.00',
+              },
+              {
+                id: 2,
+                name: '20pz',
+                price: '$315.00',
+              },
+            ],
           },
           {
             name: 'Boneless',
             description: 'Buffalo / BBQ',
-            price: '10pz $185 <br /> 20pz $325',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: '10pz',
+                price: '$185.00',
+              },
+              {
+                id: 2,
+                name: '20pz',
+                price: '$325.00',
+              },
+            ],
           },
           {
             name: 'Guacamole',
@@ -122,7 +146,19 @@ export default [
           {
             name: 'Fetuccini Alfredo',
             description: 'Served with creamy alfredo sauce',
-            price: '$185.00 <br /> Con pollo $240.00 <br /> Con camaron $275.00',
+            price: '$185.00',
+            variants: [
+              {
+                id: 1,
+                name: 'with chicken',
+                price: '$240.00',
+              },
+              {
+                id: 2,
+                name: 'with shrimp',
+                price: '$275.00',
+              },
+            ],
           },
           {
             name: 'Lasagna Brunette',
@@ -456,43 +492,99 @@ export default [
           {
             name: 'Chardonay-Vermentino',
             description: '',
-            price: 'Bottle $520.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$520.00',
+              },
+            ],
           },
           {
             name: 'Manaz-fiano Viogner 2021',
             description: '',
-            price: 'Bottle $520.00.',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$520.00',
+              },
+            ],
           },
           {
             name: 'Sauvig Blanc 2021',
             description: '',
-            price: 'Bottle $540.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$540.00',
+              },
+            ],
           },
           {
             name: 'Origen 43 2020',
             description: '',
-            price: 'Bottle $660.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$660.00',
+              },
+            ],
           },
           {
             name: 'Rose 2021',
             description: '',
-            price: 'Bottle $525.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$525.00',
+              },
+            ],
           },
           {
             name: 'Sangiovese-cabernet 2021',
             description: '',
-            price: 'Bottle $550.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$550.00',
+              },
+            ],
           },
           {
             name: 'Merlot Malbec 2020',
             description: '',
-            price: 'Bottle $600.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$600.00',
+              },
+            ],
           },
 
           {
             name: 'Nebbiolo de baja 2019',
             description: '',
-            price: 'Bottle $750.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$750.00',
+              },
+            ],
           },
         ],
       },
@@ -505,34 +597,76 @@ export default [
           {
             name: 'Chenin Black',
             description: '',
-            price: 'Bottle $430.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$430.00',
+              },
+            ],
           },
           {
             name: 'Petite Sirah',
             description: '',
-            price: 'Bottle $430.00.',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$430.00',
+              },
+            ],
           },
           {
             name: 'Cabernet Sauvignon',
             description: '',
-            price: 'Bottle $450.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$450.00',
+              },
+            ],
           },
           {
             name: 'Zinfandel',
             description: '',
-            price: 'Bottle $450.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$450.00',
+              },
+            ],
           },
 
           {
             name: 'Merlot',
             description: '',
-            price: 'Bottle $450.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$450.00',
+              },
+            ],
           },
 
           {
             name: 'Nebiolo',
             description: '',
-            price: 'Bottle $590.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$590.00',
+              },
+            ],
           },
         ],
       },
@@ -545,7 +679,14 @@ export default [
           {
             name: 'Sangre de Cristo',
             description: '',
-            price: 'Bottle $450.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$450.00',
+              },
+            ],
           },
         ],
       },
@@ -558,45 +699,141 @@ export default [
           {
             name: 'Don Julio 1942 750ml',
             description: '',
-            price: 'Bottle $5,700.00 <br /> Shot $360.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$5,700.00',
+              },
+              {
+                id: 2,
+                name: 'Shot',
+                price: '$360.00',
+              },
+            ],
           },
           {
             name: 'Don Julio 70 Anejo Cristalino 700ml',
             description: '',
-            price: 'Bottle $2,200.00 <br /> Shot $135.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$2,200.00',
+              },
+              {
+                id: 2,
+                name: 'Shot',
+                price: '$135.00',
+              },
+            ],
           },
           {
             name: 'Don Julio Blanco 700ml',
             description: '',
-            price: 'Bottle $1,500.00 <br /> Shot $110.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,500.00',
+              },
+              {
+                id: 2,
+                name: 'Shot',
+                price: '$110.00',
+              },
+            ],
           },
           {
             name: 'Don Julio Reposado 700ml',
             description: '',
-            price: 'Bottle $1,650.00 <br /> Shot $120.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,650.00',
+              },
+              {
+                id: 2,
+                name: 'Shot',
+                price: '$120.00',
+              },
+            ],
           },
           {
             name: '1800 Cristalino',
             description: '',
-            price: 'Bottle $1,800.00 <br /> Shot $130.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,800.00',
+              },
+              {
+                id: 2,
+                name: 'Shot',
+                price: '$130.00',
+              },
+            ],
           },
 
           {
             name: 'Patron Reposado 750ml',
             description: '',
-            price: 'Bottle $1,400.00 <br /> Shot $115.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,400.00',
+              },
+              {
+                id: 2,
+                name: 'Shot',
+                price: '$115.00',
+              },
+            ],
           },
 
           {
             name: 'Maestro Dobel',
             description: '',
-            price: 'Bottle $1,650.00 <br /> Shot $125.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,650.00',
+              },
+              {
+                id: 2,
+                name: 'Shot',
+                price: '$125.00',
+              },
+            ],
           },
 
           {
             name: 'Patron Silver 750ml',
             description: '',
-            price: 'Bottle $1,300.00 <br /> Shot $110.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,300.00',
+              },
+              {
+                id: 2,
+                name: 'Shot',
+                price: '$110.00',
+              },
+            ],
           },
         ],
       },
@@ -609,23 +846,71 @@ export default [
           {
             name: 'Smirnoff 750ml',
             description: '',
-            price: 'Bottle $600.00 <br /> Drink $95.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$600.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$95.00',
+              },
+            ],
           },
           {
             name: 'Stolichnaya',
             description: '',
-            price: 'Bottle $650.00 <br /> Drink $95.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$650.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$95.00',
+              },
+            ],
           },
           {
             name: 'Absolut Azul 750ml',
             description: '',
-            price: 'Bottle $700.00 <br /> Drink $95.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$700.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$95.00',
+              },
+            ],
           },
 
           {
             name: 'Grey Goose',
             description: '',
-            price: 'Bottle $1,600.00 <br /> Drink $110.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,600.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$110.00',
+              },
+            ],
           },
         ],
       },
@@ -638,22 +923,70 @@ export default [
           {
             name: 'Gusano Rojo',
             description: '',
-            price: 'Bottle $950.00 <br /> Drink $110.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$950.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$110.00',
+              },
+            ],
           },
           {
             name: '400 Conejos Joven',
             description: '',
-            price: 'Bottle $1050.00 <br /> Drink $120.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,600.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$120.00',
+              },
+            ],
           },
           {
             name: 'Amaras',
             description: '',
-            price: 'Bottle $1,500.00 <br /> Drink $135.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,500.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$135.00',
+              },
+            ],
           },
           {
             name: 'Monte Lobo',
             description: '',
-            price: 'Bottle $1,600.00 <br /> Drink $140.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,600.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$140.00',
+              },
+            ],
           },
         ],
       },
@@ -666,17 +999,53 @@ export default [
           {
             name: 'Bombay',
             description: '',
-            price: 'Bottle $1,200.00 <br /> Drink $135.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,200.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$135.00',
+              },
+            ],
           },
           {
             name: 'Tanqueray',
             description: '',
-            price: 'Bottle $1,200.00 <br /> Drink $135.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,200.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$135.00',
+              },
+            ],
           },
           {
             name: 'Hendrix',
             description: '',
-            price: 'Bottle $1,800.00 <br /> Drink $130.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,800.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$140.00',
+              },
+            ],
           },
         ],
       },
@@ -689,12 +1058,26 @@ export default [
           {
             name: 'CH Moet Brut 750ml',
             description: '',
-            price: 'Bottle $2,250.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$2,250.00',
+              },
+            ],
           },
           {
             name: 'CH Moet Ice 750ml',
             description: '',
-            price: 'Bottle $2,950.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$2,950.00',
+              },
+            ],
           },
         ],
       },
@@ -708,17 +1091,53 @@ export default [
           {
             name: 'Henessy',
             description: '',
-            price: 'Bottle $1,700.00 <br /> Drink $140.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,700.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$140.00',
+              },
+            ],
           },
           {
             name: 'Martell VSOP',
             description: '',
-            price: 'Bottle $1,900.00 <br /> Drink $145.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,900.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$145.00',
+              },
+            ],
           },
           {
             name: 'Remy Martin',
             description: '',
-            price: 'Bottle $2,200.00 <br /> Drink $170.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$2,200.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$170.00',
+              },
+            ],
           },
         ],
       },
@@ -732,38 +1151,122 @@ export default [
           {
             name: 'Johnnie Walker Red Label',
             description: '',
-            price: 'Bottle $950.00 <br /> Drink $110.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$950.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$110.00',
+              },
+            ],
           },
           {
             name: 'Jack Daniels',
             description: '',
-            price: 'Bottle $1,200.00 <br /> Drink $120.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,200.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$120.00',
+              },
+            ],
           },
           {
             name: 'Chivas Regal',
             description: '',
-            price: 'Bottle $1,600.00 <br /> Drink $135.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,600.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$135.00',
+              },
+            ],
           },
           {
             name: 'Buchanans 12Y Deluxe 750ml',
             description: '',
-            price: 'Bottle $1,900.00 <br /> Drink $150.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$1,900.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$150.00',
+              },
+            ],
           },
           {
             name: 'Johnnie Walker Black Label',
             description: '',
-            price: 'Bottle $2,000.00 <br /> Drink $150.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$2,000.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$150.00',
+              },
+            ],
           },
           {
             name: 'Macallan 12',
             description: '',
-            price: 'Bottle $2,900.00 <br /> Drink $195.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$2,900.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$195.00',
+              },
+            ],
           },
 
           {
             name: 'Buchanans 18Y 750ml',
             description: '',
-            price: 'Bottle $3,450.00 <br /> Drink $245.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$3,450.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$245.00',
+              },
+            ],
           },
         ],
       },
@@ -777,18 +1280,54 @@ export default [
           {
             name: 'Captain Morgan',
             description: '',
-            price: 'Bottle $600.00 <br /> Drink $90.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$600.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$90.00',
+              },
+            ],
           },
           {
             name: 'Bacardi Blanco',
             description: '',
-            price: 'Bottle $650.00 <br /> Drink $90.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$650.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$90.00',
+              },
+            ],
           },
 
           {
             name: 'Zacapa Solera',
             description: '',
-            price: 'Bottle $2,100.00 <br /> Drink $145.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$2,100.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$145.00',
+              },
+            ],
           },
         ],
       },
@@ -1133,31 +1672,31 @@ export default [
             name: 'Candela',
             description:
               'Mezcal joven espadín, conserva de Jamaica, pulpa de maracuya, jugo de limón, sal de chile tatemado. Decorado con twist de naranja y caramelos de Jamaica.',
-            price: '$195.00',
+            price: '$210.00',
           },
           {
             name: 'Eros',
             description:
               'Ginebra infusionado con pétalos de rosa, licor de naranja, conserva de frutos rojos, licor de hierbas aromáticas, jarabe de rosas, bittter artesanal de Jamaica y pimienta. Decorado con coral comestible y frutos del bosque.',
-            price: '$185.00',
+            price: '$210.00',
           },
           {
-            name: 'Brunette & Tonic',
+            name: 'Kukulkán',
             description:
-              'Ginebra, jarabe de lemon grass, jugos cítricos, agua quina perfumado con damiana. Decorado con zest de naranja y romero fresco.',
-            price: '$180.00 ',
+              'Tequila, orange liquor, agave honey, grilled pineapple, cucumber slices, 1 roasted Hoja santa. Decorated with pineapple leaves',
+            price: '$210.00 ',
           },
           {
             name: 'Mula arriera',
             description:
               'Mezcal joven espadín, Sal artesanal de chiles ahumados, pulpa de tamarindo natural, menta fresca, bitter artesanal de naranja y toronja, jugos cítricos, top de cerveza de jengibre, conserva de piña y apio. Decorado con menta fresca coral comestible y caramelos de jengibre coreano',
-            price: '$185.00 ',
+            price: '$210.00 ',
           },
           {
             name: 'El matador',
             description:
               'Mezcal Tobalá reposado, sal de gusano y hormiga chicatana, miel de agave, piña tatemada, pulpa de tuna, jugos cítricos, albahaca, pepino fresco , bitter artesanal de cardamomo y especias Indias. Decorado con una brocheta de piña asada y chapulines.',
-            price: '$185.00 ',
+            price: '$210.00 ',
           },
           // {
           //   name: 'Candela',

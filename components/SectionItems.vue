@@ -23,7 +23,7 @@ const sortedItems = props.items.sort((a, b) => a.id - b.id);
             :key="variant.id"
             class="flex justify-between text-secondary"
           >
-            <p :class="{ 'text-black': !item.description }">{{ variant.name }}</p>
+            <p class="text-black">{{ variant.name }}</p>
             <p>{{ variant.price }}</p>
           </div>
         </div>

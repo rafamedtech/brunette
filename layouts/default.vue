@@ -54,7 +54,8 @@ const changeLanguage = () => {
               active-class="text-secondary"
               class="flex items-center gap-2"
             >
-              <Icon class="text-xl text-primary" name="gala:calendar" /> <span>Eventos</span>
+              <Icon class="text-xl text-primary" name="gala:calendar" />
+              <span>Eventos</span>
             </NuxtLink>
           </li>
           <li>
@@ -77,9 +78,24 @@ const changeLanguage = () => {
               <span>Reservar</span></NuxtLink
             >
           </li>
+          <li>
+            <NuxtLink
+              class="btn-primary btn h-fit flex-col gap-0 px-2 text-base-100 opacity-0 transition-all duration-500 lg:flex-row lg:gap-2"
+              :class="{
+                'opacity-100 transition-all duration-700':
+                  route.path === '/' || route.path === '/en',
+              }"
+              :to="{ path: route.path === '/' ? '/en' : '/' }"
+            >
+              <Icon name="clarity:language-solid" class="text-2xl" />
+              <span v-if="route.path === '/'" class="text-xs">ENGLISH</span>
+              <span v-if="route.path === '/en'" class="text-xs">ESPANOL</span>
+            </NuxtLink>
+          </li>
         </ul>
       </Transition>
     </div>
+    <div class="divider"></div>
 
     <div class="w-full lg:w-4/5">
       <!-- <section class="background flex items-center px-2 py-4">

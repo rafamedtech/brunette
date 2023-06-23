@@ -33,7 +33,13 @@ definePageMeta({
       </h1>
     </section>
 
-    <section class="my-4 pb-16 lg:grid lg:grid-cols-2 lg:gap-4">
+    <section
+      class="my-4 pb-16 lg:grid lg:gap-4"
+      :class="{
+        'lg:grid-cols-1': category.sections.length < 2,
+        'lg:grid-cols-2': category.sections.length > 1,
+      }"
+    >
       <div v-for="section in category.sections" :key="section.title">
         <SectionBanner :section="section" />
         <SectionItems :items="section.items" />
