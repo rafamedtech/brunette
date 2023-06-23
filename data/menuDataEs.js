@@ -134,7 +134,7 @@ export default [
           {
             name: 'Tabla de quesos',
             description: '',
-            price: '$385.00',
+            price: '$485.00',
           },
         ],
       },

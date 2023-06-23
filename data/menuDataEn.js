@@ -133,7 +133,7 @@ export default [
           {
             name: 'Cheese board',
             description: '',
-            price: '$385.00',
+            price: '$485.00',
           },
         ],
       },
