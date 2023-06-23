@@ -98,7 +98,7 @@ export default [
             price: '$155.00',
           },
           {
-            name: 'Ensalade del bosque',
+            name: 'Ensalada del bosque',
             description: 'Lechugas mixtas, nuez garapiñada, queso feta, frutos rojos y manzana',
             price: '$185.00 ',
           },
