@@ -35,8 +35,8 @@ definePageMeta({
 </script>
 
 <template>
-  <main class="mt-8 overflow-x-hidden">
-    <h1 class="px-2 text-center font-handlee text-2xl text-primary lg:px-32 lg:text-4xl">Menu</h1>
+  <main class="mt-4 overflow-x-hidden lg:mt-8">
+    <h1 class="px-2 text-center font-handlee text-4xl text-primary lg:px-32">Menu</h1>
     <span class="mx-auto block w-fit text-xs uppercase text-black">(english)</span>
     <section class="grid w-full grid-cols-2 gap-8 px-2 py-4 pb-20 lg:grid-cols-2">
       <CategoryItem v-for="category in menu" :category="category" :key="category.title" />

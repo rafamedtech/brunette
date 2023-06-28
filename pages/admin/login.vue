@@ -6,16 +6,6 @@ const { auth } = useSupabaseAuthClient();
 const { query } = useRoute();
 const user = useSupabaseUser();
 
-watchEffect(() => {
-  if (user.value) {
-    email.value = '';
-    password.value = '';
-    // console.log(user.value);
-    // return navigateTo({ path: '/admin' });
-    return navigateTo({ path: query.redirectTo as string });
-  }
-});
-
 const userLogin = async () => {
   try {
     const { error } = await auth.signInWithPassword({
@@ -32,12 +22,22 @@ const userLogin = async () => {
   }
 };
 
+watchEffect(async () => {
+  if (user.value) {
+    email.value = '';
+    password.value = '';
+    // console.log(user.value);
+    // return navigateTo({ path: '/admin' });
+    await navigateTo('/admin', { replace: true });
+  }
+});
+
 useHead({
   title: 'Brunette Administración | Iniciar sesión',
 });
 
 definePageMeta({
-  layout: 'empty',
+  layout: false,
   layoutTransition: {
     name: 'up',
     mode: 'out-in',
@@ -68,7 +68,7 @@ definePageMeta({
             type="email"
             id="email"
             name="email"
-            class="bg-opacity-20 w-full rounded border border-gray-600 bg-transparent py-1 px-3 text-base leading-8 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:bg-transparent focus:ring-2 focus:ring-transparent"
+            class="bg-opacity-20 w-full rounded border border-gray-600 bg-transparent px-3 py-1 text-base leading-8 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:bg-transparent focus:ring-2 focus:ring-transparent"
             required
           />
         </div>
@@ -80,14 +80,14 @@ definePageMeta({
             v-model="password"
             name="password"
             type="password"
-            class="bg-opacity-20 w-full rounded border border-gray-600 bg-transparent py-1 px-3 text-base leading-8 outline-none transition-colors duration-200 ease-in-out focus:border-[#42b883] focus:bg-transparent focus:ring-2 focus:ring-transparent"
+            class="bg-opacity-20 w-full rounded border border-gray-600 bg-transparent px-3 py-1 text-base leading-8 outline-none transition-colors duration-200 ease-in-out focus:border-[#42b883] focus:bg-transparent focus:ring-2 focus:ring-transparent"
             required
           />
         </div>
 
         <button
           type="submit"
-          class="rounded border-0 bg-primary py-2 px-8 font-sans font-bold text-white transition-colors duration-500 hover:bg-primary/75 focus:outline-none"
+          class="rounded border-0 bg-primary px-8 py-2 font-sans font-bold text-white transition-colors duration-500 hover:bg-primary/75 focus:outline-none"
         >
           Entrar
         </button>

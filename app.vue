@@ -18,7 +18,5 @@ useHead({ htmlAttrs: { lang } });
     </NuxtLayout>
 
     <Modal v-if="modal" />
-
-    <Loader v-if="isLoading" />
   </section>
 </template>

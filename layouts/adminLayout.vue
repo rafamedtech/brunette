@@ -1,12 +1,13 @@
 <script setup>
+const user = useSupabaseUser();
+const { auth } = useSupabaseAuthClient();
 async function userLogout() {
-  const user = useSupabaseUser();
-  const { auth } = useSupabaseAuthClient();
-  const { error } = await auth.signOut();
+  try {
+    const { error } = await auth.signOut();
 
-  if (error) {
-    console.error(error);
-    return;
+    if (error) throw error;
+  } catch (error) {
+    console.log(error);
   }
 
   try {
@@ -15,7 +16,9 @@ async function userLogout() {
       body: { event: 'SIGNED_OUT', session: null },
     });
     user.value = null;
-  } catch (error) {}
+  } catch (error) {
+    console.error(error);
+  }
 
   await navigateTo('/admin/login');
 }
@@ -28,8 +31,10 @@ async function userLogout() {
         <ul class="fixed flex w-fit flex-col gap-4">
           <li>
             <figure class="text-2xl text-neutral-content">
-              <img class="h-14" src="@/assets/images/logo.png" alt="logo" />
+              <img class="h-24" src="@/assets/images/logo.png" alt="logo" />
             </figure>
+            <p class="text-center font-handlee text-xl text-primary">Administración</p>
+            <div class="divider mt-0"></div>
           </li>
           <li>
             <NuxtLink
@@ -55,7 +60,8 @@ async function userLogout() {
               active-class="text-secondary"
               class="flex items-center gap-2"
             >
-              <Icon class="text-xl text-primary" name="gala:calendar" /> <span>Eventos</span>
+              <Icon class="text-xl text-primary" name="gala:calendar" />
+              <p>Eventos</p>
             </NuxtLink>
           </li>
           <li>
@@ -92,8 +98,8 @@ async function userLogout() {
     </div>
 
     <div class="lg:w-3/4">
-      <img src="@/assets/images/logo.png" alt="" class="mx-auto mb-8 w-32 lg:hidden" />
-      <h1 class="text-center text-3xl text-primary">Administración</h1>
+      <img src="@/assets/images/logo.png" alt="" class="mx-auto mb-4 w-32 lg:hidden" />
+      <!-- <h1 class="text-center text-3xl text-primary">Administración</h1> -->
       <slot> </slot>
       <AdminBottomNav />
     </div>

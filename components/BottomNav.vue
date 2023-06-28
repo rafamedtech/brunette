@@ -13,7 +13,7 @@ const { language } = storeToRefs(store);
     >
       <li class="w-fit justify-center" key="1">
         <NuxtLink
-          :to="{ path: language === 'es' ? '/' : '/en' }"
+          :to="language === 'es' ? '/' : '/en'"
           active-class="text-black underline"
           class="flex flex-col items-center justify-between gap-0 p-0 focus:bg-transparent active:text-primary"
         >

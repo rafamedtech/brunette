@@ -1658,7 +1658,7 @@ export default [
 
   {
     title: 'Mixology',
-    slug: 'mixologia',
+    slug: 'mixology',
     cover:
       'https://res.cloudinary.com/rafamed-dev/image/upload/v1674092841/menu/IMG_0394_jnbkt4.jpg',
     sections: [

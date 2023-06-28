@@ -140,15 +140,15 @@ definePageMeta({
   <section class="w-full">
     <!-- <img src="@/assets/images/logo.png" alt="" class="mx-auto mb-8 w-32 lg:hidden" /> -->
 
-    <section class="mt-8">
+    <section class="">
       <div></div>
       <div class="w-full text-center">
         <div>
-          <h2 class="text-2xl">Encuestas</h2>
+          <h2 class="font-handlee text-4xl text-primary">Encuestas</h2>
 
           <div class="mx-auto mt-4 grid h-12 place-items-center rounded-xl">
             <Icon
-              class="cursor-pointer text-2xl text-primary"
+              class="cursor-pointer text-2xl text-secondary"
               :class="{ 'animate-spin': loadSurveys }"
               name="ri:refresh-line"
               @click="refreshSurveys"

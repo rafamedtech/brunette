@@ -4,7 +4,7 @@ export const useMainStore = defineStore('main', () => {
   const supabase = useSupabaseClient();
   const modal = ref(false);
   const languageModal = ref(true);
-  const isLoading = ref(true);
+  const isLoading = ref(false);
 
   const language = ref<string>('es');
   const events = reactive([]);

@@ -3,13 +3,22 @@ import { useMainStore } from '@/stores/menu';
 import { storeToRefs } from 'pinia';
 
 const store = useMainStore();
-store.$patch({
-  isLoading: true,
-  language: 'es',
-});
+// store.$patch({
+//   isLoading: true,
+// });
 
 const { language } = storeToRefs(store);
-const { menu } = useMenu('es');
+const { menu: menuDataES } = useMenu('es');
+const { menu: menuDataEN } = useMenu('en');
+
+const menu = computed(() => {
+  if (language.value === 'es') {
+    return menuDataES.value;
+  }
+  return menuDataEN.value;
+  // if (language.value === 'en') {
+  // }
+});
 
 // Metadata
 useHead({
@@ -53,9 +62,11 @@ definePageMeta({
 </script>
 
 <template>
-  <main class="relative mt-4 overflow-x-hidden bg-[#F5F5F5] p-4">
-    <h1 class="px-2 text-center font-handlee text-2xl text-primary lg:px-32 lg:text-4xl">Menú</h1>
-    <span class="mx-auto block w-fit text-xs uppercase text-black">(español)</span>
+  <main class="relative mt-4 overflow-x-hidden bg-[#F5F5F5] lg:mt-8">
+    <h1 class="px-2 text-center font-handlee text-4xl text-primary lg:px-32">
+      {{ language === 'es' ? 'Menú' : 'Menu' }}
+    </h1>
+
     <section class="grid w-full grid-cols-2 gap-8 px-2 py-4 pb-20 lg:grid-cols-2">
       <CategoryItem v-for="category in menu" :category="category" :key="category.title" />
     </section>

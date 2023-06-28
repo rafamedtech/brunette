@@ -157,7 +157,7 @@ definePageMeta({
 </script>
 
 <template>
-  <main class="p-4 pb-16">
+  <main class="mt-4 pb-16 lg:mt-8">
     <section class="mt-4 flex items-center">
       <button class="absolute my-auto ml-5 text-primary" @click="$router.back()">
         <i class="fa-solid fa-arrow-left-long text-3xl"></i>

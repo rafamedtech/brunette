@@ -4,19 +4,21 @@ import { storeToRefs } from 'pinia';
 
 const store = useMainStore();
 const route = useRoute();
-const { language } = storeToRefs(store);
+const { language, isLoading } = storeToRefs(store);
 
 const changeLanguage = () => {
-  store.$patch({
-    isLoading: true,
-    language: language.value === 'es' ? 'en' : 'es',
-  });
+  isLoading.value = true;
+  setTimeout(() => {
+    store.$patch({
+      language: language.value === 'es' ? 'en' : 'es',
+    });
+  }, 1000);
 
   setTimeout(() => {
     store.$patch({
       isLoading: false,
     });
-  }, 1500);
+  }, 1000);
 };
 </script>
 
@@ -30,22 +32,12 @@ const changeLanguage = () => {
               <img class="h-20" src="@/assets/images/logo.png" alt="logo" />
             </figure>
           </li>
-          <!-- <li>
-            <NuxtLink
-              :to="{ path: '/admin' }"
-              active-class="text-secondary"
-              class="flex items-center gap-2"
-            >
-              <Icon class="text-xl text-primary" name="gala:display" /> <span>Inicio</span>
-            </NuxtLink>
-          </li> -->
+
           <li>
-            <NuxtLink
-              :to="{ path: language === 'es' ? '/' : '/en' }"
-              active-class="text-secondary"
-              class="flex items-center gap-2"
-            >
-              <Icon class="text-xl text-primary" name="gala:brochure" /> <span>Menú</span>
+            <!-- :to="{ path: language === 'es' ? '/' : '/en' }" -->
+            <NuxtLink to="/" active-class="text-secondary" class="flex items-center gap-2">
+              <Icon class="text-xl text-primary" name="gala:brochure" />
+              <span>{{ language === 'es' ? 'Menú' : 'Menu' }}</span>
             </NuxtLink>
           </li>
           <li>
@@ -55,7 +47,7 @@ const changeLanguage = () => {
               class="flex items-center gap-2"
             >
               <Icon class="text-xl text-primary" name="gala:calendar" />
-              <span>Eventos</span>
+              <span>{{ language === 'es' ? 'Eventos' : 'Events' }}</span>
             </NuxtLink>
           </li>
           <li>
@@ -65,7 +57,7 @@ const changeLanguage = () => {
               class="flex items-center gap-2"
             >
               <Icon class="text-xl text-primary" name="gala:editor" />
-              <span>Encuesta</span></NuxtLink
+              <span>{{ language === 'es' ? 'Encuesta' : 'Survey' }}</span></NuxtLink
             >
           </li>
           <li>
@@ -75,10 +67,11 @@ const changeLanguage = () => {
               class="flex items-center gap-2"
             >
               <Icon class="text-xl text-primary" name="gala:book" />
-              <span>Reservar</span></NuxtLink
+              <span>{{ language === 'es' ? 'Reservar' : 'Reservation' }}</span></NuxtLink
             >
+            <div class="divider"></div>
           </li>
-          <li>
+          <!-- <li>
             <NuxtLink
               class="btn-primary btn h-fit flex-col gap-0 px-2 text-base-100 opacity-0 transition-all duration-500 lg:flex-row lg:gap-2"
               :class="{
@@ -91,6 +84,29 @@ const changeLanguage = () => {
               <span v-if="route.path === '/'" class="text-xs">ENGLISH</span>
               <span v-if="route.path === '/en'" class="text-xs">ESPANOL</span>
             </NuxtLink>
+          </li> -->
+          <li>
+            <div>
+              <p>{{ language === 'es' ? 'Idioma' : 'Language' }}</p>
+              <button
+                class="btn-primary btn h-fit flex-col gap-0 px-2 text-base-100 opacity-0 transition-all duration-500 lg:flex-row lg:gap-2"
+                :class="{
+                  'opacity-100 transition-all duration-700':
+                    route.path === '/' || route.path === '/en',
+                }"
+                @click="changeLanguage"
+              >
+                <Icon
+                  :name="
+                    language === 'es'
+                      ? 'emojione-v1:flag-for-mexico'
+                      : 'emojione-v1:flag-for-united-states'
+                  "
+                  class="text-2xl"
+                />
+                <span class="text-xs">{{ language === 'es' ? 'ESPANOL' : 'ENGLISH' }}</span>
+              </button>
+            </div>
           </li>
         </ul>
       </Transition>
@@ -98,27 +114,6 @@ const changeLanguage = () => {
     <div class="divider"></div>
 
     <div class="w-full lg:w-4/5">
-      <!-- <section class="background flex items-center px-2 py-4">
-        <div class="flex-none lg:hidden">
-          <label for="my-drawer-3" class="btn-ghost btn-square btn w-full text-accent">
-            <Icon name="charm:menu-hamburger" class="text-3xl" />
-          </label>
-        </div>
-
-        <img src="@/assets/images/logo.png" alt="" class="mx-auto w-32 lg:hidden" />
-        <NuxtLink
-          class="btn-secondary btn h-fit flex-col gap-0 px-2 text-base-100 opacity-0 transition-all duration-500 lg:flex-row lg:gap-2"
-          :class="{
-            'opacity-100 transition-all duration-700': route.path === '/' || route.path === '/en',
-          }"
-          :to="{ path: route.path === '/' ? '/en' : '/' }"
-        >
-          <Icon name="clarity:language-solid" class="text-2xl" />
-          <span v-if="route.path === '/'" class="text-xs">EN</span>
-          <span v-if="route.path === '/en'" class="text-xs">ES</span>
-        </NuxtLink>
-      </section> -->
-
       <div class="background navbar w-full bg-base-100 lg:hidden">
         <div class="navbar-start">
           <div class="dropdown">
@@ -144,12 +139,12 @@ const changeLanguage = () => {
             >
               <!-- <li><img class="mx-auto h-28 w-fit" src="@/assets/images/logo.png" alt="logo" /></li> -->
               <li class="flex w-full flex-row justify-center gap-4 text-5xl active:bg-transparent">
-                <NuxtLink to="https://www.facebook.com/brunette.realdelmar" target="_blank"
-                  ><Icon name="ri:facebook-circle-fill" size="34"
-                /></NuxtLink>
-                <NuxtLink to="https://www.instagram.com/brunette.realdelmar/" target="_blank"
-                  ><Icon name="ri:instagram-line" size="34"
-                /></NuxtLink>
+                <NuxtLink to="https://www.facebook.com/brunette.realdelmar" target="_blank">
+                  <Icon name="ri:facebook-circle-fill" size="34" />
+                </NuxtLink>
+                <NuxtLink to="https://www.instagram.com/brunette.realdelmar/" target="_blank">
+                  <Icon name="ri:instagram-line" size="34" />
+                </NuxtLink>
               </li>
               <li><p class="mx-auto text-center font-bold text-primary">(664) 974 6842</p></li>
               <li>
@@ -192,22 +187,35 @@ const changeLanguage = () => {
           </figure>
         </div>
         <div class="navbar-end">
-          <NuxtLink
+          <button
             class="btn-primary btn h-fit flex-col gap-0 px-2 text-base-100 opacity-0 transition-all duration-500 lg:flex-row lg:gap-2"
             :class="{
               'opacity-100 transition-all duration-700': route.path === '/' || route.path === '/en',
             }"
-            :to="{ path: route.path === '/' ? '/en' : '/' }"
+            @click="changeLanguage"
           >
-            <Icon name="clarity:language-solid" class="text-2xl" />
-            <span v-if="route.path === '/'" class="text-xs">EN</span>
-            <span v-if="route.path === '/en'" class="text-xs">ES</span>
-          </NuxtLink>
+            <Icon
+              :name="
+                language === 'es'
+                  ? 'emojione-v1:flag-for-mexico'
+                  : 'emojione-v1:flag-for-united-states'
+              "
+              class="text-2xl"
+            />
+            <span class="text-xs">{{ language === 'es' ? 'ES' : 'EN' }}</span>
+          </button>
         </div>
       </div>
       <slot> </slot>
       <BottomNav />
-      <!-- <Sidebar /> -->
     </div>
+    <Transition name="fade-in">
+      <div
+        v-if="isLoading"
+        class="absolute inset-0 z-[99999] grid min-h-screen w-screen place-content-center backdrop-blur-xl"
+      >
+        <Loader />
+      </div>
+    </Transition>
   </main>
 </template>
