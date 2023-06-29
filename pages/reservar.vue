@@ -173,6 +173,7 @@ definePageMeta({
         {{ language === 'es' ? 'Reservación' : 'Reservation' }}
       </h1>
     </section>
+    <div class="divider mx-auto w-1/2"></div>
     <div class="hero-content mx-auto flex-col lg:flex-row">
       <div class="text-center">
         <p class="text-black">

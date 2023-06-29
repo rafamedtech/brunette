@@ -12,7 +12,10 @@ export const useMainStore = defineStore('main', () => {
 
   const getSurveys = async () => {
     try {
-      const { data: surveysData, error } = await supabase.from('surveys').select('*');
+      const { data: surveysData, error } = await supabase
+        .from('surveys')
+        .select('*')
+        .order('created_at');
 
       surveys.value = surveysData;
 

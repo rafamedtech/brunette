@@ -25,7 +25,7 @@ async function userLogout() {
 </script>
 
 <template>
-  <main class="container mt-8 flex w-full justify-center">
+  <main class="container flex w-full justify-center lg:mt-8">
     <div class="hidden justify-between lg:flex lg:w-1/4">
       <Transition name="up" appear>
         <ul class="fixed flex w-fit flex-col gap-4">
@@ -98,7 +98,11 @@ async function userLogout() {
     </div>
 
     <div class="lg:w-3/4">
-      <img src="@/assets/images/logo.png" alt="" class="mx-auto mb-4 w-32 lg:hidden" />
+      <figure class="">
+        <img src="@/assets/images/logo.png" alt="" class="mx-auto mt-4 w-32 lg:hidden" />
+      </figure>
+      <!-- <p class="text-center font-handlee text-xl text-primary">Administración</p> -->
+      <div class="divider mx-auto w-1/2 lg:hidden"></div>
       <!-- <h1 class="text-center text-3xl text-primary">Administración</h1> -->
       <slot> </slot>
       <AdminBottomNav />

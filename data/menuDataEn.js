@@ -415,7 +415,24 @@ export default [
           {
             name: 'Red, green, mole, chipotle',
             description: '',
-            price: 'Regular - $155.00 <br /> With eggs - $175.00 <br /> With chicken - $195.00',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Regular',
+                price: '$155.00',
+              },
+              {
+                id: 2,
+                name: 'With eggs',
+                price: '$175.00',
+              },
+              {
+                id: 3,
+                name: 'With chicken',
+                price: '$195.00',
+              },
+            ],
           },
         ],
       },

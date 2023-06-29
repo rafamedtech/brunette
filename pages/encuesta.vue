@@ -166,6 +166,7 @@ definePageMeta({
         {{ language === 'es' ? 'Encuesta' : 'Survey' }}
       </h1>
     </section>
+    <div class="divider mx-auto w-1/2"></div>
     <!-- 
     <button class="btn-accent btn flex items-center text-white" @click="logout">
       Iniciar sesion con <Icon name="mdi:apple" class="mx-2 text-3xl" />
@@ -173,7 +174,7 @@ definePageMeta({
 
     <section>
       <div class="hero">
-        <div class="flex-col p-4">
+        <div class="flex-col">
           <div v-if="language === 'es'" class="text-center">
             <h1 class="text-2xl text-secondary">Agradeceríamos tu opinión</h1>
             <p class="pb-6 text-black">
@@ -186,6 +187,7 @@ definePageMeta({
               With your opinion, we can improve our products and services.
             </p>
           </div>
+
           <div class="card mx-auto w-full max-w-sm flex-shrink-0 bg-base-100">
             <form class="card-body rounded-xl bg-white shadow-xl">
               <div class="form-control relative flex flex-col">

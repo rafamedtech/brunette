@@ -4,7 +4,7 @@ export async function useEvents() {
 
   async function getEvents() {
     try {
-      const { data, error } = await supabase.from('events').select('*');
+      const { data, error } = await supabase.from('events').select('*').order('id');
       events.value = data as any;
 
       if (error) throw error;

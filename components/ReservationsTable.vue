@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <table class="my-8 hidden min-w-full rounded-xl shadow-pinterest lg:table">
+  <table class="my-8 hidden min-w-full rounded-xl lg:table">
     <!-- head -->
     <thead>
       <tr class="text-center">

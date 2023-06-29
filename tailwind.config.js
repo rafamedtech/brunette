@@ -19,6 +19,9 @@ module.exports = {
           '2xl': '1124px',
         },
       },
+      boxShadow: {
+        pinterest: 'rgb(0 0 0 / 10%) 0px 5px 20px 0px',
+      },
     },
   },
 

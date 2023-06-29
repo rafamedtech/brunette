@@ -2,9 +2,28 @@
 import { useMainStore } from '@/stores/menu';
 import { storeToRefs } from 'pinia';
 
+const supabase = useSupabaseClient();
+
 const store = useMainStore();
 const { getSurveys } = store;
-const { surveys } = storeToRefs(store);
+// const { surveys } = storeToRefs(store);
+const { data: surveys } = await useAsyncData(
+  'surveys',
+  async () => supabase.from('surveys').select('*').order('created_at'),
+  { transform: (result) => result.data }
+);
+
+const ascendingSurveys = ref(false);
+
+const sortedSurveys = computed(() => {
+  return surveys.value.sort((a, b) => {
+    if (ascendingSurveys.value) {
+      return new Date(a.created_at) - new Date(b.created_at);
+    } else {
+      return new Date(b.created_at) - new Date(a.created_at);
+    }
+  });
+});
 await getSurveys();
 
 const loadSurveys = ref(false);
@@ -140,11 +159,12 @@ definePageMeta({
   <section class="w-full">
     <!-- <img src="@/assets/images/logo.png" alt="" class="mx-auto mb-8 w-32 lg:hidden" /> -->
 
-    <section class="">
-      <div></div>
+    <section class="mb-20 lg:mb-8">
       <div class="w-full text-center">
         <div>
           <h2 class="font-handlee text-4xl text-primary">Encuestas</h2>
+
+          <div class="divider mx-auto w-1/2"></div>
 
           <div class="mx-auto mt-4 grid h-12 place-items-center rounded-xl">
             <Icon
@@ -767,8 +787,39 @@ definePageMeta({
           </div>
         </div>
 
+        <div class="divider mt-32"></div>
+
         <div class="mt-8 grid w-full gap-8 p-4">
-          <SurveyCard v-for="survey in surveys" :key="survey.id" :survey="survey" />
+          <div class="flex justify-end">
+            <div class="dropdown-end dropdown">
+              <label tabindex="0" class="btn-primary btn m-1 hover:text-white">
+                <Icon
+                  :name="ascendingSurveys ? 'cil:sort-ascending' : 'cil:sort-descending'"
+                  size="28"
+                  class="text-white"
+                />
+                <span class="normal-case text-black"> Ordenar</span>
+              </label>
+              <ul
+                tabindex="0"
+                class="dropdown-content menu rounded-box z-[1] w-52 bg-base-100 p-2 shadow"
+              >
+                <li>
+                  <button @click="ascendingSurveys = true">
+                    <Icon name="cil:sort-ascending" size="32" class="text-secondary" />
+                    <span>Ascendente</span>
+                  </button>
+                </li>
+                <li>
+                  <button @click="ascendingSurveys = false">
+                    <Icon name="cil:sort-descending" size="32" class="text-secondary" />
+                    <span>Descendente</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <SurveyCard v-for="survey in sortedSurveys" :key="survey.id" :survey="survey" />
         </div>
       </div>
     </section>

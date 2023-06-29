@@ -87,7 +87,15 @@ const changeLanguage = () => {
           </li> -->
           <li>
             <div>
-              <p>{{ language === 'es' ? 'Idioma' : 'Language' }}</p>
+              <p
+                class="opacity-0 transition-all duration-500"
+                :class="{
+                  'opacity-100 transition-all duration-700':
+                    route.path === '/' || route.path === '/en',
+                }"
+              >
+                {{ language === 'es' ? 'Idioma' : 'Language' }}
+              </p>
               <button
                 class="btn-primary btn h-fit flex-col gap-0 px-2 text-base-100 opacity-0 transition-all duration-500 lg:flex-row lg:gap-2"
                 :class="{

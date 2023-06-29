@@ -65,6 +65,7 @@ definePageMeta({
         {{ language === 'es' ? 'Eventos' : 'Events' }}
       </h1>
     </section>
+    <div class="divider mx-auto w-1/2"></div>
     <div
       class="container hero-content w-full flex-col items-center justify-center text-center lg:flex-row"
     >
@@ -80,7 +81,7 @@ definePageMeta({
         <div
           v-for="{ id, title, cover } in events"
           :key="id"
-          class="carousel-item w-full flex-col p-4"
+          class="carousel-item w-full flex-col p-4 lg:px-0"
         >
           <h2 class="text-center text-2xl uppercase text-primary">{{ title }}</h2>
           <img class="h-[40rem] rounded-2xl md:mx-auto md:object-cover" :src="cover" alt="" />

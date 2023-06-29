@@ -37,8 +37,9 @@ definePageMeta({
     <!-- <img src="@/assets/images/logo.png" alt="" class="mx-auto mb-8 w-32 lg:hidden" /> -->
 
     <section class="">
-      <div class="mb-20 w-full text-center lg:mb-0">
+      <div class="mb-20 w-full text-center lg:mb-8">
         <h2 class="font-handlee text-4xl text-primary">Eventos</h2>
+        <div class="divider mx-auto w-1/2"></div>
         <NuxtLink class="btn-primary btn mt-4" to="/admin/eventos/nuevo"> Agregar evento </NuxtLink>
         <EventDialog />
         <div v-if="isLoading" class="mt-32">
