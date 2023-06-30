@@ -41,7 +41,7 @@ definePageMeta({
     <!-- <img src="@/assets/images/logo.png" alt="" class="mx-auto mb-8 w-32 lg:hidden" /> -->
     <div class="">
       <div class="w-full text-center lg:mb-0">
-        <h2 class="font-handlee text-4xl text-primary">Eventos</h2>
+        <h2 class="font-handlee text-4xl text-primary">Configuración de eventos</h2>
         <div class="divider mx-auto w-1/2"></div>
       </div>
       <div class="relative mx-auto flex w-fit items-center justify-center">
@@ -51,10 +51,9 @@ definePageMeta({
         <h2 class="text-2xl">Crear nuevo evento</h2>
       </div>
 
-      <div class="container relative my-8 flex flex-col items-center gap-4 rounded-xl">
-        <!-- <h4 class="text-2xl text-primary">{{ event.title }}</h4> -->
-        <div class="">
-          <div class="form-control w-96">
+      <div class="card mx-auto mb-20 mt-8 w-full max-w-sm flex-shrink-0 px-2 lg:mb-8">
+        <form @submit.prevent class="card-body flex flex-col p-2">
+          <div class="form-control w-full">
             <label class="label">
               <span class="label-text">Titulo</span>
             </label>
@@ -69,9 +68,9 @@ definePageMeta({
             <span class="label-text-alt">Bottom Right label</span>
           </label> -->
           </div>
-          <div class="form-control w-96">
+          <div class="form-control">
             <label class="label">
-              <span class="label-text">Imagen</span>
+              <span class="label-text">Imagen (URL)</span>
               <!-- <span class="label-text-alt">Alt label</span> -->
             </label>
             <input
@@ -84,22 +83,21 @@ definePageMeta({
             <span class="label-text-alt">Alt label</span>
           </label> -->
           </div>
-          <figure class="mt-8 w-96" v-if="event.cover">
+          <figure class="mt-8 w-full" v-if="event.cover">
             <img :src="event.cover" alt="" class="w-full rounded-xl shadow-xl" />
           </figure>
           <div
             v-else
-            class="mt-8 flex h-[40rem] w-96 flex-col items-center justify-center rounded-xl bg-white shadow-xl"
+            class="mt-8 flex h-[40rem] flex-col items-center justify-center rounded-xl bg-white shadow-pinterest"
           >
             <Icon name="tabler:photo-exclamation" size="48" class="text-secondary" />
             Vista previa no disponible
           </div>
-        </div>
-
-        <button class="btn-primary btn w-40" @click="createEvent">
-          <Icon v-if="isLoading" name="svg-spinners:tadpole" size="32" />
-          <span v-else>Crear evento</span>
-        </button>
+          <button class="btn-primary btn mx-auto my-4 w-40" @click="createEvent">
+            <Icon v-if="isLoading" name="svg-spinners:tadpole" size="32" />
+            <span v-else>Crear evento</span>
+          </button>
+        </form>
       </div>
     </div>
   </section>

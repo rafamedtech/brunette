@@ -81,12 +81,14 @@ definePageMeta({
       <div class="w-full text-center">
         <h2 class="font-handlee text-4xl text-primary">Inicio</h2>
         <div class="divider mx-auto w-1/2"></div>
-        <div class="mt-0 grid w-full grid-cols-1 place-items-center gap-0 p-4">
+        <div
+          class="background mt-0 grid w-full grid-cols-1 place-items-center gap-0 rounded-xl p-4 shadow-pinterest"
+        >
           <NuxtLink :to="{ path: '/admin/reservaciones' }" class="card-body grid w-full pt-0">
             <h3 class="text-3xl">Reservaciones</h3>
 
             <div
-              class="background stats stats-vertical mt-4 rounded-2xl shadow-xl shadow-primary/30 lg:stats-horizontal"
+              class="stats stats-vertical mt-4 rounded-2xl bg-transparent shadow-primary/30 lg:stats-horizontal"
             >
               <div class="stat">
                 <div class="stat-figure text-secondary"></div>
@@ -113,9 +115,11 @@ definePageMeta({
             </div>
           </NuxtLink>
 
+          <div class="divider"></div>
+
           <NuxtLink :to="{ path: '/admin/encuestas' }" class="card-body mb-10 w-full pt-0 lg:mb-0">
             <h3 class="text-3xl">Encuestas</h3>
-            <div class="background mx-auto mt-8 rounded-2xl shadow-xl shadow-primary/30 lg:stats">
+            <div class="mx-auto mt-8 rounded-2xl lg:stats lg:bg-transparent">
               <div class="stat">
                 <div class="stat-figure text-secondary"></div>
                 <div class="stat-title font-bold text-primary">Total</div>

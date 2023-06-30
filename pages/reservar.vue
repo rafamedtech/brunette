@@ -183,7 +183,7 @@ definePageMeta({
       </div>
     </div>
 
-    <div class="card mx-auto w-full max-w-sm flex-shrink-0 bg-base-100 shadow-xl">
+    <div class="card mx-auto w-full max-w-sm flex-shrink-0 bg-base-100 px-2 shadow-xl">
       <form @submit.prevent class="card-body flex flex-col gap-6">
         <div class="relative flex flex-col">
           <label class="text-primary" for="">{{ language === 'es' ? 'Fecha' : 'Date' }}</label>

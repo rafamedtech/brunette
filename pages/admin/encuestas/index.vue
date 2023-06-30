@@ -7,9 +7,12 @@ const supabase = useSupabaseClient();
 const store = useMainStore();
 const { getSurveys } = store;
 // const { surveys } = storeToRefs(store);
+
+// Fetch data from Supabase based on the current scroll position
+
 const { data: surveys } = await useAsyncData(
   'surveys',
-  async () => supabase.from('surveys').select('*').order('created_at'),
+  async () => supabase.from('surveys').select('*'),
   { transform: (result) => result.data }
 );
 
@@ -162,7 +165,7 @@ definePageMeta({
     <section class="mb-20 lg:mb-8">
       <div class="w-full text-center">
         <div>
-          <h2 class="font-handlee text-4xl text-primary">Encuestas</h2>
+          <h2 class="font-handlee text-4xl text-primary">Configuración de encuestas</h2>
 
           <div class="divider mx-auto w-1/2"></div>
 
@@ -821,6 +824,10 @@ definePageMeta({
           </div>
           <SurveyCard v-for="survey in sortedSurveys" :key="survey.id" :survey="survey" />
         </div>
+        <!-- <div class="join grid grid-cols-2">
+          <button class="btn-outline join-item btn" @click="previousPage">Anteriores</button>
+          <button class="btn-outline join-item btn" @click="nextPage">Siguientes</button>
+        </div> -->
       </div>
     </section>
   </section>

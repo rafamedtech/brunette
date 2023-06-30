@@ -188,8 +188,8 @@ definePageMeta({
             </p>
           </div>
 
-          <div class="card mx-auto w-full max-w-sm flex-shrink-0 bg-base-100">
-            <form class="card-body rounded-xl bg-white shadow-xl">
+          <div class="card mx-auto w-full max-w-sm flex-shrink-0 bg-base-100 px-2">
+            <form class="card-body rounded-xl shadow-xl">
               <div class="form-control relative flex flex-col">
                 <label class="text-primary" for="name">{{
                   language === 'es' ? 'Tu nombre (opcional)' : 'Your name (optional)'

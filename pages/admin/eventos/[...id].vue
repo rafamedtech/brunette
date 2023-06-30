@@ -50,7 +50,7 @@ definePageMeta({
     <!-- <img src="@/assets/images/logo.png" alt="" class="mx-auto mb-8 w-32 lg:hidden" /> -->
     <div class="mb-8">
       <div class="w-full text-center lg:mb-0">
-        <h2 class="font-handlee text-4xl text-primary">Eventos</h2>
+        <h2 class="font-handlee text-4xl text-primary">Configuración de eventos</h2>
         <div class="divider mx-auto w-1/2"></div>
       </div>
 
@@ -61,9 +61,9 @@ definePageMeta({
         <h3 class="text-xl">Actualizar evento</h3>
       </div>
 
-      <div class="relative mt-8 flex flex-col items-center gap-4 rounded-xl">
+      <div class="mb-20 mt-8 flex w-full flex-col items-center gap-4 rounded-xl lg:mb-8">
         <!-- <h4 class="text-2xl text-primary">{{ event.title }}</h4> -->
-        <div class="form-control w-96">
+        <div class="form-control w-full px-2 lg:w-96 lg:px-0">
           <label class="label">
             <span class="label-text">Titulo</span>
           </label>
@@ -78,7 +78,7 @@ definePageMeta({
             <span class="label-text-alt">Bottom Right label</span>
           </label> -->
         </div>
-        <div class="form-control w-96">
+        <div class="form-control w-full px-2 lg:w-96 lg:px-0">
           <label class="label">
             <span class="label-text">Imagen (URL)</span>
             <!-- <span class="label-text-alt">Alt label</span> -->
