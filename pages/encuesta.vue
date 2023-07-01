@@ -188,8 +188,8 @@ definePageMeta({
             </p>
           </div>
 
-          <div class="card mx-auto w-full max-w-sm flex-shrink-0 bg-base-100 px-2">
-            <form class="card-body rounded-xl shadow-xl">
+          <div class="card mx-auto w-full max-w-sm flex-shrink-0 px-2">
+            <form class="card-body rounded-xl bg-base-100 shadow-pinterest">
               <div class="form-control relative flex flex-col">
                 <label class="text-primary" for="name">{{
                   language === 'es' ? 'Tu nombre (opcional)' : 'Your name (optional)'
@@ -198,7 +198,7 @@ definePageMeta({
                   v-model="surveyData.name"
                   type="text"
                   id="name"
-                  class="input-bordered input-primary input"
+                  class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
                 />
               </div>
               <div class="form-control relative flex flex-col">
@@ -209,7 +209,7 @@ definePageMeta({
                   v-model="surveyData.phone"
                   type="text"
                   id="name"
-                  class="input-bordered input-primary input"
+                  class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
                 />
               </div>
               <div class="form-control relative flex flex-col">
@@ -220,7 +220,7 @@ definePageMeta({
                 <select
                   v-model="surveyData.mesero"
                   id="mesero"
-                  class="input-bordered input-primary input"
+                  class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
                 >
                   <option value="No lo sé">
                     {{ language === 'es' ? 'No lo sé' : "I don't know" }}
@@ -560,7 +560,7 @@ definePageMeta({
                 </label>
                 <textarea
                   v-model="surveyData.comment"
-                  class="textarea-accent textarea"
+                  class="textarea-bordered textarea border-[#d1d5db] transition-all focus:ring focus:ring-primary"
                   name="comment"
                   id="comment"
                   :placeholder="language === 'es' ? 'Escribe aquí...' : 'Write here...'"

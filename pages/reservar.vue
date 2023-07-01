@@ -183,8 +183,11 @@ definePageMeta({
       </div>
     </div>
 
-    <div class="card mx-auto w-full max-w-sm flex-shrink-0 bg-base-100 px-2 shadow-xl">
-      <form @submit.prevent class="card-body flex flex-col gap-6">
+    <div class="card mx-auto w-full max-w-sm flex-shrink-0 px-2">
+      <form
+        @submit.prevent
+        class="card-body flex flex-col gap-6 rounded-xl bg-base-100 shadow-pinterest"
+      >
         <div class="relative flex flex-col">
           <label class="text-primary" for="">{{ language === 'es' ? 'Fecha' : 'Date' }}</label>
           <VueDatepickerUi
@@ -201,11 +204,12 @@ definePageMeta({
           />
           <span v-if="v$.date.$error" class="text-red-500">{{ v$.date.$errors[0].$message }}</span>
         </div>
+
         <div class="flex flex-col">
           <label class="text-primary" for="">{{ language === 'es' ? 'Hora' : 'Time' }}</label>
           <input
             v-model="reservationData.time"
-            class="input-bordered input"
+            class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
             type="time"
             name=""
             id=""
@@ -218,7 +222,7 @@ definePageMeta({
             v-model="reservationData.name"
             type="text"
             placeholder="Ej. Juan Perez"
-            class="input-bordered input w-full max-w-xs"
+            class="input-bordered input w-full max-w-xs border-[#d1d5db] transition-all focus:ring focus:ring-primary"
             :class="{ 'border-red-500': v$.name.$error }"
           />
           <Icon
@@ -238,7 +242,7 @@ definePageMeta({
             v-model="reservationData.phone"
             type="number"
             placeholder="Ej 6641234567"
-            class="input-bordered input w-full max-w-xs"
+            class="input-bordered input w-full max-w-xs border-[#d1d5db] transition-all focus:ring focus:ring-primary"
             :class="{ 'border-red-500': v$.phone.$error }"
           />
           <Icon
@@ -259,7 +263,7 @@ definePageMeta({
           <input
             v-model="reservationData.qty"
             type="number"
-            class="input-bordered input w-full max-w-xs"
+            class="input-bordered input w-full max-w-xs border-[#d1d5db] transition-all focus:ring focus:ring-primary"
             :class="{ 'border-red-500': v$.qty.$error }"
           />
           <Icon
@@ -383,7 +387,7 @@ definePageMeta({
 }
 
 .v-calendar .input-field input {
-  @apply input-bordered input pl-10;
+  @apply input-bordered input pl-10 transition-all focus:ring focus:ring-primary;
   border-color: v-bind(errorBorder);
 }
 

@@ -76,7 +76,7 @@ definePageMeta({
 
     <section class="mb-8 w-full">
       <div
-        class="container rounded-box hidden gap-8 bg-[#ffffff] p-4 pb-8 shadow-xl lg:grid lg:grid-cols-2"
+        class="container rounded-box hidden gap-8 bg-[#ffffff] p-4 pb-8 shadow-pinterest lg:grid lg:grid-cols-2"
       >
         <div
           v-for="{ id, title, cover } in events"
