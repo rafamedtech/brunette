@@ -93,7 +93,7 @@ definePageMeta({
             <span class="label-text-alt">Alt label</span>
           </label> -->
         </div>
-        <figure class="w-96">
+        <figure class="w-full px-2 lg:w-96">
           <img :src="event.cover" alt="" class="w-full rounded-xl shadow-xl" />
         </figure>
         <section class="flex gap-2">
