@@ -112,7 +112,7 @@ async function userLogout() {
         <img src="@/assets/images/logo.png" alt="" class="mx-auto mt-4 w-32 lg:hidden" />
       </figure>
       <!-- <p class="text-center font-handlee text-xl text-primary">Administración</p> -->
-      <h1 class="text-center font-handlee text-2xl text-primary lg:hidden">Administración</h1>
+      <h1 class="text-center font-handlee text-lg text-primary lg:hidden">Administración</h1>
       <div class="divider mx-auto w-1/2 lg:hidden"></div>
       <slot> </slot>
       <AdminBottomNav />
