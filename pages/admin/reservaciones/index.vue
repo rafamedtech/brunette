@@ -44,7 +44,7 @@ definePageMeta({
   <section class="w-full">
     <section class="min-w-full">
       <div class="w-full text-center">
-        <h2 class="font-handlee text-4xl text-primary">Configuración de reservaciones</h2>
+        <h2 class="font-handlee text-4xl text-primary">Administrar reservaciones</h2>
 
         <div class="divider mx-auto w-1/2"></div>
 

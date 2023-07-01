@@ -81,12 +81,12 @@ async function deleteReservation(reservation) {
 
 <template>
   <div
-    class="relative flex w-full flex-col gap-2 rounded-xl p-4 shadow-pinterest"
+    class="relative flex w-full flex-col gap-2 rounded-xl bg-base-100 p-4 shadow-pinterest"
     :class="{
       'bg-primary ': new Date(reservation.date).getDate() === new Date(Date.now()).getDate(),
     }"
   >
-    <div class="tooltip tooltip-secondary absolute right-4 top-4" :data-tip="reservation.status">
+    <div class="tooltip-secondary tooltip absolute right-4 top-4" :data-tip="reservation.status">
       <Icon
         :name="statusIcon"
         class="cursor-pointer text-3xl hover:font-bold"
@@ -126,12 +126,12 @@ async function deleteReservation(reservation) {
     </section>
     <section class="w-full">
       <ul
-        class="rounded-box grid w-full grid-cols-2 place-items-center gap-4 bg-base-100 p-4 text-base shadow"
+        class="rounded-box grid w-full grid-cols-2 place-items-center gap-4 border border-[#d1d5db] bg-base-100 p-4 text-base"
       >
         <li>
           <NuxtLink
             :to="getMessage(reservation)"
-            class="flex w-full justify-around"
+            class="flex w-full justify-around gap-2"
             @click="changeStatus(reservation)"
           >
             <span>Aceptar</span>
@@ -143,7 +143,7 @@ async function deleteReservation(reservation) {
           </NuxtLink>
         </li>
         <li>
-          <div class="flex w-full justify-around" @click="cancelReservation(reservation)">
+          <div class="flex w-full justify-around gap-2" @click="cancelReservation(reservation)">
             <span>Cancelar</span>
             <Icon
               name="ri:indeterminate-circle-line"
@@ -155,7 +155,7 @@ async function deleteReservation(reservation) {
           <NuxtLink
             :to="getSuggestion(reservation)"
             target="_blank"
-            class="flex w-full justify-between"
+            class="flex w-full justify-between gap-2"
           >
             <span>Sugerir</span>
             <Icon
@@ -165,7 +165,7 @@ async function deleteReservation(reservation) {
           </NuxtLink>
         </li>
         <li>
-          <div class="flex w-full justify-around" @click="deleteReservation(reservation)">
+          <div class="flex w-full justify-around gap-2" @click="deleteReservation(reservation)">
             <span>Eliminar</span>
             <Icon
               name="ri:delete-bin-5-line"

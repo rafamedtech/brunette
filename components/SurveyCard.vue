@@ -57,7 +57,7 @@ async function completeSurvey(survey) {
 
     <div
       tabindex="0"
-      class="collapse mb-10 bg-[#F5F5F5] text-primary"
+      class="collapse-plus collapse bg-[#F5F5F5] text-primary"
       :class="{ 'bg-base-100/40 ': !survey.complete }"
     >
       <div class="collapse-title text-xl font-medium">Detalles de la encuesta</div>
@@ -97,7 +97,7 @@ async function completeSurvey(survey) {
       </div>
     </div>
 
-    <div class="tooltip-primary tooltip absolute bottom-4 right-4" data-tip="Marcar como leída">
+    <div class="tooltip-primary tooltip absolute right-4 top-4" data-tip="Marcar como leída">
       <Icon
         v-if="!survey.complete"
         name="ri:checkbox-circle-line"

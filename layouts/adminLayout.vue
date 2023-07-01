@@ -87,6 +87,16 @@ async function userLogout() {
           <li>
             <div class="divider"></div>
           </li>
+          <!-- <li>
+            <NuxtLink
+              class="flex items-center gap-2"
+              to="/admin/configuracion"
+              active-class="text-secondary"
+            >
+              <Icon class="text-xl text-primary" name="fluent-emoji-high-contrast:gear" />
+              <label for="my-modal-6" class="cursor-pointer">Configuración</label>
+            </NuxtLink>
+          </li>-->
           <li>
             <button class="flex items-center gap-2">
               <Icon class="text-xl text-primary" name="ri:logout-box-line" />

@@ -165,7 +165,7 @@ definePageMeta({
     <section class="mb-20 lg:mb-8">
       <div class="w-full text-center">
         <div>
-          <h2 class="font-handlee text-4xl text-primary">Configuración de encuestas</h2>
+          <h2 class="font-handlee text-4xl text-primary">Administrar encuestas</h2>
 
           <div class="divider mx-auto w-1/2"></div>
 

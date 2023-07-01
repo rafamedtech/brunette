@@ -125,13 +125,14 @@ async function deleteReservation(reservation) {
     </td>
 
     <td class="flex items-center gap-4 text-2xl">
-      <div class="tooltip tooltip-primary" :data-tip="reservation.status">
+      <div class="tooltip-primary tooltip" :data-tip="reservation.status">
         <Icon
           :name="statusIcon"
           class="cursor-pointer hover:font-bold"
           :class="{
             'text-green-500': reservation.status === 'Aceptada',
             'text-red-500': reservation.status === 'Cancelada',
+            'text-orange-500': reservation.status === 'Solicitud',
           }"
         />
       </div>
@@ -141,7 +142,7 @@ async function deleteReservation(reservation) {
         <ul
           tabindex="0"
           :class="{ hidden: dropdown }"
-          class="dropdown-content menu rounded-box w-52 bg-base-100 p-2 text-base shadow"
+          class="dropdown-content menu rounded-box z-[999] w-52 bg-base-100 p-2 text-base shadow"
         >
           <li>
             <NuxtLink

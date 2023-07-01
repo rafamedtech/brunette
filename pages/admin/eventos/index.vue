@@ -38,7 +38,7 @@ definePageMeta({
 
     <section class="">
       <div class="mb-20 w-full text-center lg:mb-8">
-        <h2 class="font-handlee text-4xl text-primary">Configuración de eventos</h2>
+        <h2 class="font-handlee text-4xl text-primary">Administrar eventos</h2>
         <div class="divider mx-auto w-1/2"></div>
         <NuxtLink class="btn-primary btn mt-4" to="/admin/eventos/nuevo"> Agregar evento </NuxtLink>
         <EventDialog />

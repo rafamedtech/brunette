@@ -41,7 +41,7 @@ definePageMeta({
     <!-- <img src="@/assets/images/logo.png" alt="" class="mx-auto mb-8 w-32 lg:hidden" /> -->
     <div class="">
       <div class="w-full text-center lg:mb-0">
-        <h2 class="font-handlee text-4xl text-primary">Configuración de eventos</h2>
+        <h2 class="font-handlee text-4xl text-primary">Administrar eventos</h2>
         <div class="divider mx-auto w-1/2"></div>
       </div>
       <div class="relative mx-auto flex w-fit items-center justify-center">

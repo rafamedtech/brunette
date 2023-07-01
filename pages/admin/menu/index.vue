@@ -18,7 +18,7 @@ definePageMeta({
 
     <section class="">
       <div class="w-full text-center">
-        <h2 class="font-handlee text-4xl text-primary">Configuración del Menú</h2>
+        <h2 class="font-handlee text-4xl text-primary">Administrar Menú</h2>
         <div class="divider mx-auto w-1/2"></div>
       </div>
       <div class="mt-8 grid w-full gap-8 p-4 lg:grid-cols-2">

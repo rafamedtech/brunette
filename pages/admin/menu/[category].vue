@@ -37,7 +37,7 @@ definePageMeta({
 <template>
   <main class="container">
     <div class="w-full text-center">
-      <h2 class="font-handlee text-4xl text-primary">Configuración del Menú</h2>
+      <h2 class="font-handlee text-4xl text-primary">Administrar Menú</h2>
       <div class="divider mx-auto w-1/2"></div>
     </div>
     <section class="flex items-center gap-4 pt-4">
