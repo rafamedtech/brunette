@@ -8,30 +8,30 @@ const { language } = storeToRefs(store);
 
 <template>
   <div class="flex w-screen justify-center lg:hidden">
-    <div class="btm-nav z-40 bg-primary shadow-pinterest">
+    <div class="btm-nav z-40 bg-base-100 shadow-pinterest">
       <nuxt-link :to="{ path: '/admin' }" active-class="active border-primary">
         <!-- class="flex flex-col items-center justify-between gap-0 p-0 focus:bg-transparent active:text-primary" -->
-        <Icon name="gala:display" class="text-xl text-white" />
+        <Icon name="gala:display" class="text-xl text-secondary" />
         <span class="btm-nav-label text-xs">{{ language === 'es' ? 'Inicio' : 'Home' }}</span>
       </nuxt-link>
       <nuxt-link :to="{ path: '/admin/menu' }" active-class="active border-primary">
         <!-- class="flex flex-col items-center justify-between gap-0 p-0 focus:bg-transparent active:text-primary" -->
-        <Icon name="gala:brochure" class="text-xl text-white" />
+        <Icon name="gala:brochure" class="text-xl text-secondary" />
         <span class="btm-nav-label text-xs">{{ language === 'es' ? 'Menu' : 'Menu' }}</span>
       </nuxt-link>
       <nuxt-link :to="{ path: '/admin/eventos' }" active-class="active border-primary">
         <!-- class="flex flex-col items-center justify-between gap-0 p-0 focus:bg-transparent active:text-primary" -->
-        <Icon name="gala:calendar" class="text-xl text-white" />
+        <Icon name="gala:calendar" class="text-xl text-secondary" />
         <span class="btm-nav-label text-xs">{{ language === 'es' ? 'Eventos' : 'Events' }}</span>
       </nuxt-link>
       <nuxt-link :to="{ path: '/admin/encuestas' }" active-class="active border-primary">
         <!-- class="flex flex-col items-center justify-between gap-0 p-0 focus:bg-transparent active:text-primary" -->
-        <Icon name="gala:editor" class="text-xl text-white" />
+        <Icon name="gala:editor" class="text-xl text-secondary" />
         <span class="btm-nav-label text-xs">{{ language === 'es' ? 'Encuestas' : 'Survey' }}</span>
       </nuxt-link>
       <nuxt-link :to="{ path: '/admin/reservaciones' }" active-class="active border-primary">
         <!-- class="flex flex-col items-center justify-between gap-0 p-0 focus:bg-transparent active:text-primary" -->
-        <Icon name="gala:book" class="text-xl text-white" />
+        <Icon name="gala:book" class="text-xl text-secondary" />
         <span class="btm-nav-label text-xs">{{
           language === 'es' ? 'Reserv' : 'Reservation'
         }}</span>
