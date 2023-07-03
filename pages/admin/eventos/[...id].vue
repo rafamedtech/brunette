@@ -58,7 +58,7 @@ definePageMeta({
         <button class="absolute -left-16 text-primary" @click="$router.back()">
           <Icon name="ri:arrow-left-line" class="text-4xl font-bold text-secondary" />
         </button>
-        <h3 class="text-xl">Actualizar evento</h3>
+        <h3 class="text-2xl">Actualizar evento</h3>
       </div>
 
       <div class="mb-20 mt-8 flex w-full flex-col items-center gap-4 rounded-xl lg:mb-8">

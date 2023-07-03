@@ -201,7 +201,7 @@ definePageMeta({
         <div
           class="background mt-4 hidden w-full rounded-2xl p-4 shadow-xl shadow-primary/30 lg:block"
         >
-          <section class="stats flex justify-center bg-[#F5F5F5] lg:w-full">
+          <section class="stats flex justify-center bg-base-100 lg:w-full">
             <div class="stat flex w-full flex-col p-4 lg:justify-between">
               <h5 class="h-24 text-left text-primary">
                 La bienvenida por parte de nuestro mesero fue:
@@ -362,7 +362,7 @@ definePageMeta({
         <!-- Mobile stats -->
         <div class="background carousel-center carousel w-screen gap-4 p-4 lg:hidden">
           <div
-            class="carousel-item flex flex-col justify-between rounded-xl bg-[#F5F5F5] p-2 lg:stat lg:rounded-none lg:rounded-bl-xl lg:rounded-tl-xl"
+            class="carousel-item flex flex-col justify-between rounded-xl bg-base-100 p-2 lg:stat lg:rounded-none lg:rounded-bl-xl lg:rounded-tl-xl"
           >
             <h5 class="h-24 text-left text-primary">
               La bienvenida por parte de nuestro mesero fue:
@@ -396,7 +396,7 @@ definePageMeta({
             </section>
           </div>
           <div
-            class="carousel-item flex flex-col justify-between rounded-xl bg-[#F5F5F5] p-2 lg:stat lg:rounded-none"
+            class="carousel-item flex flex-col justify-between rounded-xl bg-base-100 p-2 lg:stat lg:rounded-none"
           >
             <h5 class="h-24 text-left text-primary">
               La calidad y temperatura de los alimentos fue:
@@ -430,7 +430,7 @@ definePageMeta({
             </section>
           </div>
           <div
-            class="carousel-item flex flex-col justify-between rounded-xl bg-[#F5F5F5] p-2 lg:stat lg:rounded-none"
+            class="carousel-item flex flex-col justify-between rounded-xl bg-base-100 p-2 lg:stat lg:rounded-none"
           >
             <h5 class="h-24 text-left text-primary">La calidad de sus bebidas fue:</h5>
             <div class="divider"></div>
@@ -462,7 +462,7 @@ definePageMeta({
             </section>
           </div>
           <div
-            class="carousel-item flex flex-col justify-between rounded-xl bg-[#F5F5F5] p-2 lg:stat lg:rounded-none"
+            class="carousel-item flex flex-col justify-between rounded-xl bg-base-100 p-2 lg:stat lg:rounded-none"
           >
             <h5 class="h-24 text-left text-primary">La limpieza del restaurante la considera:</h5>
             <div class="divider"></div>
@@ -494,7 +494,7 @@ definePageMeta({
             </section>
           </div>
           <div
-            class="carousel-item flex flex-col justify-between rounded-xl bg-[#F5F5F5] p-2 lg:stat lg:rounded-none"
+            class="carousel-item flex flex-col justify-between rounded-xl bg-base-100 p-2 lg:stat lg:rounded-none"
           >
             <h5 class="h-24 text-left text-primary">Como califica nuestro servicio?</h5>
             <div class="divider"></div>
@@ -529,7 +529,7 @@ definePageMeta({
 
         <h4 class="mt-8 text-2xl text-black">Por mesero</h4>
         <div class="background mt-4 hidden rounded-2xl p-4 shadow-xl shadow-primary/30 lg:block">
-          <section class="stats flex w-full justify-center gap-8 bg-[#F5F5F5]">
+          <section class="stats flex w-full justify-center gap-8 bg-base-100">
             <div class="stat p-4">
               <h5 class="font-bold text-primary">Diego Vargas</h5>
               <div class="divider"></div>
@@ -661,7 +661,7 @@ definePageMeta({
 
         <div class="background carousel-center carousel w-screen gap-4 p-4 lg:hidden">
           <div
-            class="carousel-item flex flex-col justify-between rounded-xl bg-[#F5F5F5] p-2 lg:stat lg:rounded-none lg:rounded-bl-xl lg:rounded-tl-xl"
+            class="carousel-item flex flex-col justify-between rounded-xl bg-base-100 p-2 lg:stat lg:rounded-none lg:rounded-bl-xl lg:rounded-tl-xl"
           >
             <h5 class="font-bold text-primary">Diego Vargas</h5>
             <div class="divider"></div>
@@ -691,7 +691,7 @@ definePageMeta({
             </section>
           </div>
           <div
-            class="carousel-item flex flex-col justify-between rounded-xl bg-[#F5F5F5] p-2 lg:stat lg:rounded-none"
+            class="carousel-item flex flex-col justify-between rounded-xl bg-base-100 p-2 lg:stat lg:rounded-none"
           >
             <h5 class="font-bold text-primary">Giovanny Gómez</h5>
             <div class="divider"></div>
@@ -723,7 +723,7 @@ definePageMeta({
             </section>
           </div>
           <div
-            class="carousel-item flex flex-col justify-between rounded-xl bg-[#F5F5F5] p-2 lg:stat lg:rounded-none"
+            class="carousel-item flex flex-col justify-between rounded-xl bg-base-100 p-2 lg:stat lg:rounded-none"
           >
             <h5 class="font-bold text-primary">Christian Pérez</h5>
             <div class="divider"></div>
@@ -753,7 +753,7 @@ definePageMeta({
             </section>
           </div>
           <div
-            class="carousel-item flex flex-col justify-between rounded-xl bg-[#F5F5F5] p-2 lg:stat lg:rounded-none"
+            class="carousel-item flex flex-col justify-between rounded-xl bg-base-100 p-2 lg:stat lg:rounded-none"
           >
             <h5 class="font-bold text-primary">No lo sé</h5>
             <div class="divider"></div>

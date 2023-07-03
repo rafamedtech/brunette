@@ -12,7 +12,7 @@ useHead({ htmlAttrs: { lang } });
 </script>
 
 <template>
-  <section class="relative min-h-screen overflow-x-hidden bg-[#F5F5F5]">
+  <section class="relative min-h-screen overflow-x-hidden bg-base-100">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

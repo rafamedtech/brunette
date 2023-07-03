@@ -81,31 +81,38 @@ definePageMeta({
       <div class="w-full text-center">
         <h2 class="font-handlee text-4xl text-primary">Inicio</h2>
         <div class="divider mx-auto w-1/2"></div>
-        <div class="mt-0 grid w-full grid-cols-1 place-items-center gap-0 rounded-xl p-4">
-          <NuxtLink :to="{ path: '/admin/reservaciones' }" class="card-body grid w-full pt-0">
+        <div class="mt-0 grid w-full grid-cols-1 place-items-center gap-0 rounded-xl">
+          <NuxtLink :to="{ path: '/admin/reservaciones' }" class="card-body grid w-full p-2 pt-0">
             <h3 class="text-3xl">Reservaciones</h3>
 
-            <div
-              class="background stats stats-vertical mt-4 rounded-2xl shadow-xl lg:stats-horizontal"
-            >
-              <div class="stat">
+            <!-- class="background stats stats-vertical mt-4 rounded-2xl shadow-xl lg:stats-horizontal" -->
+            <div class="grid grid-cols-2 place-content-center gap-4 lg:grid-cols-4">
+              <div
+                class="background stat items-center justify-center gap-0 rounded-xl bg-base-100 text-center shadow-xl"
+              >
                 <div class="stat-figure text-secondary"></div>
                 <div class="stat-title font-bold text-primary">Total</div>
                 <div class="stat-value">{{ sortedReservations.length }}</div>
               </div>
 
-              <div class="stat">
+              <div
+                class="background stat items-center justify-center gap-0 rounded-xl bg-base-100 text-center shadow-xl"
+              >
                 <div class="stat-figure text-secondary"></div>
                 <div class="stat-title font-bold text-primary">Sin confirmar</div>
                 <div class="stat-value">{{ unconfirmedReservations }}</div>
               </div>
 
-              <div class="stat">
+              <div
+                class="background stat items-center justify-center gap-0 rounded-xl bg-base-100 text-center shadow-xl"
+              >
                 <div class="stat-figure text-secondary"></div>
                 <div class="stat-title font-bold text-primary">Canceladas</div>
                 <div class="stat-value">{{ canceledReservations }}</div>
               </div>
-              <div class="stat">
+              <div
+                class="background stat items-center justify-center gap-0 rounded-xl bg-base-100 text-center shadow-xl"
+              >
                 <div class="stat-figure text-secondary"></div>
                 <div class="stat-title font-bold text-primary">Para hoy</div>
                 <div class="stat-value">{{ todayReservations }}</div>
@@ -115,16 +122,19 @@ definePageMeta({
 
           <div class="divider"></div>
 
-          <NuxtLink :to="{ path: '/admin/encuestas' }" class="card-body mb-10 w-full pt-0 lg:mb-0">
+          <NuxtLink
+            :to="{ path: '/admin/encuestas' }"
+            class="card-body mb-10 w-full p-2 pt-0 lg:mb-0"
+          >
             <h3 class="text-3xl">Encuestas</h3>
-            <div class="background mx-auto mt-8 rounded-2xl shadow-xl lg:stats">
-              <div class="stat">
+            <div class="mt-8 grid grid-cols-2 gap-4">
+              <div class="background stat rounded-xl shadow-xl">
                 <div class="stat-figure text-secondary"></div>
                 <div class="stat-title font-bold text-primary">Total</div>
                 <div class="stat-value">{{ surveys.length }}</div>
               </div>
 
-              <div class="stat">
+              <div class="background stat rounded-xl shadow-xl">
                 <div class="stat-figure text-secondary"></div>
                 <div class="stat-title font-bold text-primary">Sin leer</div>
                 <div class="stat-value">{{ unreadSurveys.length }}</div>
