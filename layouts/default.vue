@@ -143,7 +143,7 @@ const changeLanguage = () => {
             </label>
             <ul
               tabindex="0"
-              class="dropdown-content menu rounded-box menu-sm z-50 mt-3 w-80 bg-[#f5f5f5] p-2 shadow"
+              class="dropdown-content menu rounded-box menu-sm z-50 mt-3 w-80 bg-base-100 p-2 shadow"
             >
               <!-- <li><img class="mx-auto h-28 w-fit" src="@/assets/images/logo.png" alt="logo" /></li> -->
               <li class="flex w-full flex-row justify-center gap-4 text-5xl active:bg-transparent">

@@ -62,7 +62,7 @@ definePageMeta({
 </script>
 
 <template>
-  <main class="relative mt-4 overflow-x-hidden bg-[#F5F5F5] lg:mt-8">
+  <main class="relative mt-4 overflow-x-hidden bg-base-100 lg:mt-8">
     <h1 class="px-2 text-center font-handlee text-4xl text-primary lg:px-32">
       {{ language === 'es' ? 'Menú' : 'Menu' }}
     </h1>

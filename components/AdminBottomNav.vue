@@ -11,22 +11,27 @@ const { language } = storeToRefs(store);
     <div class="btm-nav bg-base-100 shadow-pinterest">
       <nuxt-link :to="{ path: '/admin' }" active-class="active border-primary">
         <!-- class="flex flex-col items-center justify-between gap-0 p-0 focus:bg-transparent active:text-primary" -->
-        <Icon name="ri:home-3-fill" class="text-xl text-primary" />
+        <Icon name="gala:display" class="text-xl text-primary" />
         <span class="btm-nav-label">{{ language === 'es' ? 'Inicio' : 'Home' }}</span>
+      </nuxt-link>
+      <nuxt-link :to="{ path: '/admin/menu' }" active-class="active border-primary">
+        <!-- class="flex flex-col items-center justify-between gap-0 p-0 focus:bg-transparent active:text-primary" -->
+        <Icon name="gala:brochure" class="text-xl text-primary" />
+        <span class="btm-nav-label">{{ language === 'es' ? 'Menu' : 'Menu' }}</span>
       </nuxt-link>
       <nuxt-link :to="{ path: '/admin/eventos' }" active-class="active border-primary">
         <!-- class="flex flex-col items-center justify-between gap-0 p-0 focus:bg-transparent active:text-primary" -->
-        <Icon name="ri:calendar-todo-fill" class="text-xl text-primary" />
+        <Icon name="gala:calendar" class="text-xl text-primary" />
         <span class="btm-nav-label">{{ language === 'es' ? 'Eventos' : 'Events' }}</span>
       </nuxt-link>
       <nuxt-link :to="{ path: '/admin/encuestas' }" active-class="active border-primary">
         <!-- class="flex flex-col items-center justify-between gap-0 p-0 focus:bg-transparent active:text-primary" -->
-        <Icon name="ri:survey-fill" class="text-xl text-primary" />
+        <Icon name="gala:editor" class="text-xl text-primary" />
         <span class="btm-nav-label">{{ language === 'es' ? 'Encuestas' : 'Survey' }}</span>
       </nuxt-link>
       <nuxt-link :to="{ path: '/admin/reservaciones' }" active-class="active border-primary">
         <!-- class="flex flex-col items-center justify-between gap-0 p-0 focus:bg-transparent active:text-primary" -->
-        <Icon name="ri:health-book-fill" class="text-xl text-primary" />
+        <Icon name="gala:book" class="text-xl text-primary" />
         <span>{{ language === 'es' ? 'Reserv' : 'Reservation' }}</span>
       </nuxt-link>
     </div>

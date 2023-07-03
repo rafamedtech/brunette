@@ -134,10 +134,16 @@ definePageMeta({
                 <div class="stat-value">{{ surveys.length }}</div>
               </div>
 
-              <div class="background stat rounded-xl shadow-xl">
-                <div class="stat-figure text-secondary"></div>
-                <div class="stat-title font-bold text-primary">Sin leer</div>
-                <div class="stat-value">{{ unreadSurveys.length }}</div>
+              <div class="indicator w-full">
+                <span
+                  class="badge badge-secondary indicator-item"
+                  v-if="unreadSurveys.length > 0"
+                ></span>
+                <div class="background stat rounded-xl shadow-xl">
+                  <div class="stat-figure text-secondary"></div>
+                  <div class="stat-title font-bold text-primary">Sin leer</div>
+                  <div class="stat-value">{{ unreadSurveys.length }}</div>
+                </div>
               </div>
             </div>
           </NuxtLink>
