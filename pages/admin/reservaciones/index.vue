@@ -42,12 +42,9 @@ definePageMeta({
 
 <template>
   <section class="w-full">
+    <AdminPageTitle> Administrar reservaciones </AdminPageTitle>
     <section class="min-w-full">
       <div class="w-full text-center">
-        <h2 class="font-handlee text-4xl text-primary">Administrar reservaciones</h2>
-
-        <div class="divider mx-auto w-1/2"></div>
-
         <div class="mx-auto mt-4 grid h-12 place-items-center rounded-xl">
           <Icon
             class="cursor-pointer text-2xl text-secondary"

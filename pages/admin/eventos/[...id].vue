@@ -47,12 +47,12 @@ definePageMeta({
 
 <template>
   <main class="w-full">
-    <!-- <img src="@/assets/images/logo.png" alt="" class="mx-auto mb-8 w-32 lg:hidden" /> -->
+    <AdminPageTitle> Administrar eventos </AdminPageTitle>
     <div class="mb-8">
-      <div class="w-full text-center lg:mb-0">
+      <!-- <div class="w-full text-center lg:mb-0">
         <h2 class="font-handlee text-4xl text-primary">Administrar eventos</h2>
         <div class="divider mx-auto w-1/2"></div>
-      </div>
+      </div> -->
 
       <div class="relative mx-auto mt-4 flex w-fit items-center justify-center">
         <button class="absolute -left-16 text-primary" @click="$router.back()">

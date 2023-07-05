@@ -1,0 +1,39 @@
+<script lang="ts" setup>
+export interface Category {
+  id: number;
+  slug: string;
+  title: string;
+  cover?: string;
+}
+
+export interface Props {
+  category: Category;
+}
+
+defineProps<Props>();
+</script>
+
+<template>
+  <NuxtLink
+    :to="{
+      path: $route.path.includes('/admin')
+        ? `/admin/menu/categorias/${category.id}`
+        : `/${category.slug}`,
+    }"
+    class="relative flex h-52 w-full items-center justify-center overflow-hidden rounded-xl text-center shadow-xl"
+  >
+    <img
+      :src="category.cover"
+      class="rounded-box absolute inset-0 h-full w-full object-cover brightness-50 transition-all hover:scale-110"
+      alt="item picture"
+    />
+
+    <NuxtLink
+      class="btn-circle btn absolute right-2 top-2 cursor-pointer border-transparent bg-transparent text-secondary hover:btn-primary"
+      :to="`/admin/eventos/${category.id}`"
+    >
+      <Icon name="solar:pen-outline" size="28" />
+    </NuxtLink>
+    <span class="z-[99] font-handlee text-3xl text-white">{{ category.title }}</span>
+  </NuxtLink>
+</template>

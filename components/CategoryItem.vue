@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 export interface Category {
+  id: number;
   slug: string;
   title: string;
   cover?: string;
@@ -15,11 +16,13 @@ defineProps<Props>();
 <template>
   <NuxtLink
     :to="{
-      path: `${$route.path === '/' ? '/' : '/en/'}${category.slug}`,
+      path: $route.path.includes('/admin')
+        ? `/admin/menu/categorias/${category.id}`
+        : `/${category.slug}`,
     }"
     class="h-fit w-full text-center"
   >
-    <span class="font-handlee text-xl text-primary lg:text-2xl">{{ category.title }}</span>
+    <span class="font-handlee text-2xl lg:text-3xl">{{ category.title }}</span>
     <figure class="card h-52 shadow-xl lg:h-80">
       <img
         :src="category.cover"

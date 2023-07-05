@@ -77,10 +77,9 @@ definePageMeta({
 
 <template>
   <section class="w-full">
+    <AdminPageTitle> Inicio </AdminPageTitle>
     <section class="mx-4 mb-8 rounded-3xl">
       <div class="w-full text-center">
-        <h2 class="font-handlee text-4xl text-primary">Inicio</h2>
-        <div class="divider mx-auto w-1/2"></div>
         <div class="mt-0 grid w-full grid-cols-1 place-items-center gap-0 rounded-xl">
           <NuxtLink :to="{ path: '/admin/reservaciones' }" class="card-body grid w-full p-2 pt-0">
             <h3 class="text-3xl">Reservaciones</h3>

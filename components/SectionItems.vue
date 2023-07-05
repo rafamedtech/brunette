@@ -1,11 +1,11 @@
 <script setup>
-const props = defineProps({
+defineProps({
   items: {
     type: Array,
   },
 });
 
-const sortedItems = props.items.sort((a, b) => a.id - b.id);
+// const sortedItems = props.items.sort((a, b) => a.id - b.id);
 </script>
 
 <template>

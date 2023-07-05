@@ -39,7 +39,7 @@ async function userLogout() {
           <li>
             <NuxtLink
               :to="{ path: '/admin' }"
-              active-class="text-secondary"
+              active-class="font-bold text-primary"
               class="flex items-center gap-2"
             >
               <Icon class="text-xl text-primary" name="gala:display" /> <span>Inicio</span>
@@ -48,7 +48,7 @@ async function userLogout() {
           <li>
             <NuxtLink
               :to="{ path: '/admin/menu' }"
-              active-class="text-secondary"
+              active-class="font-bold text-primary"
               class="flex items-center gap-2"
             >
               <Icon class="text-xl text-primary" name="gala:brochure" /> <span>Menú</span>
@@ -57,7 +57,7 @@ async function userLogout() {
           <li>
             <NuxtLink
               :to="{ path: '/admin/eventos' }"
-              active-class="text-secondary"
+              active-class="font-bold text-primary"
               class="flex items-center gap-2"
             >
               <Icon class="text-xl text-primary" name="gala:calendar" />
@@ -67,7 +67,7 @@ async function userLogout() {
           <li>
             <NuxtLink
               :to="{ path: '/admin/encuestas' }"
-              active-class="text-secondary"
+              active-class="font-bold text-primary"
               class="flex items-center gap-2"
             >
               <Icon class="text-xl text-primary" name="gala:editor" />
@@ -77,7 +77,7 @@ async function userLogout() {
           <li>
             <NuxtLink
               to="/admin/reservaciones"
-              active-class="text-secondary"
+              active-class="font-bold text-primary"
               class="flex items-center gap-2"
             >
               <Icon class="text-xl text-primary" name="gala:book" />
@@ -91,7 +91,7 @@ async function userLogout() {
             <NuxtLink
               class="flex items-center gap-2"
               to="/admin/configuracion"
-              active-class="text-secondary"
+              active-class="font-bold text-primary"
             >
               <Icon class="text-xl text-primary" name="fluent-emoji-high-contrast:gear" />
               <label for="my-modal-6" class="cursor-pointer">Configuración</label>

@@ -1,14 +1,10 @@
 <script setup>
 import { useMainStore } from '@/stores/menu';
-import { storeToRefs } from 'pinia';
 
 const supabase = useSupabaseClient();
 
 const store = useMainStore();
 const { getSurveys } = store;
-// const { surveys } = storeToRefs(store);
-
-// Fetch data from Supabase based on the current scroll position
 
 const { data: surveys } = await useAsyncData(
   'surveys',
@@ -160,15 +156,10 @@ definePageMeta({
 
 <template>
   <section class="w-full">
-    <!-- <img src="@/assets/images/logo.png" alt="" class="mx-auto mb-8 w-32 lg:hidden" /> -->
-
-    <section class="mb-20 lg:mb-8">
+    <AdminPageTitle> Administrar encuestas </AdminPageTitle>
+    <section class="mb-24 lg:mb-8">
       <div class="w-full text-center">
         <div>
-          <h2 class="font-handlee text-4xl text-primary">Administrar encuestas</h2>
-
-          <div class="divider mx-auto w-1/2"></div>
-
           <div class="mx-auto mt-4 grid h-12 place-items-center rounded-xl">
             <Icon
               class="cursor-pointer text-2xl text-secondary"

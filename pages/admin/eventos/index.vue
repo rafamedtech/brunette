@@ -1,22 +1,11 @@
 <script setup>
-import { useEventStore } from '@/stores/events';
 import { useMainStore } from '@/stores/menu';
 import { storeToRefs } from 'pinia';
 
 const mainStore = useMainStore();
-const eventStore = useEventStore();
 const { isLoading } = storeToRefs(mainStore);
-const modal = ref(null);
 
-const { events, deleteEvent } = await useEvents();
-console.log(events.value);
-
-const { currentEvent } = storeToRefs(eventStore);
-// console.log(currentEvent);
-
-function setCurrentEvent(event) {
-  currentEvent.value = event;
-}
+const { events } = await useEvents();
 
 onMounted(() => {
   isLoading.value = false;
@@ -34,14 +23,11 @@ definePageMeta({
 
 <template>
   <section class="w-full">
-    <!-- <img src="@/assets/images/logo.png" alt="" class="mx-auto mb-8 w-32 lg:hidden" /> -->
-
-    <section class="">
-      <div class="mb-20 w-full text-center lg:mb-8">
-        <h2 class="font-handlee text-4xl text-primary">Administrar eventos</h2>
-        <div class="divider mx-auto w-1/2"></div>
+    <AdminPageTitle> Administrar eventos </AdminPageTitle>
+    <section>
+      <div class="mb-24 w-full text-center lg:mb-8">
         <NuxtLink class="btn-primary btn mt-4" to="/admin/eventos/nuevo"> Agregar evento </NuxtLink>
-        <EventDialog />
+
         <div v-if="isLoading" class="mt-32">
           <Loader />
         </div>
@@ -60,6 +46,5 @@ definePageMeta({
         </div>
       </div>
     </section>
-    <!-- <CustomModal /> -->
   </section>
 </template>
