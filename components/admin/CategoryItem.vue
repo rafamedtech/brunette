@@ -24,13 +24,13 @@ defineProps<Props>();
   >
     <img
       :src="category.cover"
-      class="rounded-box absolute inset-0 h-full w-full object-cover brightness-50 transition-all hover:scale-110"
+      class="rounded-box absolute inset-0 h-full w-full object-cover brightness-50 transition-all"
       alt="item picture"
     />
 
     <NuxtLink
       class="btn-circle btn absolute right-2 top-2 cursor-pointer border-transparent bg-transparent text-secondary hover:btn-primary"
-      :to="`/admin/eventos/${category.id}`"
+      :to="`/admin/menu/categorias/${category.id}/editar`"
     >
       <Icon name="solar:pen-outline" size="28" />
     </NuxtLink>

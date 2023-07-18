@@ -3,9 +3,7 @@ import { useMainStore } from '@/stores/menu';
 import { storeToRefs } from 'pinia';
 
 const store = useMainStore();
-// store.$patch({
-//   isLoading: true,
-// });
+
 
 const { language } = storeToRefs(store);
 const { menu: menuDataES } = useMenu('es');
@@ -16,8 +14,6 @@ const menu = computed(() => {
     return menuDataES.value;
   }
   return menuDataEN.value;
-  // if (language.value === 'en') {
-  // }
 });
 
 // Metadata

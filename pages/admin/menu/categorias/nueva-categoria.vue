@@ -20,7 +20,7 @@ async function createCategory() {
 
     // console.log(data);
     isLoading.value = false;
-    await navigateTo('/admin/menu/');
+    await navigateTo('/admin/menu/categorias');
 
     if (error) throw error;
   } catch (error) {
@@ -46,7 +46,7 @@ definePageMeta({
         <button class="absolute -left-16 text-primary" @click="$router.back()">
           <Icon name="ri:arrow-left-line" class="text-4xl font-bold text-secondary" />
         </button>
-        <h2 class="text-2xl">Crear nueva categoria</h2>
+        <h2 class="text-2xl">Crear nueva categoría</h2>
       </div>
 
       <div class="card mx-auto mb-20 mt-8 w-full max-w-sm flex-shrink-0 px-2 lg:mb-8">
@@ -102,7 +102,7 @@ definePageMeta({
           </figure>
           <div
             v-else
-            class="mt-8 flex h-[40rem] flex-col items-center justify-center rounded-xl bg-white shadow-pinterest"
+            class="background mt-8 flex h-[40rem] flex-col items-center justify-center rounded-xl bg-base-100 shadow-pinterest"
           >
             <Icon name="tabler:photo-exclamation" size="48" class="text-secondary" />
             Vista previa no disponible

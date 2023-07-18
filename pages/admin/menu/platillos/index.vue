@@ -3,33 +3,21 @@ import { useMainStore } from '@/stores/menu';
 import { storeToRefs } from 'pinia';
 
 const store = useMainStore();
-const { currentCategory } = storeToRefs(store);
+const { currentSection } = storeToRefs(store);
 
-const sections = ref([]);
 const supabase = useSupabaseClient();
-const { data } = await useAsyncData(
-  'sections',
-  async () => await supabase.from('sections').select('*, categories(*)'),
-  { transform: (result) => result.data }
-);
+const { data: items } = await supabase.from('items').select('*');
 
-onMounted(() => {
-  sections.value = data.value;
-});
-
-function newSection() {
-  currentCategory.value = null;
-  return navigateTo('/admin/menu/secciones/nueva-seccion');
+function newItem() {
+  currentSection.value = null;
+  return navigateTo('/admin/menu/platillos/nuevo-platillo');
 }
-
-const modal = ref(null);
 
 definePageMeta({
   middleware: 'auth',
   pageTransition: {
     name: 'up',
     mode: 'out-in',
-    appear: true,
   },
   layout: 'admin-layout',
 });
@@ -49,36 +37,29 @@ definePageMeta({
           <!-- <h2 class="text-2xl">Todas las secciones</h2> -->
           <div class="breadcrumbs text-2xl">
             <ul>
-              <li><a>Secciones</a></li>
+              <li><a>Platillos</a></li>
               <li>
-                <a>Todas</a>
+                <a>Todos</a>
               </li>
             </ul>
           </div>
         </div>
 
-        <button
-          class="btn-primary btn mx-auto mt-4 text-lg normal-case lg:mx-0"
-          @click="newSection"
-        >
-          Nueva sección
+        <button class="btn-primary btn mx-auto mt-4 text-lg normal-case lg:mx-0" @click="newItem">
+          Nuevo platillo
         </button>
       </div>
 
       <section class="mb-24 mt-8 grid w-full gap-8 p-4">
-        <div
-          v-if="sections.length"
-          :class="{ 'lg:grid-cols-2': sections.length }"
-          class="grid w-full gap-8 p-4"
-        >
-          <AdminSectionBanner v-for="section in sections" :key="section.title" :section="section" />
+        <div v-if="items.length">
+          <ul class="grid gap-8 p-4 lg:grid-cols-3">
+            <LazyAdminSectionItems v-for="item in items" :key="item.id" :item="item" />
+          </ul>
         </div>
         <div v-else>
-          <NoData>No hay ninguna sección</NoData>
+          <NoData>No hay ningún platillo</NoData>
         </div>
       </section>
     </section>
-    <button ref="modal" class="hidden" onclick="my_modal_5.showModal()"></button>
-    <CustomModal type="no-sections" />
   </main>
 </template>

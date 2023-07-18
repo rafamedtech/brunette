@@ -43,10 +43,8 @@ module.exports = {
           primary: '#7a8a3a',
 
           secondary: '#baa476',
-          // secondary: '#dfebe6',
 
           accent: '#baa476',
-          // accent: '#7a8a3a',
 
           neutral: '#021431',
 

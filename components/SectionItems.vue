@@ -13,7 +13,7 @@ defineProps({
     <li :class="{ 'mx-auto': items.length === 1 }" v-for="item in items" :key="item.name">
       <div>
         <h4 class="text-base font-bold uppercase text-primary">{{ item.name }}</h4>
-        <p v-if="item.description" v-html="item.description"></p>
+        <p v-if="item.description">{{ item.description }}</p>
         <p class="text-secondary" :class="{ 'text-black': !item.description }" v-if="item.price">
           {{ item.price }}
         </p>

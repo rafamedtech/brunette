@@ -1,7 +1,18 @@
 <script setup>
-// const supabase = useSupabaseClient();
+import { useMainStore } from '@/stores/menu';
+import { storeToRefs } from 'pinia';
 
-// const { data: menu } = await supabase.from('categories').select('*');
+const store = useMainStore();
+const { currentCategory, currentSection } = storeToRefs(store);
+
+function newSection() {
+  currentCategory.value = null;
+  return navigateTo('/admin/menu/secciones/nueva-seccion');
+}
+function newItem() {
+  currentSection.value = null;
+  return navigateTo('/admin/menu/platillos/nuevo-platillo');
+}
 
 definePageMeta({
   middleware: 'auth',
@@ -24,9 +35,13 @@ definePageMeta({
           tabindex="0"
           class="dropdown-content menu rounded-box z-[1] w-52 bg-base-100 p-2 shadow"
         >
-          <li><a>Categoria</a></li>
-          <li><a>Seccion</a></li>
-          <li><a>Platillo</a></li>
+          <li>
+            <NuxtLink to="/admin/menu/categorias/nueva-categoria" class="active:btn-primary"
+              >Categoría</NuxtLink
+            >
+          </li>
+          <li><button @click="newSection" class="active:btn-primary">Sección</button></li>
+          <li><button @click="newItem" class="active:btn-primary">Platillo</button></li>
         </ul>
       </div>
     </section>
@@ -36,7 +51,7 @@ definePageMeta({
         to="/admin/menu/categorias"
         class="background card mx-auto flex h-32 w-full items-center justify-center bg-base-100 text-center shadow-xl"
       >
-        <span class="font-handlee text-3xl">Categorias</span>
+        <span class="font-handlee text-3xl">Categorías</span>
       </NuxtLink>
       <NuxtLink
         to="/admin/menu/secciones"
@@ -45,7 +60,7 @@ definePageMeta({
         <span class="font-handlee text-3xl">Secciones</span>
       </NuxtLink>
       <NuxtLink
-        to="/"
+        to="/admin/menu/platillos"
         class="background card mx-auto flex h-32 w-full items-center justify-center bg-base-100 text-center shadow-xl"
       >
         <span class="font-handlee text-3xl">Platillos</span>

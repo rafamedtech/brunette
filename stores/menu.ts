@@ -10,6 +10,9 @@ export const useMainStore = defineStore('main', () => {
   const events = reactive([]);
   const surveys = ref<any>([]);
 
+  const currentCategory = ref(null);
+  const currentSection = ref(null);
+
   const getSurveys = async () => {
     try {
       const { data: surveysData, error } = await supabase
@@ -57,6 +60,8 @@ export const useMainStore = defineStore('main', () => {
     events,
     surveys,
     reservations,
+    currentCategory,
+    currentSection,
     getSurveys,
     getReservations,
 

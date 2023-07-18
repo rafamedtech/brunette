@@ -50,6 +50,7 @@ async function userLogout() {
               :to="{ path: '/admin/menu' }"
               active-class="font-bold text-primary"
               class="flex items-center gap-2"
+              :class="{ 'font-bold text-primary underline': $route.path.includes('/menu') }"
             >
               <Icon class="text-xl text-primary" name="gala:brochure" /> <span>Menú</span>
             </NuxtLink>
@@ -59,6 +60,7 @@ async function userLogout() {
               :to="{ path: '/admin/eventos' }"
               active-class="font-bold text-primary"
               class="flex items-center gap-2"
+              :class="{ 'font-bold text-primary underline': $route.path.includes('/eventos') }"
             >
               <Icon class="text-xl text-primary" name="gala:calendar" />
               <p>Eventos</p>

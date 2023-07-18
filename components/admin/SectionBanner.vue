@@ -7,14 +7,16 @@ const props = defineProps({
 </script>
 
 <template>
-  <div
-    class="card relative mx-auto flex h-32 w-full flex-col justify-center rounded-xl px-8 py-2 shadow-xl lg:h-40"
+  <NuxtLink
+    :to="`/admin/menu/secciones/${section.id}`"
+    class="background card relative mx-auto flex h-32 w-full flex-col justify-center rounded-xl px-8 py-2 shadow-xl"
   >
-    <img
-      class="absolute inset-0 h-full w-full rounded-xl object-cover"
-      src="@/assets/images/menu-background.jpeg"
-      alt=""
-    />
+    <NuxtLink
+      class="btn-primary btn-circle btn absolute right-2 top-2 cursor-pointer"
+      :to="`/admin/menu/secciones/${section.id}/editar`"
+    >
+      <Icon name="solar:pen-outline" size="28" />
+    </NuxtLink>
 
     <h2 class="z-10 text-center font-handlee text-3xl text-black">{{ section.title }}</h2>
     <p
@@ -23,5 +25,5 @@ const props = defineProps({
     >
       {{ section.description }}
     </p>
-  </div>
+  </NuxtLink>
 </template>

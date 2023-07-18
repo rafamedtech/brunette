@@ -148,7 +148,6 @@ definePageMeta({
   pageTransition: {
     name: 'up',
     mode: 'out-in',
-    appear: true,
   },
   layout: 'admin-layout',
 });

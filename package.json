@@ -13,9 +13,9 @@
     "@nuxtjs/supabase": "^0.3.7",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@types/node": "^18",
-    "nuxt-icon": "^0.4.1",
     "daisyui": "^3.1.1",
     "nuxt": "3.4.3",
+    "nuxt-icon": "^0.4.1",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0"
   },
@@ -24,6 +24,7 @@
     "@vuelidate/core": "^2.0.2",
     "@vuelidate/validators": "^2.0.2",
     "pinia": "^2.1.4",
+    "uid": "^2.0.2",
     "vue-datepicker-ui": "^3.1.1"
   },
   "license": "MIT"
