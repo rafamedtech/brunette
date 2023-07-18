@@ -10,14 +10,9 @@ const isLoading = ref(true);
 const supabase = useSupabaseClient();
 
 const categoryId = Number(useRoute().params.id[0]);
-// const { id } = useRoute().params;
-const { data: category } = await supabase.from('categories').select('*').eq('id', categoryId);
-// const { data: category } = await supabase.from('categories').select('*').eq('id', Number(id[0]));
 
-// const { data: sections } = await supabase
-//   .from('sections')
-//   .select('*, categories(*)')
-//   .eq('category', categoryId);
+const { data: category } = await supabase.from('categories').select('*').eq('id', categoryId);
+
 const sections = ref([]);
 const { data } = await useAsyncData(
   'sections',

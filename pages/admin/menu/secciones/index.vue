@@ -2,6 +2,8 @@
 import { useMainStore } from '@/stores/menu';
 import { storeToRefs } from 'pinia';
 
+const isLoading = ref(true);
+
 const store = useMainStore();
 const { currentCategory } = storeToRefs(store);
 
@@ -9,12 +11,13 @@ const sections = ref([]);
 const supabase = useSupabaseClient();
 const { data } = await useAsyncData(
   'sections',
-  async () => await supabase.from('sections').select('*, categories(*)'),
+  async () => await supabase.from('sections').select('id, title'),
   { transform: (result) => result.data }
 );
 
 onMounted(() => {
   sections.value = data.value;
+  isLoading.value = false;
 });
 
 function newSection() {
@@ -71,10 +74,24 @@ definePageMeta({
           :class="{ 'lg:grid-cols-2': sections.length }"
           class="grid w-full gap-8 p-4"
         >
-          <AdminSectionBanner v-for="section in sections" :key="section.title" :section="section" />
+          <Suspense>
+            <template #default>
+              <AdminSectionBanner
+                v-for="section in sections"
+                :key="section.title"
+                :section="section"
+              />
+            </template>
+            <template #fallback>
+              <div class="grid w-full gap-8 p-4">Cargando...</div>
+            </template>
+          </Suspense>
         </div>
-        <div v-else>
+        <div v-if="!sections.length && !isLoading">
           <NoData>No hay ninguna sección</NoData>
+        </div>
+        <div v-if="!sections.length && isLoading" class="grid w-full gap-8 p-4">
+          <Loader />
         </div>
       </section>
     </section>
