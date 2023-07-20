@@ -1,16 +1,13 @@
 <script setup>
-import { useMainStore } from '@/stores/menu';
-import { storeToRefs } from 'pinia';
+import { useVuelidate } from '@vuelidate/core';
+import { required, requiredIf, helpers } from '@vuelidate/validators';
 import { uid } from 'uid';
 const sectionId = useRoute().params.id[0];
 
-// const { events } = await useEvents();
-
-const mainStore = useMainStore();
-const { isLoading } = storeToRefs(mainStore);
+const store = useMainStore();
+const { isLoading } = storeToRefs(store);
 const supabase = useSupabaseClient();
 
-// const event = events.value.find((event) => event.id === Number(eventId));
 const { data: sections } = await supabase.from('sections').select('*');
 const { id } = useRoute().params;
 const { data: item } = await supabase.from('items').select('*').eq('id', Number(id[0]));
@@ -23,8 +20,6 @@ const updatedItem = reactive({
   variants: [],
 });
 
-// event.value = events.value.find((event) => event.id === Number(eventId));
-
 onMounted(() => {
   isLoading.value = false;
   updatedItem.name = item[0].name;
@@ -33,12 +28,6 @@ onMounted(() => {
   updatedItem.section = item[0].section;
   updatedItem.variants = item[0].variants;
 });
-
-// watchEffect(() => {
-//   if (currentCategory.value) {
-//     updatedSection.category = currentCategory.value;
-//   }
-// });
 
 function addVariant() {
   if (updatedItem.variants.length === 3) {
@@ -56,9 +45,14 @@ function removeVariant(id) {
 }
 
 async function updateItem() {
+  v$.value.$validate();
+  if (v$.value.$error) {
+    return;
+  }
+
   isLoading.value = true;
   try {
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('items')
       .update(updatedItem)
       .eq('id', Number(sectionId))
@@ -71,6 +65,42 @@ async function updateItem() {
     console.log(error);
   }
 }
+
+const rules = computed(() => {
+  return {
+    name: {
+      required: helpers.withMessage('Este campo es obligatorio', required),
+    },
+    section: {
+      required: helpers.withMessage('Este campo es obligatorio', required),
+    },
+    price: {
+      required: helpers.withMessage(
+        'Este campo es obligatorio',
+        requiredIf(updatedItem.variants.length < 1)
+      ),
+    },
+
+    variants: {
+      $each: helpers.forEach({
+        name: {
+          required: helpers.withMessage(
+            'Este campo es obligatorio',
+            requiredIf(!updatedItem.price)
+          ),
+        },
+        price: {
+          required: helpers.withMessage(
+            'Este campo es obligatorio',
+            requiredIf(!updatedItem.price)
+          ),
+        },
+      }),
+    },
+  };
+});
+
+const v$ = useVuelidate(rules, updatedItem);
 
 definePageMeta({
   pageTransition: {
@@ -104,10 +134,11 @@ definePageMeta({
               class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
               v-model="updatedItem.name"
             />
-            <!-- <label class="label">
-            <span class="label-text-alt">Bottom Left label</span>
-            <span class="label-text-alt">Bottom Right label</span>
-          </label> -->
+            <label class="label">
+              <span v-if="v$.name.$error" class="label-text-alt text-error">{{
+                v$.name.$errors[0].$message
+              }}</span>
+            </label>
           </div>
           <div class="form-control w-full">
             <label class="label">
@@ -119,22 +150,12 @@ definePageMeta({
               class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
               v-model="updatedItem.description"
             />
-            <!-- <label class="label">
-            <span class="label-text-alt">Bottom Left label</span>
-            <span class="label-text-alt">Bottom Right label</span>
-          </label> -->
           </div>
           <div class="form-control">
             <label class="label">
               <span class="label-text text-primary">Sección</span>
-              <!-- <span class="label-text-alt">Alt label</span> -->
             </label>
-            <!-- <input
-              type="text"
-              class="input-bordered input-primary input w-full text-primary"
-              placeholder="ej. nombre-categoria"
-              v-model="section.slug"
-            /> -->
+
             <select
               v-model="updatedItem.section"
               id="mesero"
@@ -144,26 +165,30 @@ definePageMeta({
                 {{ section.title }}
               </option>
             </select>
-            <!-- <label class="label">
-            <span class="label-text-alt">Alt label</span>
-            <span class="label-text-alt">Alt label</span>
-          </label> -->
+            <label class="label">
+              <span v-if="v$.section.$error" class="label-text-alt text-error">{{
+                v$.section.$errors[0].$message
+              }}</span>
+            </label>
           </div>
 
           <div class="form-control w-full">
             <label class="label">
               <span class="label-text text-primary">Precio</span>
             </label>
-            <input
-              type="text"
-              placeholder="Escribe aqui"
-              class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
-              v-model="updatedItem.price"
-            />
-            <!-- <label class="label">
-            <span class="label-text-alt">Bottom Left label</span>
-            <span class="label-text-alt">Bottom Right label</span>
-          </label> -->
+            <div class="join w-full">
+              <label class="btn-secondary join-item btn border text-xl text-white">$</label>
+              <input
+                type="number"
+                class="input-bordered input join-item w-full border-[#d1d5db] transition-all focus:ring focus:ring-primary"
+                v-model="updatedItem.price"
+              />
+            </div>
+            <label class="label">
+              <span v-if="v$.price.$error" class="label-text-alt text-error">{{
+                v$.price.$errors[0].$message
+              }}</span>
+            </label>
           </div>
 
           <section class="mt-8">
@@ -190,16 +215,35 @@ definePageMeta({
                   type="text"
                   class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
                 />
+                <label class="label">
+                  <span
+                    v-for="error in v$.variants.$each.$response.$errors[index].name"
+                    :key="error"
+                    class="label-text-alt text-error"
+                    >{{ error.$message }}</span
+                  >
+                </label>
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="label-text text-primary">Precio</span>
                 </label>
-                <input
-                  v-model="variant.price"
-                  type="text"
-                  class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
-                />
+                <div class="join w-full">
+                  <label class="btn-secondary join-item btn border text-xl text-white">$</label>
+                  <input
+                    v-model="variant.price"
+                    type="number"
+                    class="input-bordered input join-item w-full border-[#d1d5db] transition-all focus:ring focus:ring-primary"
+                  />
+                </div>
+                <label class="label">
+                  <span
+                    class="label-text-alt text-error"
+                    v-for="error in v$.variants.$each.$response.$errors[index].price"
+                    :key="error"
+                    >{{ error.$message }}</span
+                  >
+                </label>
               </div>
               <div class="divider"></div>
             </div>
@@ -217,13 +261,16 @@ definePageMeta({
               class="btn-error btn w-40 bg-red-500 text-white"
               onclick="my_modal_5.showModal()"
             >
-              <span>Eliminar</span>
+              <span class="normal-case">Eliminar</span>
               <Icon name="ic:outline-delete" size="28" />
             </button>
 
             <button class="btn-primary btn mx-auto w-44" @click="updateItem">
               <Icon v-if="isLoading" name="svg-spinners:tadpole" size="32" />
-              <span v-else>Actualizar platillo</span>
+              <div v-else class="flex items-center gap-2">
+                <span class="normal-case">Guardar</span>
+                <Icon name="icon-park-outline:save-one" size="28" />
+              </div>
             </button>
           </section>
         </form>

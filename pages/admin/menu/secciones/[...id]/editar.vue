@@ -1,25 +1,22 @@
 <script setup>
-import { useMainStore } from '@/stores/menu';
-import { storeToRefs } from 'pinia';
+// import { useMainStore } from '@/stores/menu';
+// import { storeToRefs } from 'pinia';
+import { useVuelidate } from '@vuelidate/core';
+import { required, helpers } from '@vuelidate/validators';
 const sectionId = useRoute().params.id[0];
-
-// const { events } = await useEvents();
 
 const mainStore = useMainStore();
 const { isLoading } = storeToRefs(mainStore);
 const supabase = useSupabaseClient();
 
-// const event = events.value.find((event) => event.id === Number(eventId));
 const { data: categories } = await supabase.from('categories').select('*');
-const { id } = useRoute().params;
-const { data: section } = await supabase.from('sections').select('*').eq('id', Number(id[0]));
+const id = Number(useRoute().params.id[0]);
+const { data: section } = await supabase.from('sections').select('*').eq('id', id);
 
 const updatedSection = reactive({
   title: '',
   category: '',
 });
-
-// event.value = events.value.find((event) => event.id === Number(eventId));
 
 onMounted(() => {
   isLoading.value = false;
@@ -33,8 +30,27 @@ onMounted(() => {
 //   }
 // });
 
+const rules = computed(() => {
+  return {
+    title: {
+      required: helpers.withMessage('Este campo es obligatorio', required),
+    },
+    category: {
+      required: helpers.withMessage('Este campo es obligatorio', required),
+    },
+  };
+});
+
+const v$ = useVuelidate(rules, updatedSection);
+
 async function updateSection() {
+  v$.value.$validate();
+  if (v$.value.$error) {
+    return;
+  }
+
   isLoading.value = true;
+
   try {
     const { data, error } = await supabase
       .from('sections')
@@ -50,16 +66,10 @@ async function updateSection() {
   }
 }
 
-// async function deleteCurrentEvent() {
-//   events.value = events.value.filter((event) => event.id !== Number(eventId));
-//   await navigateTo('/admin/eventos');
-// }
-
 definePageMeta({
   pageTransition: {
     name: 'up',
     mode: 'out-in',
-    appear: true,
   },
   layout: 'admin-layout',
 });
@@ -69,11 +79,6 @@ definePageMeta({
   <main class="w-full">
     <AdminPageTitle> Administrar Menú </AdminPageTitle>
     <div class="mb-8">
-      <!-- <div class="w-full text-center lg:mb-0">
-        <h2 class="font-handlee text-4xl text-primary">Administrar eventos</h2>
-        <div class="divider mx-auto w-1/2"></div>
-      </div> -->
-
       <div class="relative mx-auto mt-4 flex w-fit items-center justify-center">
         <button class="absolute -left-16 text-primary" @click="$router.back()">
           <Icon name="ri:arrow-left-line" class="text-4xl font-bold text-secondary" />
@@ -82,47 +87,38 @@ definePageMeta({
       </div>
 
       <div class="mb-20 mt-8 flex w-full flex-col items-center gap-4 rounded-xl lg:mb-8">
-        <!-- <h4 class="text-2xl text-primary">{{ event.title }}</h4> -->
         <div class="form-control w-full px-2 lg:w-96 lg:px-0">
           <label class="label">
-            <span class="label-text">Nombre</span>
+            <span class="label-text text-primary">Nombre</span>
           </label>
           <input
             type="text"
-            placeholder="Escribe aqui"
-            class="input-bordered input-primary input w-full text-primary"
+            placeholder="Escribe aquí"
+            class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
             v-model="updatedSection.title"
           />
-          <!-- <label class="label">
-            <span class="label-text-alt">Bottom Left label</span>
-            <span class="label-text-alt">Bottom Right label</span>
-          </label> -->
+          <label v-if="v$.title.$error" class="label">
+            <span class="label-text-alt text-error">{{ v$.title.$errors[0].$message }}</span>
+          </label>
         </div>
         <div class="form-control w-full px-2 lg:w-96 lg:px-0">
           <label class="label">
-            <span class="label-text text-primary">Categoria</span>
-            <!-- <span class="label-text-alt">Alt label</span> -->
+            <span class="label-text text-primary">Categoría</span>
           </label>
-          <!-- <input
-              type="text"
-              class="input-bordered input-primary input w-full text-primary"
-              placeholder="ej. nombre-categoria"
-              v-model="category.slug"
-            /> -->
+
           <select
             v-model="updatedSection.category"
             id="mesero"
             class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
           >
-            <option value="" selected>Selecciona una opcion</option>
+            <option value="" selected>Selecciona una opción</option>
             <option v-for="category in categories" :key="category.id" :value="category.id">
               {{ category.title }}
             </option>
           </select>
-          <!-- <label class="label">
-            <span class="label-text-alt">Alt label</span>
-            <span class="label-text-alt">Alt label</span>
-          </label> -->
+          <label v-if="v$.category.$error" class="label">
+            <span class="label-text-alt text-error">{{ v$.category.$errors[0].$message }}</span>
+          </label>
         </div>
 
         <!-- <figure class="w-full px-2 lg:w-96">
@@ -130,14 +126,14 @@ definePageMeta({
         </figure> -->
         <section class="flex gap-2">
           <button class="btn-error btn w-40 bg-red-500 text-white" onclick="my_modal_5.showModal()">
-            <span>Eliminar</span>
+            <span class="normal-case">Eliminar</span>
             <Icon name="ic:outline-delete" size="28" />
           </button>
           <button class="btn-primary btn w-40 text-white" @click="updateSection">
             <Icon v-if="isLoading" name="svg-spinners:tadpole" size="32" />
             <div v-else class="flex items-center gap-2">
-              <span>Guardar</span>
-              <Icon name="carbon:save" size="28" />
+              <span class="normal-case">Guardar</span>
+              <Icon name="icon-park-outline:save-one" size="28" />
             </div>
           </button>
         </section>

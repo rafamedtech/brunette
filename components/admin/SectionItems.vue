@@ -14,7 +14,7 @@ const props = defineProps({
       class="btn-circle btn absolute -right-4 -top-4 z-50 cursor-pointer border-transparent bg-transparent text-secondary hover:btn-primary"
       :to="`/admin/menu/platillos/${item.id}/editar`"
     >
-      <Icon name="solar:pen-outline" size="28" />
+      <Icon name="solar:pen-outline" size="24" />
     </NuxtLink>
     <div
       class="flex h-full w-full flex-col justify-between rounded-xl bg-white p-2 backdrop-opacity-50"

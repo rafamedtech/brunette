@@ -22,18 +22,7 @@ const itemName = ref(null);
 onMounted(() => {
   itemName.value.focus();
 });
-// const variants = ref([])
 
-// function addVariant() {
-//   if (variants.value.length === 3) {
-//     return;
-//   }
-//   variants.value.push({
-//     id: uid(2),
-//     name: '',
-//     price: 0,
-//   });
-// }
 function addVariant() {
   if (item.variants.length === 3) {
     return;
@@ -45,9 +34,6 @@ function addVariant() {
   });
 }
 
-// function removeVariant(id) {
-//   variants.value = variants.value.filter((variant) => variant.id !== id);
-// }
 function removeVariant(id) {
   item.variants = item.variants.filter((variant) => variant.id !== id);
 }
@@ -67,7 +53,6 @@ const rules = computed(() => {
       required: helpers.withMessage('Este campo es obligatorio', required),
     },
     price: {
-      // required:  requiredIf(item.variants.length < 1)
       required: helpers.withMessage(
         'Este campo es obligatorio',
         requiredIf(item.variants.length < 1)
@@ -88,20 +73,18 @@ const rules = computed(() => {
 });
 
 const v$ = useVuelidate(rules, item);
-// const v$ = useVuelidate(rules, {item, variants: variants.value});
 
 async function createItem() {
   v$.value.$validate();
   if (v$.value.$error) {
     return;
   }
+
   isLoading.value = true;
-  // console.log(item);
-  // // console.log(section);
+
   try {
     const { error } = await supabase.from('items').insert([item]);
 
-    // console.log(data);
     isLoading.value = false;
     await navigateTo('/admin/menu/platillos');
 
@@ -148,7 +131,6 @@ definePageMeta({
               <span v-if="v$.name.$error" class="label-text-alt text-error">{{
                 v$.name.$errors[0].$message
               }}</span>
-              <!-- <span class="label-text-alt">Bottom Right label</span> -->
             </label>
           </div>
           <div class="form-control w-full">
@@ -161,22 +143,12 @@ definePageMeta({
               class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
               v-model="item.description"
             />
-            <!-- <label class="label">
-            <span class="label-text-alt">Bottom Left label</span>
-            <span class="label-text-alt">Bottom Right label</span>
-          </label> -->
           </div>
           <div class="form-control">
             <label class="label">
               <span class="label-text text-primary">Sección</span>
-              <!-- <span class="label-text-alt">Alt label</span> -->
             </label>
-            <!-- <input
-              type="text"
-              class="input-bordered input-primary input w-full text-primary"
-              placeholder="ej. nombre-categoria"
-              v-model="section.slug"
-            /> -->
+
             <select
               v-model="item.section"
               id="mesero"
@@ -191,7 +163,6 @@ definePageMeta({
               <span v-if="v$.section.$error" class="label-text-alt text-error">{{
                 v$.section.$errors[0].$message
               }}</span>
-              <!-- <span class="label-text-alt">Alt label</span> -->
             </label>
           </div>
 
@@ -255,7 +226,7 @@ definePageMeta({
                   <label class="btn-secondary join-item btn border text-xl text-white">$</label>
                   <input
                     v-model="variant.price"
-                    type="text"
+                    type="number"
                     class="input-bordered input join-item w-full border-[#d1d5db] transition-all focus:ring focus:ring-primary"
                   />
                 </div>

@@ -1,11 +1,4 @@
 <script setup>
-// import { useEventStore } from '@/stores/events';
-// import { useMainStore } from '@/stores/menu';
-// import { storeToRefs } from 'pinia';
-
-// const store = useMainStore();
-
-// const { isLoading } = storeToRefs(store);
 const props = defineProps({
   type: String,
 });
@@ -36,15 +29,15 @@ const descriptionText = computed(() => {
   return 'Seguro que deseas eliminar esto?';
 });
 
-const { events, deleteEvent } = await useEvents();
+// const { events, deleteEvent } = await useEvents();
 const { deleteCategory, deleteSection, deleteItem } = useMenu();
 
 async function deleteCurrentEvent() {
   const id = useRoute().params.id[0];
+  const { events, deleteEvent } = await useEvents();
   await deleteEvent(Number(id));
 
   events.value = events.value.filter((event) => event.id !== Number(id));
-  // console.log(events.value);
 
   await navigateTo('/admin/eventos');
 }

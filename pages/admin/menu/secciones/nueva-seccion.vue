@@ -1,6 +1,6 @@
 <script setup>
-import { useMainStore } from '@/stores/menu';
-import { storeToRefs } from 'pinia';
+import { useVuelidate } from '@vuelidate/core';
+import { required, helpers } from '@vuelidate/validators';
 
 const store = useMainStore();
 const { isLoading, currentCategory } = storeToRefs(store);
@@ -20,13 +20,30 @@ watchEffect(() => {
   }
 });
 
+const rules = computed(() => {
+  return {
+    title: {
+      required: helpers.withMessage('Este campo es obligatorio', required),
+    },
+    category: {
+      required: helpers.withMessage('Este campo es obligatorio', required),
+    },
+  };
+});
+
+const v$ = useVuelidate(rules, section);
+
 async function createSection() {
+  v$.value.$validate();
+  if (v$.value.$error) {
+    return;
+  }
+
   isLoading.value = true;
-  // console.log(section);
+
   try {
     const { error } = await supabase.from('sections').insert([section]);
 
-    // console.log(data);
     isLoading.value = false;
     await navigateTo('/admin/menu/secciones');
 
@@ -40,7 +57,6 @@ definePageMeta({
   pageTransition: {
     name: 'up',
     mode: 'out-in',
-    appear: true,
   },
   layout: 'admin-layout',
 });
@@ -65,26 +81,19 @@ definePageMeta({
             </label>
             <input
               type="text"
-              placeholder="Escribe aqui"
+              placeholder="Escribe aquí"
               class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
               v-model="section.title"
             />
-            <!-- <label class="label">
-            <span class="label-text-alt">Bottom Left label</span>
-            <span class="label-text-alt">Bottom Right label</span>
-          </label> -->
+            <label v-if="v$.title.$error" class="label">
+              <span class="label-text-alt text-error">{{ v$.title.$errors[0].$message }}</span>
+            </label>
           </div>
           <div class="form-control">
             <label class="label">
-              <span class="label-text text-primary">Categoria</span>
-              <!-- <span class="label-text-alt">Alt label</span> -->
+              <span class="label-text text-primary">Categoría</span>
             </label>
-            <!-- <input
-              type="text"
-              class="input-bordered input-primary input w-full text-primary"
-              placeholder="ej. nombre-categoria"
-              v-model="category.slug"
-            /> -->
+
             <select
               v-model="section.category"
               id="mesero"
@@ -94,15 +103,14 @@ definePageMeta({
                 {{ category.title }}
               </option>
             </select>
-            <!-- <label class="label">
-            <span class="label-text-alt">Alt label</span>
-            <span class="label-text-alt">Alt label</span>
-          </label> -->
+            <label v-if="v$.category.$error" class="label">
+              <span class="label-text-alt text-error">{{ v$.category.$errors[0].$message }}</span>
+            </label>
           </div>
 
           <button class="btn-primary btn mx-auto my-4 w-44" @click="createSection">
             <Icon v-if="isLoading" name="svg-spinners:tadpole" size="32" />
-            <span v-else>Crear seccion</span>
+            <span v-else class="normal-case">Crear seccion</span>
           </button>
         </form>
       </div>

@@ -12,10 +12,10 @@ const props = defineProps({
     class="background card relative mx-auto flex h-32 w-full flex-col justify-center rounded-xl px-8 py-2 shadow-xl"
   >
     <NuxtLink
-      class="btn-primary btn-circle btn absolute right-2 top-2 cursor-pointer"
+      class="btn-circle btn absolute right-2 top-2 cursor-pointer bg-transparent hover:btn-primary"
       :to="`/admin/menu/secciones/${section.id}/editar`"
     >
-      <Icon name="solar:pen-outline" size="28" />
+      <Icon name="solar:pen-outline" size="24" />
     </NuxtLink>
 
     <h2 class="z-10 text-center font-handlee text-3xl text-black">{{ section.title }}</h2>

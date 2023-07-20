@@ -1,15 +1,11 @@
 <script setup>
-import { useMainStore } from '@/stores/menu';
-import { storeToRefs } from 'pinia';
-const eventId = useRoute().params.id[0];
-
-const { events } = await useEvents();
+import { useVuelidate } from '@vuelidate/core';
+import { required, helpers } from '@vuelidate/validators';
 
 const mainStore = useMainStore();
 const { isLoading } = storeToRefs(mainStore);
 const supabase = useSupabaseClient();
 
-// const event = events.value.find((event) => event.id === Number(eventId));
 const id = Number(useRoute().params.id[0]);
 const { data: category } = await supabase.from('categories').select('*').eq('id', id);
 
@@ -19,8 +15,6 @@ const updatedCategory = reactive({
   cover: '',
 });
 
-// event.value = events.value.find((event) => event.id === Number(eventId));
-
 onMounted(() => {
   isLoading.value = false;
   updatedCategory.title = category[0].title;
@@ -29,9 +23,14 @@ onMounted(() => {
 });
 
 async function updateCategory() {
+  v$.value.$validate();
+  if (v$.value.$error) {
+    return;
+  }
+
   isLoading.value = true;
   try {
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('categories')
       .update(updatedCategory)
       .eq('id', id)
@@ -45,10 +44,25 @@ async function updateCategory() {
   }
 }
 
-// async function deleteCurrentEvent() {
-//   events.value = events.value.filter((event) => event.id !== Number(eventId));
-//   await navigateTo('/admin/eventos');
-// }
+const rules = computed(() => {
+  return {
+    title: {
+      required: helpers.withMessage('Este campo es obligatorio', required),
+    },
+    slug: {
+      required: helpers.withMessage('Este campo es obligatorio', required),
+    },
+    cover: {
+      required: helpers.withMessage('Este campo es obligatorio', required),
+      validImage: helpers.withMessage(
+        'El enlace a la imagen no es válido',
+        helpers.regex(/(https?:\/\/.*\.(?:png|jpg|jpeg|gif|svg))/i)
+      ),
+    },
+  };
+});
+
+const v$ = useVuelidate(rules, updatedCategory);
 
 definePageMeta({
   pageTransition: {
@@ -64,11 +78,6 @@ definePageMeta({
   <main class="w-full">
     <AdminPageTitle> Administrar Menú </AdminPageTitle>
     <div class="mb-8">
-      <!-- <div class="w-full text-center lg:mb-0">
-        <h2 class="font-handlee text-4xl text-primary">Administrar eventos</h2>
-        <div class="divider mx-auto w-1/2"></div>
-      </div> -->
-
       <div class="relative mx-auto mt-4 flex w-fit items-center justify-center">
         <button class="absolute -left-16 text-primary" @click="$router.back()">
           <Icon name="ri:arrow-left-line" class="text-4xl font-bold text-secondary" />
@@ -80,62 +89,87 @@ definePageMeta({
         <!-- <h4 class="text-2xl text-primary">{{ event.title }}</h4> -->
         <div class="form-control w-full px-2 lg:w-96 lg:px-0">
           <label class="label">
-            <span class="label-text">Nombre</span>
+            <span class="label-text text-primary">Nombre</span>
           </label>
           <input
             type="text"
             placeholder="Escribe aqui"
-            class="input-bordered input-primary input w-full text-primary"
+            class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
             v-model="updatedCategory.title"
           />
-          <!-- <label class="label">
-            <span class="label-text-alt">Bottom Left label</span>
-            <span class="label-text-alt">Bottom Right label</span>
-          </label> -->
+          <label class="label">
+            <span v-if="v$.title.$error" class="label-text-alt text-error">{{
+              v$.title.$errors[0].$message
+            }}</span>
+          </label>
         </div>
         <div class="form-control w-full px-2 lg:w-96 lg:px-0">
           <label class="label">
-            <span class="label-text">Slug</span>
+            <span class="label-text text-primary">Slug</span>
           </label>
           <input
             type="text"
             placeholder="Ej. nombre-categoria"
-            class="input-bordered input-primary input w-full text-primary"
+            class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary disabled:border-[#d1d5db] disabled:bg-transparent disabled:italic"
             v-model="updatedCategory.slug"
+            disabled
           />
-          <!-- <label class="label">
-            <span class="label-text-alt">Bottom Left label</span>
-            <span class="label-text-alt">Bottom Right label</span>
-          </label> -->
+          <label class="label">
+            <span v-if="v$.slug.$error" class="label-text-alt text-error">{{
+              v$.slug.$errors[0].$message
+            }}</span>
+          </label>
         </div>
         <div class="form-control w-full px-2 lg:w-96 lg:px-0">
           <label class="label">
-            <span class="label-text">Imagen (URL)</span>
-            <!-- <span class="label-text-alt">Alt label</span> -->
+            <span class="label-text text-primary">Imagen (URL)</span>
           </label>
           <input
             type="text"
-            class="input-bordered input-primary input w-full text-primary"
+            class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
+            @input="v$.cover.$touch"
+            placeholder="Ej. https://image-url.com/image-name.jpg"
             v-model="updatedCategory.cover"
           />
-          <!-- <label class="label">
-            <span class="label-text-alt">Alt label</span>
-            <span class="label-text-alt">Alt label</span>
-          </label> -->
+          <label v-if="v$.cover.$error" class="label">
+            <span
+              v-for="error in v$.cover.$errors"
+              :key="error"
+              class="label-text-alt text-error"
+              >{{ error.$message }}</span
+            >
+          </label>
         </div>
-        <figure class="w-full px-2 lg:w-96">
+
+        <!-- Cover preview -->
+        <figure class="mt-4 w-full lg:w-96" v-if="updatedCategory.cover && !v$.cover.$error">
           <img :src="updatedCategory.cover" alt="" class="w-full rounded-xl shadow-xl" />
         </figure>
+        <div
+          v-if="!updatedCategory.cover | (!v$.cover.$error && !updatedCategory.cover)"
+          class="background mt-4 flex h-[40rem] w-96 flex-col items-center justify-center gap-2 rounded-xl bg-base-100 shadow-pinterest"
+        >
+          <Icon name="tabler:photo-exclamation" size="48" class="text-secondary" />
+          Vista previa no disponible
+        </div>
+
+        <div
+          v-if="v$.cover.$error && updatedCategory.cover"
+          class="background mt-4 flex h-[40rem] w-96 flex-col items-center justify-center gap-2 rounded-xl bg-base-100 shadow-pinterest"
+        >
+          <Icon name="tabler:photo-exclamation" size="48" class="text-error" />
+          Imagen NO válida
+        </div>
         <section class="flex gap-2">
           <button class="btn-error btn w-40 bg-red-500 text-white" onclick="my_modal_5.showModal()">
-            <span>Eliminar</span>
+            <span class="normal-case">Eliminar</span>
             <Icon name="ic:outline-delete" size="28" />
           </button>
           <button class="btn-primary btn w-40 text-white" @click="updateCategory">
             <Icon v-if="isLoading" name="svg-spinners:tadpole" size="32" />
             <div v-else class="flex items-center gap-2">
-              <span>Guardar</span>
-              <Icon name="carbon:save" size="28" />
+              <span class="normal-case">Guardar</span>
+              <Icon name="icon-park-outline:save-one" size="28" />
             </div>
           </button>
         </section>

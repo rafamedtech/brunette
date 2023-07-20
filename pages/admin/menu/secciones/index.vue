@@ -1,7 +1,4 @@
 <script setup>
-import { useMainStore } from '@/stores/menu';
-import { storeToRefs } from 'pinia';
-
 const isLoading = ref(true);
 
 const store = useMainStore();
@@ -32,7 +29,6 @@ definePageMeta({
   pageTransition: {
     name: 'up',
     mode: 'out-in',
-    appear: true,
   },
   layout: 'admin-layout',
 });
@@ -68,7 +64,7 @@ definePageMeta({
         </button>
       </div>
 
-      <section class="mb-24 mt-8 grid w-full gap-8 p-4">
+      <section class="mb-24 mt-8 grid w-full gap-8">
         <div
           v-if="sections.length"
           :class="{ 'lg:grid-cols-2': sections.length }"
@@ -76,7 +72,7 @@ definePageMeta({
         >
           <Suspense>
             <template #default>
-              <AdminSectionBanner
+              <LazyAdminSectionBanner
                 v-for="section in sections"
                 :key="section.title"
                 :section="section"

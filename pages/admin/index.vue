@@ -1,7 +1,4 @@
 <script setup>
-import { useMainStore } from '@/stores/menu';
-import { storeToRefs } from 'pinia';
-
 const store = useMainStore();
 const { getReservations, getSurveys } = store;
 const { surveys } = storeToRefs(store);
@@ -15,18 +12,10 @@ const promises = await Promise.allSettled([getReservations(), getSurveys()]);
 //   (reservation) => new Date(reservation.date).toDateString() === new Date(Date.now()).toDateString()
 // );
 
-const {
-  reservations,
-  filteredReservations,
-  sortedReservations,
-  unconfirmedReservations,
-  canceledReservations,
-  todayReservations,
-} = await useReservation();
+const { sortedReservations, unconfirmedReservations, canceledReservations, todayReservations } =
+  await useReservation();
 
 const unreadSurveys = computed(() => surveys.value.filter((survey) => survey.complete === false));
-
-// console.log(firstWaiter.value);
 
 useHead({
   title: 'Brunette Kitchen & Drinks | Administración',
@@ -84,7 +73,6 @@ definePageMeta({
           <NuxtLink :to="{ path: '/admin/reservaciones' }" class="card-body grid w-full p-2 pt-0">
             <h3 class="text-3xl">Reservaciones</h3>
 
-            <!-- class="background stats stats-vertical mt-4 rounded-2xl shadow-xl lg:stats-horizontal" -->
             <div class="grid grid-cols-2 place-content-center gap-4 lg:grid-cols-4">
               <div
                 class="background stat items-center justify-center gap-0 rounded-xl bg-base-100 text-center shadow-xl"
@@ -126,7 +114,7 @@ definePageMeta({
             class="card-body mb-10 w-full p-2 pt-0 lg:mb-0"
           >
             <h3 class="text-3xl">Encuestas</h3>
-            <div class="mt-8 grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-2 gap-4">
               <div class="background stat rounded-xl shadow-xl">
                 <div class="stat-figure text-secondary"></div>
                 <div class="stat-title font-bold text-primary">Total</div>
@@ -147,7 +135,6 @@ definePageMeta({
             </div>
           </NuxtLink>
         </div>
-        <!-- <div class="divider"></div> -->
       </div>
     </section>
   </section>

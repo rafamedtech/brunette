@@ -1,8 +1,6 @@
 <script setup>
-// import { useMainStore } from '@/stores/menu';
-// import { storeToRefs } from 'pinia';
 import { useVuelidate } from '@vuelidate/core';
-import { required, requiredIf, helpers } from '@vuelidate/validators';
+import { required, helpers } from '@vuelidate/validators';
 
 const store = useMainStore();
 const { isLoading } = storeToRefs(store);
@@ -47,11 +45,10 @@ async function createCategory() {
   }
 
   isLoading.value = true;
-  // console.log(event);
+
   try {
     const { error } = await supabase.from('categories').insert([category]);
 
-    // console.log(data);
     isLoading.value = false;
     await navigateTo('/admin/menu/categorias');
 
@@ -76,17 +73,6 @@ const rules = computed(() => {
         helpers.regex(/(https?:\/\/.*\.(?:png|jpg|jpeg|gif|svg))/i)
       ),
     },
-
-    // variants: {
-    //   $each: helpers.forEach({
-    //     name: {
-    //       required: helpers.withMessage('Este campo es obligatorio', requiredIf(!item.price)),
-    //     },
-    //     price: {
-    //       required: helpers.withMessage('Este campo es obligatorio', requiredIf(!item.price)),
-    //     },
-    //   }),
-    // },
   };
 });
 
@@ -96,7 +82,6 @@ definePageMeta({
   pageTransition: {
     name: 'up',
     mode: 'out-in',
-    appear: true,
   },
   layout: 'admin-layout',
 });
@@ -121,7 +106,7 @@ definePageMeta({
             </label>
             <input
               type="text"
-              placeholder="Escribe aqui"
+              placeholder="Escribe aquí"
               class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
               v-model="category.title"
             />
@@ -151,7 +136,6 @@ definePageMeta({
           <div class="form-control">
             <label class="label">
               <span class="label-text text-primary">Imagen (URL)</span>
-              <!-- <span class="label-text-alt">Alt label</span> -->
             </label>
             <input
               type="text"
@@ -173,6 +157,8 @@ definePageMeta({
               <Icon name="icon-park-outline:check-one" class="text-green-500" />
             </label>
           </div>
+
+          <!-- Cover preview -->
           <figure class="mt-4 w-full" v-if="category.cover && !v$.cover.$error">
             <img :src="category.cover" alt="" class="w-full rounded-xl shadow-xl" />
           </figure>
@@ -192,9 +178,12 @@ definePageMeta({
             Imagen NO válida
           </div>
 
-          <button class="btn-primary btn mx-auto my-4 w-44" @click="createCategory">
+          <button class="btn-primary btn mx-auto mt-4 w-44" @click="createCategory">
             <Icon v-if="isLoading" name="svg-spinners:tadpole" size="32" />
-            <span v-else>Crear categoria</span>
+            <div v-else class="flex w-full items-center gap-2">
+              <span class="normal-case">Crear categoría</span>
+              <Icon name="icon-park-outline:save-one" size="24" />
+            </div>
           </button>
         </form>
       </div>
