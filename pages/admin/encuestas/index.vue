@@ -154,7 +154,7 @@ definePageMeta({
 </script>
 
 <template>
-  <section class="w-full">
+  <section class="container w-full">
     <AdminPageTitle> Administrar encuestas </AdminPageTitle>
     <section class="mb-24 lg:mb-8">
       <div class="w-full text-center">

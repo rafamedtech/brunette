@@ -18,10 +18,6 @@
     scroll-behavior: smooth; /* set scroll-behaviour to smooth here */
     width: 100vw;
     overflow-x: hidden;
-    /* margin-left: calc(100vw - 100%);
-    margin-right: 0; */
-
-    /* @apply lg:mr-0; */
   }
 
   .custom-banner {

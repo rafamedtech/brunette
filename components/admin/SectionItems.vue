@@ -11,7 +11,7 @@ const props = defineProps({
 <template>
   <li class="background relative mx-auto grid w-full place-items-center rounded-xl bg-base-200 p-4">
     <NuxtLink
-      class="btn-circle btn absolute -right-4 -top-4 z-50 cursor-pointer border-transparent bg-transparent text-secondary hover:btn-primary"
+      class="btn-primary btn-circle btn absolute -right-4 -top-4 z-40 cursor-pointer border-transparent text-white"
       :to="`/admin/menu/platillos/${item.id}/editar`"
     >
       <Icon name="solar:pen-outline" size="24" />

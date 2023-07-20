@@ -1,6 +1,6 @@
 <script setup>
-import { useMainStore } from '@/stores/menu';
-import { storeToRefs } from 'pinia';
+// import { useMainStore } from '@/stores/menu';
+// import { storeToRefs } from 'pinia';
 
 const store = useMainStore();
 const route = useRoute();
@@ -71,20 +71,7 @@ const changeLanguage = () => {
             >
             <div class="divider"></div>
           </li>
-          <!-- <li>
-            <NuxtLink
-              class="btn-primary btn h-fit flex-col gap-0 px-2 text-base-100 opacity-0 transition-all duration-500 lg:flex-row lg:gap-2"
-              :class="{
-                'opacity-100 transition-all duration-700':
-                  route.path === '/' || route.path === '/en',
-              }"
-              :to="{ path: route.path === '/' ? '/en' : '/' }"
-            >
-              <Icon name="clarity:language-solid" class="text-2xl" />
-              <span v-if="route.path === '/'" class="text-xs">ENGLISH</span>
-              <span v-if="route.path === '/en'" class="text-xs">ESPANOL</span>
-            </NuxtLink>
-          </li> -->
+
           <li>
             <div>
               <p

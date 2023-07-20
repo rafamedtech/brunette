@@ -30,10 +30,13 @@ definePageMeta({
     <AdminPageTitle> Administrar Menú </AdminPageTitle>
     <section class="flex justify-center">
       <div class="dropdown-right dropdown-hover dropdown">
-        <label tabindex="0" class="btn-primary btn mx-auto text-lg normal-case">Nuevo</label>
+        <label tabindex="0" class="btn-primary btn mx-auto normal-case">
+          Nuevo
+          <Icon name="icon-park-outline:file-addition-one" size="24" />
+        </label>
         <ul
           tabindex="0"
-          class="dropdown-content menu rounded-box z-[1] w-52 bg-base-100 p-2 shadow"
+          class="dropdown-content menu rounded-box z-[1] w-fit bg-base-100 p-2 shadow"
         >
           <li>
             <NuxtLink to="/admin/menu/categorias/nueva-categoria" class="active:btn-primary"

@@ -39,7 +39,7 @@ async function userLogout() {
           <li>
             <NuxtLink
               :to="{ path: '/admin' }"
-              active-class="font-bold text-primary"
+              active-class="font-bold text-primary underline"
               class="flex items-center gap-2"
             >
               <Icon class="text-xl text-primary" name="gala:display" /> <span>Inicio</span>
@@ -69,7 +69,7 @@ async function userLogout() {
           <li>
             <NuxtLink
               :to="{ path: '/admin/encuestas' }"
-              active-class="font-bold text-primary"
+              active-class="font-bold text-primary underline"
               class="flex items-center gap-2"
             >
               <Icon class="text-xl text-primary" name="gala:editor" />
@@ -79,7 +79,7 @@ async function userLogout() {
           <li>
             <NuxtLink
               to="/admin/reservaciones"
-              active-class="font-bold text-primary"
+              active-class="font-bold text-primary underline"
               class="flex items-center gap-2"
             >
               <Icon class="text-xl text-primary" name="gala:book" />

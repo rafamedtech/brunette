@@ -43,7 +43,7 @@ definePageMeta({
             <Icon name="ri:arrow-left-line" class="text-4xl font-bold text-secondary" />
           </NuxtLink>
           <!-- <h2 class="text-2xl">Todas las categorias</h2> -->
-          <div class="breadcrumbs text-2xl">
+          <div class="breadcrumbs lg:text-2xl">
             <ul>
               <li><a>Categorías</a></li>
               <li><a>Todas</a></li>
@@ -60,7 +60,7 @@ definePageMeta({
       </div>
 
       <div class="mb-24 mt-8 w-full p-4" :class="{ 'lg:grid-cols-2': menu.length }">
-        <div v-if="menu.length && !isLoading" class="grid grid-cols-2 gap-8">
+        <div v-if="menu.length && !isLoading" class="grid gap-8 lg:grid-cols-2">
           <AdminCategoryItem v-for="category in menu" :category="category" :key="category.title" />
         </div>
         <div v-else class="py-32">

@@ -35,7 +35,7 @@ definePageMeta({
             <Icon name="ri:arrow-left-line" class="text-4xl font-bold text-secondary" />
           </NuxtLink>
           <!-- <h2 class="text-2xl">Todas las secciones</h2> -->
-          <div class="breadcrumbs text-2xl">
+          <div class="breadcrumbs lg:text-2xl">
             <ul>
               <li><a>Platillos</a></li>
               <li>

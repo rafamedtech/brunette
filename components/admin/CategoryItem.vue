@@ -20,7 +20,7 @@ defineProps<Props>();
         ? `/admin/menu/categorias/${category.id}`
         : `/${category.slug}`,
     }"
-    class="relative flex h-52 w-full items-center justify-center overflow-hidden rounded-xl text-center shadow-xl"
+    class="relative flex h-52 w-full items-center justify-center rounded-xl text-center shadow-xl"
   >
     <img
       :src="category.cover"
@@ -29,7 +29,7 @@ defineProps<Props>();
     />
 
     <NuxtLink
-      class="btn-circle btn absolute right-2 top-2 cursor-pointer border-transparent bg-transparent text-secondary hover:btn-primary"
+      class="btn-primary btn-circle btn absolute -right-2 -top-2 cursor-pointer text-white"
       :to="`/admin/menu/categorias/${category.id}/editar`"
     >
       <Icon name="solar:pen-outline" size="28" />
