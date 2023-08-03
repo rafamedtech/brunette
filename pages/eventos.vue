@@ -69,7 +69,7 @@ definePageMeta({
     <div
       class="container hero-content w-full flex-col items-center justify-center text-center lg:flex-row"
     >
-      <p class="text-center text-black">
+      <p class="text-center text-2xl text-black">
         {{ language === 'es' ? 'Conoce los próximos eventos' : 'Find the next events' }}
       </p>
     </div>
@@ -84,7 +84,15 @@ definePageMeta({
           class="carousel-item w-full flex-col p-4 lg:px-0"
         >
           <h2 class="text-center text-2xl uppercase text-primary">{{ title }}</h2>
-          <img class="h-[40rem] rounded-2xl md:mx-auto md:object-cover" :src="cover" alt="" />
+          <!-- <img class="h-[40rem] rounded-2xl md:mx-auto md:object-cover" :src="cover" alt="" /> -->
+          <nuxt-img
+            :src="cover"
+            densities="x1 x2"
+            format="webp"
+            quality="80"
+            loading="lazy"
+            class="h-[40rem] rounded-2xl md:mx-auto md:object-cover"
+          />
         </div>
       </div>
       <div class="carousel-center carousel mx-auto w-screen max-w-md lg:hidden">
@@ -95,10 +103,18 @@ definePageMeta({
           class="carousel-item relative w-80 flex-col p-2"
         >
           <h2 class="text-center text-2xl uppercase text-primary">{{ event.title }}</h2>
-          <img
+          <!-- <img
             class="w-full rounded-2xl md:mx-auto md:h-96 md:w-96 md:object-cover"
             :src="event.cover"
             alt=""
+          /> -->
+          <nuxt-img
+            :src="event.cover"
+            densities="x1 x2"
+            format="webp"
+            quality="80"
+            loading="lazy"
+            class="w-full rounded-2xl md:mx-auto md:h-96 md:w-96 md:object-cover"
           />
           <div
             class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"

@@ -53,7 +53,7 @@ definePageMeta({
             <Icon name="ri:arrow-left-line" class="text-4xl font-bold text-secondary" />
           </button>
           <!-- <h2 class="text-2xl">Detalle de {{ section[0].title }}</h2> -->
-          <div class="breadcrumbs lg:text-2xl">
+          <div class="breadcrumbs text-xs lg:text-2xl">
             <ul>
               <li><a>Secciones</a></li>
 
@@ -64,7 +64,7 @@ definePageMeta({
           </div>
         </div>
 
-        <button class="btn-primary btn mx-auto mt-4 text-lg normal-case lg:mx-0" @click="newItem">
+        <button class="btn btn-primary mx-auto mt-4 text-lg normal-case lg:mx-0" @click="newItem">
           Nuevo platillo
         </button>
       </div>

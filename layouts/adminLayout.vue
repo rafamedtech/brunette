@@ -1,7 +1,9 @@
 <script setup>
-const user = useSupabaseUser();
-const { auth } = useSupabaseAuthClient();
+// const user = useSupabaseUser();
+
 async function userLogout() {
+  const user = useSupabaseUser();
+  const { auth } = useSupabaseAuthClient();
   try {
     const { error } = await auth.signOut();
 
@@ -133,7 +135,7 @@ async function userLogout() {
             class="btn border border-gray-300 bg-gray-300 text-black hover:border-gray-300 hover:bg-gray-300/75"
             >Cancelar</label
           >
-          <button for="my-modal-6" class="btn-primary btn text-white" @click="userLogout">
+          <button for="my-modal-6" class="btn btn-primary text-white" @click="userLogout">
             Aceptar
           </button>
         </div>

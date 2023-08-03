@@ -2,18 +2,22 @@
 const isLoading = ref(true);
 
 const store = useMainStore();
-const { currentCategory } = storeToRefs(store);
+
+const { currentCategory, language } = storeToRefs(store);
 
 const sections = ref([]);
-const supabase = useSupabaseClient();
-const { data } = await useAsyncData(
-  'sections',
-  async () => await supabase.from('sections').select('id, title'),
-  { transform: (result) => result.data }
-);
+// const supabase = useSupabaseClient();
+const { sections: data, getSections } = useMenu();
+await getSections(language.value);
+// const { data } = await useAsyncData(
+//   'sections',
+//   async () => await supabase.from('sections').select('id, title'),
+//   { transform: (result) => result.data }
+// );
 
 onMounted(() => {
   sections.value = data.value;
+
   isLoading.value = false;
 });
 
@@ -52,12 +56,29 @@ definePageMeta({
               <li>
                 <a>Todas</a>
               </li>
+              <li>
+                <a
+                  ><span
+                    class="flex gap-2 px-2 font-bold text-base-100 text-primary lg:items-center lg:gap-2"
+                    @click="changeLanguage"
+                  >
+                    <span class="">{{ language === 'es' ? 'Español' : 'Inglés' }}</span>
+                    <Icon
+                      :name="
+                        language === 'es'
+                          ? 'emojione-v1:flag-for-mexico'
+                          : 'emojione-v1:flag-for-united-states'
+                      "
+                      class="text-2xl"
+                    /> </span
+                ></a>
+              </li>
             </ul>
           </div>
         </div>
 
         <button
-          class="btn-primary btn mx-auto mt-4 text-lg normal-case lg:mx-0"
+          class="btn btn-primary mx-auto mt-4 text-lg normal-case lg:mx-0"
           @click="newSection"
         >
           Nueva sección
@@ -70,23 +91,12 @@ definePageMeta({
           :class="{ 'lg:grid-cols-2': sections.length }"
           class="grid w-full gap-8 p-4"
         >
-          <Suspense>
-            <template #default>
-              <LazyAdminSectionBanner
-                v-for="section in sections"
-                :key="section.title"
-                :section="section"
-              />
-            </template>
-            <template #fallback>
-              <div class="grid w-full gap-8 p-4">Cargando...</div>
-            </template>
-          </Suspense>
+          <AdminSectionBanner v-for="section in sections" :key="section.id" :section="section" />
         </div>
         <div v-if="!sections.length && !isLoading">
           <NoData>No hay ninguna sección</NoData>
         </div>
-        <div v-if="!sections.length && isLoading" class="grid w-full gap-8 p-4">
+        <div v-if="!sections.length && isLoading" class="py-32">
           <Loader />
         </div>
       </section>

@@ -7,9 +7,11 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="relative flex h-32 w-full flex-col justify-center py-2 lg:h-40">
+  <div
+    class="relative flex h-32 w-full flex-col justify-center py-2 lg:h-40 lg:rounded-xl lg:shadow-xl"
+  >
     <img
-      class="absolute inset-0 h-full w-full object-cover"
+      class="absolute inset-0 h-full w-full object-cover lg:rounded-xl"
       src="@/assets/images/menu-background.jpeg"
       alt=""
     />

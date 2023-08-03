@@ -29,7 +29,7 @@ defineProps<Props>();
     />
 
     <NuxtLink
-      class="btn-primary btn-circle btn absolute -right-2 -top-2 cursor-pointer text-white"
+      class="btn btn-circle btn-primary absolute -right-2 -top-2 cursor-pointer text-white"
       :to="`/admin/menu/categorias/${category.id}/editar`"
     >
       <Icon name="solar:pen-outline" size="28" />

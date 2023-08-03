@@ -6,6 +6,8 @@ const store = useMainStore();
 const route = useRoute();
 const { language, isLoading } = storeToRefs(store);
 
+// const language = useLocalStorage('language', null);
+
 const changeLanguage = () => {
   isLoading.value = true;
   setTimeout(() => {
@@ -35,7 +37,11 @@ const changeLanguage = () => {
 
           <li>
             <!-- :to="{ path: language === 'es' ? '/' : '/en' }" -->
-            <NuxtLink to="/" active-class="text-secondary" class="flex items-center gap-2">
+            <NuxtLink
+              to="/"
+              active-class="text-primary font-bold underline"
+              class="flex items-center gap-2"
+            >
               <Icon class="text-xl text-primary" name="gala:brochure" />
               <span>{{ language === 'es' ? 'Menú' : 'Menu' }}</span>
             </NuxtLink>
@@ -43,7 +49,7 @@ const changeLanguage = () => {
           <li>
             <NuxtLink
               :to="{ name: 'eventos' }"
-              active-class="text-secondary"
+              active-class="text-primary font-bold underline"
               class="flex items-center gap-2"
             >
               <Icon class="text-xl text-primary" name="gala:calendar" />
@@ -53,7 +59,7 @@ const changeLanguage = () => {
           <li>
             <NuxtLink
               :to="{ name: 'encuesta' }"
-              active-class="text-secondary"
+              active-class="text-primary font-bold underline"
               class="flex items-center gap-2"
             >
               <Icon class="text-xl text-primary" name="gala:editor" />
@@ -63,7 +69,7 @@ const changeLanguage = () => {
           <li>
             <NuxtLink
               :to="{ name: 'reservar' }"
-              active-class="text-secondary"
+              active-class="text-primary font-bold underline"
               class="flex items-center gap-2"
             >
               <Icon class="text-xl text-primary" name="gala:book" />

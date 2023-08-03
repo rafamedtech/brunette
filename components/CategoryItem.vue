@@ -24,11 +24,22 @@ defineProps<Props>();
   >
     <span class="font-handlee text-2xl lg:text-3xl">{{ category.title }}</span>
     <figure class="card h-52 shadow-xl lg:h-80">
-      <img
+      <nuxt-img
+        :src="category.cover"
+        densities="x1 x2"
+        format="webp"
+        quality="80"
+        preload
+        loading="lazy"
+        class="rounded-box h-full w-full object-cover"
+      />
+
+      <!-- alt="item picture" -->
+      <!-- <img
         :src="category.cover"
         class="rounded-box h-full w-full object-cover"
         alt="item picture"
-      />
+      /> -->
     </figure>
   </NuxtLink>
 </template>

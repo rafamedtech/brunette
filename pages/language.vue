@@ -13,13 +13,15 @@ async function selectLanguage(lang: string) {
   // });
   language.value = lang;
 
+  await navigateTo('/');
+
   // await navigateTo(query.redirectTo as string);
 
-  if (language.value === 'es') {
-    return await navigateTo('/');
-  } else {
-    return await navigateTo('/en');
-  }
+  // if (language.value === 'es') {
+  //   return await navigateTo('/');
+  // } else {
+  //   return await navigateTo('/en');
+  // }
 }
 
 definePageMeta({
@@ -32,7 +34,6 @@ definePageMeta({
   pageTransition: {
     name: 'up',
     mode: 'out-in',
-    appear: true,
   },
 });
 </script>
@@ -47,8 +48,8 @@ definePageMeta({
         <h1 class="text-4xl text-accent">Menú</h1>
         <h2>Selecciona idioma / Select language</h2>
         <div class="flex justify-center gap-4">
-          <button class="btn-primary btn text-white" @click="selectLanguage('es')">Español</button>
-          <button class="btn-primary btn text-white" @click="selectLanguage('en')">English</button>
+          <button class="btn btn-primary text-white" @click="selectLanguage('es')">Español</button>
+          <button class="btn btn-primary text-white" @click="selectLanguage('en')">English</button>
         </div>
       </article>
     </Transition>

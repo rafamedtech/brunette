@@ -1,20 +1,23 @@
 <script setup>
+import menuEs from '@/data/menuDataEs';
+import menuEn from '@/data/menuDataEn';
 import { useMainStore } from '@/stores/menu';
 import { storeToRefs } from 'pinia';
 
 const store = useMainStore();
 
-
 const { language } = storeToRefs(store);
-const { menu: menuDataES } = useMenu('es');
-const { menu: menuDataEN } = useMenu('en');
+// const { menu: menuDataES } = useMenu('es');
+// const { menu: menuDataEN } = useMenu('en');
 
 const menu = computed(() => {
-  if (language.value === 'es') {
-    return menuDataES.value;
+  if (language.value === 'en') {
+    return menuEn;
   }
-  return menuDataEN.value;
+  return menuEs;
 });
+
+// console.log(menu.value);
 
 // Metadata
 useHead({

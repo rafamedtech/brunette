@@ -1,12 +1,12 @@
 import { defineStore } from 'pinia';
 
-export const useMainStore = defineStore('main', () => {
-  const supabase = useSupabaseClient();
+export const useMainStore = defineStore('menu', () => {
   const modal = ref(false);
   const languageModal = ref(true);
   const isLoading = ref(false);
 
   const language = ref<string>('es');
+  // const language = useLocalStorage('language', 'none');
   const events = reactive([]);
   const surveys = ref<any>([]);
 
@@ -14,6 +14,7 @@ export const useMainStore = defineStore('main', () => {
   const currentSection = ref(null);
 
   const getSurveys = async () => {
+    const supabase = useSupabaseClient();
     try {
       const { data: surveysData, error } = await supabase
         .from('surveys')
@@ -30,6 +31,7 @@ export const useMainStore = defineStore('main', () => {
 
   const reservations = ref<any>([]);
   async function getReservations() {
+    const supabase = useSupabaseClient();
     try {
       const { data: reservationsData, error } = await supabase.from('reservations').select('*');
       reservations.value = reservationsData;

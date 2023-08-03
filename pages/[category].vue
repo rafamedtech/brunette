@@ -1,11 +1,19 @@
 <script setup>
+import menuEs from '@/data/menuDataEs';
+import menuEn from '@/data/menuDataEn';
 import { storeToRefs } from 'pinia';
 import { useMainStore } from '@/stores/menu';
 
 const store = useMainStore();
 const { language } = storeToRefs(store);
 
-const { menu } = useMenu('en');
+// const { menu } = useMenu('en');
+const menu = computed(() => {
+  if (language.value === 'en') {
+    return menuEn;
+  }
+  return menuEs;
+});
 const { params } = useRoute();
 const category = menu.value.find((category) => category.slug === params.category);
 

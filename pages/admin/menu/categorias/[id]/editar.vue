@@ -3,11 +3,14 @@ import { useVuelidate } from '@vuelidate/core';
 import { required, helpers } from '@vuelidate/validators';
 
 const mainStore = useMainStore();
-const { isLoading } = storeToRefs(mainStore);
+const { isLoading, language } = storeToRefs(mainStore);
 const supabase = useSupabaseClient();
 
 const id = Number(useRoute().params.id[0]);
-const { data: category } = await supabase.from('categories').select('*').eq('id', id);
+const { data: category } = await supabase
+  .from(`${language.value === 'es' ? 'categories' : 'categories_en'}`)
+  .select('*')
+  .eq('id', id);
 
 const updatedCategory = reactive({
   title: '',
@@ -31,7 +34,7 @@ async function updateCategory() {
   isLoading.value = true;
   try {
     const { error } = await supabase
-      .from('categories')
+      .from(`${language.value === 'es' ? 'categories' : 'categories_en'}`)
       .update(updatedCategory)
       .eq('id', id)
       .select();
@@ -94,7 +97,7 @@ definePageMeta({
           <input
             type="text"
             placeholder="Escribe aqui"
-            class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
+            class="input input-bordered border-[#d1d5db] transition-all focus:ring focus:ring-primary"
             v-model="updatedCategory.title"
           />
           <label class="label">
@@ -110,7 +113,7 @@ definePageMeta({
           <input
             type="text"
             placeholder="Ej. nombre-categoria"
-            class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary disabled:border-[#d1d5db] disabled:bg-transparent disabled:italic"
+            class="input input-bordered border-[#d1d5db] transition-all focus:ring focus:ring-primary disabled:border-[#d1d5db] disabled:bg-transparent disabled:italic"
             v-model="updatedCategory.slug"
             disabled
           />
@@ -126,7 +129,7 @@ definePageMeta({
           </label>
           <input
             type="text"
-            class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
+            class="input input-bordered border-[#d1d5db] transition-all focus:ring focus:ring-primary"
             @input="v$.cover.$touch"
             placeholder="Ej. https://image-url.com/image-name.jpg"
             v-model="updatedCategory.cover"
@@ -161,11 +164,11 @@ definePageMeta({
           Imagen NO válida
         </div>
         <section class="flex gap-2">
-          <button class="btn-error btn w-40 bg-red-500 text-white" onclick="my_modal_5.showModal()">
+          <button class="btn btn-error w-40 bg-red-500 text-white" onclick="my_modal_5.showModal()">
             <span class="normal-case">Eliminar</span>
             <Icon name="ic:outline-delete" size="28" />
           </button>
-          <button class="btn-primary btn w-40 text-white" @click="updateCategory">
+          <button class="btn btn-primary w-40 text-white" @click="updateCategory">
             <Icon v-if="isLoading" name="svg-spinners:tadpole" size="32" />
             <div v-else class="flex items-center gap-2">
               <span class="normal-case">Guardar</span>

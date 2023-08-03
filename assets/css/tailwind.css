@@ -15,7 +15,6 @@
   }
 
   html {
-    scroll-behavior: smooth; /* set scroll-behaviour to smooth here */
     width: 100vw;
     overflow-x: hidden;
   }

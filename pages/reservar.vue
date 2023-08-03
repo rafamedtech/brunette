@@ -176,7 +176,7 @@ definePageMeta({
     <div class="divider mx-auto w-1/2"></div>
     <div class="hero-content mx-auto flex-col lg:flex-row">
       <div class="text-center">
-        <p class="text-black">
+        <p class="text-2xl text-black">
           {{ language === 'es' ? 'Asegura tu fecha especial' : 'Save your special date' }}
         </p>
         <!-- <p class="py-6">Con tus comentarios, podemos mejorar nuestros productos y servicios.</p> -->

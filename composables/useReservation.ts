@@ -1,9 +1,7 @@
-import { useMainStore } from '@/stores/menu';
-import { storeToRefs } from 'pinia';
-
 export const useReservation = async () => {
   const supabase = useSupabaseClient();
   const store = useMainStore();
+
   const { reservations } = storeToRefs(store);
   // const reservations = ref<any>([]);
 
