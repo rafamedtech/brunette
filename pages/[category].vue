@@ -61,7 +61,7 @@ definePageMeta({
     >
       <div v-for="section in category.sections" :key="section.title">
         <SectionBanner :section="section" />
-        <SectionItems :items="section.items" />
+        <SectionItems :items="section.items" :one-column="category.sections.length <= 1" />
       </div>
     </section>
   </main>

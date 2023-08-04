@@ -1,7 +1,11 @@
 <script setup>
-defineProps({
+const props = defineProps({
   items: {
     type: Array,
+  },
+  oneColumn: {
+    type: Boolean,
+    default: () => false,
   },
 });
 
@@ -9,7 +13,10 @@ defineProps({
 </script>
 
 <template>
-  <ul class="grid gap-4 p-4" :class="{ 'grid-cols-2': items.length > 1 }">
+  <ul
+    class="grid grid-cols-1 gap-4 p-4 lg:grid-cols-2"
+    :class="{ 'grid-cols-2 text-left': !oneColumn }"
+  >
     <li :class="{ 'mx-auto': items.length === 1 }" v-for="item in items" :key="item.name">
       <div>
         <h4 class="text-base font-bold uppercase text-primary">{{ item.name }}</h4>

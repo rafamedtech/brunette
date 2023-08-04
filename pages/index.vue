@@ -4,6 +4,9 @@ import menuEn from '@/data/menuDataEn';
 import { useMainStore } from '@/stores/menu';
 import { storeToRefs } from 'pinia';
 
+// const { getDatabase } = useSurveys();
+// await getDatabase();
+
 const store = useMainStore();
 
 const { language } = storeToRefs(store);

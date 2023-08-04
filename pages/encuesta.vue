@@ -1,9 +1,4 @@
 <script setup>
-import { useMainStore } from '@/stores/menu';
-import { storeToRefs } from 'pinia';
-// import { useVuelidate } from '@vuelidate/core';
-// import { required, helpers } from '@vuelidate/validators';
-
 const store = useMainStore();
 const { modal, language } = storeToRefs(store);
 
@@ -20,41 +15,18 @@ const surveyData = reactive({
   comment: '',
 });
 
-const supabase = useSupabaseClient();
-async function sendSurvey() {
-  try {
-    const { error } = await supabase.from('surveys').insert([surveyData]);
-    // console.log(data);
+// const supabase = useSupabaseClient();
+// async function sendSurvey() {
+//   try {
+//     const { error } = await supabase.from('surveys').insert([surveyData]);
+//     // console.log(data);
 
-    if (error) throw error;
-  } catch (error) {
-    console.log(error);
-  }
-}
+//     if (error) throw error;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
-// Validation Messages
-// const nameRequired = computed(() =>
-//   language.value === 'es' ? 'Es necesario ingresar un nombre' : 'Name field is required'
-// );
-// const meseroRequired = computed(() =>
-//   language.value === 'es' ? 'Es necesario ingresar un nombre' : 'Name field is required'
-// );
-
-//Form validation
-// const rules = computed(() => {
-//   return {
-//     name: {
-//       required: helpers.withMessage(nameRequired, required),
-//     },
-//     mesero: {
-//       required: helpers.withMessage(meseroRequired, required),
-//     },
-//   };
-// });
-
-// const v$ = useVuelidate(rules, surveyData);
-
-// const modalToggle = computed(() => (v$.value.$error ? '' : 'my-modal-6'));
 const openModal = () => {
   // v$.value.$validate();
   // if (v$.value.$error) {
@@ -74,46 +46,7 @@ const openModal = () => {
   modal.value = true;
 };
 
-const meseroLog = () => {
-  console.log(surveyData.mesero);
-};
-
-// OAuth Authentication
-// const { auth } = useSupabaseClient();
-// const user = useSupabaseUser();
-
-// const googleAuth = async () => {
-//   try {
-//     const { error } = await auth.signInWithOAuth({
-//       provider: 'google',
-//     });
-
-//     if (error) throw error;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-
-// const logout = async () => {
-//   const { error } = await auth.signOut();
-
-//   if (error) {
-//     console.log(error);
-//     return;
-//   }
-//   // console.log(user.value);
-
-//   try {
-//     await $fetch('/api/_supabase/session', {
-//       method: 'POST',
-//       body: { event: 'SIGNED_OUT', session: null },
-//     });
-
-//     user.value = null;
-//   } catch (error) {
-//     console.error(error);
-//   }
-// };
+const config = useRuntimeConfig();
 
 useHead({
   title: 'Brunette Kitchen & Drinks | Encuesta de satisfacción 📋',
@@ -189,7 +122,11 @@ definePageMeta({
           </div>
 
           <div class="card mx-auto w-full max-w-sm flex-shrink-0 px-2">
-            <form class="card-body rounded-xl bg-base-100 shadow-pinterest">
+            <form
+              class="card-body rounded-xl bg-base-100 shadow-pinterest"
+              method="POST"
+              action="https://api.sheetmonkey.io/form/6nvddoEsozk7jz92gRBbAD"
+            >
               <div class="form-control relative flex flex-col">
                 <label class="text-primary" for="name">{{
                   language === 'es' ? 'Tu nombre (opcional)' : 'Your name (optional)'
@@ -198,7 +135,8 @@ definePageMeta({
                   v-model="surveyData.name"
                   type="text"
                   id="name"
-                  class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
+                  name="name"
+                  class="input input-bordered border-[#d1d5db] transition-all focus:ring focus:ring-primary"
                 />
               </div>
               <div class="form-control relative flex flex-col">
@@ -208,8 +146,9 @@ definePageMeta({
                 <input
                   v-model="surveyData.phone"
                   type="text"
-                  id="name"
-                  class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
+                  id="phone"
+                  name="phone"
+                  class="input input-bordered border-[#d1d5db] transition-all focus:ring focus:ring-primary"
                 />
               </div>
               <div class="form-control relative flex flex-col">
@@ -220,7 +159,8 @@ definePageMeta({
                 <select
                   v-model="surveyData.mesero"
                   id="mesero"
-                  class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
+                  name="mesero"
+                  class="input input-bordered border-[#d1d5db] transition-all focus:ring focus:ring-primary"
                 >
                   <option value="No lo sé">
                     {{ language === 'es' ? 'No lo sé' : "I don't know" }}
@@ -243,7 +183,7 @@ definePageMeta({
                 </label>
 
                 <section>
-                  <fieldset class="flex w-full flex-col gap-2 px-2 text-xs">
+                  <fieldset class="flex w-full flex-col gap-2 px-2 text-xs" name="firstQuestion">
                     <div class="flex w-1/2 items-center justify-between">
                       <label for="first-bad" class="text-base">{{
                         language === 'es' ? 'Mala' : 'Bad'
@@ -251,7 +191,7 @@ definePageMeta({
                       <input
                         type="radio"
                         id="first-bad"
-                        name="radio-1"
+                        name="firstQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.firstQuestion"
                         value="Mala"
@@ -262,7 +202,7 @@ definePageMeta({
                       <input
                         type="radio"
                         id="first-regular"
-                        name="radio-1"
+                        name="firstQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.firstQuestion"
                         value="Regular"
@@ -275,7 +215,7 @@ definePageMeta({
                       <input
                         type="radio"
                         id="first-good"
-                        name="radio-1"
+                        name="firstQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.firstQuestion"
                         value="Buena"
@@ -288,7 +228,7 @@ definePageMeta({
                       <input
                         type="radio"
                         id="first-excellent"
-                        name="radio-1"
+                        name="firstQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.firstQuestion"
                         value="Excelente"
@@ -317,7 +257,7 @@ definePageMeta({
                       }}</label>
                       <input
                         type="radio"
-                        name="radio-2"
+                        name="secondQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.secondQuestion"
                         value="Mala"
@@ -327,7 +267,7 @@ definePageMeta({
                       <label for="" class="text-base">Regular</label>
                       <input
                         type="radio"
-                        name="radio-2"
+                        name="secondQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.secondQuestion"
                         value="Regular"
@@ -339,7 +279,7 @@ definePageMeta({
                       }}</label>
                       <input
                         type="radio"
-                        name="radio-2"
+                        name="secondQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.secondQuestion"
                         value="Buena"
@@ -351,7 +291,7 @@ definePageMeta({
                       }}</label>
                       <input
                         type="radio"
-                        name="radio-2"
+                        name="secondQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.secondQuestion"
                         value="Excelente"
@@ -380,7 +320,7 @@ definePageMeta({
                       }}</label>
                       <input
                         type="radio"
-                        name="radio-3"
+                        name="thirdQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.thirdQuestion"
                         value="Mala"
@@ -390,7 +330,7 @@ definePageMeta({
                       <label for="" class="text-base">Regular</label>
                       <input
                         type="radio"
-                        name="radio-3"
+                        name="thirdQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.thirdQuestion"
                         value="Regular"
@@ -402,7 +342,7 @@ definePageMeta({
                       }}</label>
                       <input
                         type="radio"
-                        name="radio-3"
+                        name="thirdQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.thirdQuestion"
                         value="Buena"
@@ -414,7 +354,7 @@ definePageMeta({
                       }}</label>
                       <input
                         type="radio"
-                        name="radio-3"
+                        name="thirdQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.thirdQuestion"
                         value="Excelente"
@@ -443,7 +383,7 @@ definePageMeta({
                       }}</label>
                       <input
                         type="radio"
-                        name="radio-4"
+                        name="fourthQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.fourthQuestion"
                         value="Mala"
@@ -453,7 +393,7 @@ definePageMeta({
                       <label for="" class="text-base">Regular</label>
                       <input
                         type="radio"
-                        name="radio-4"
+                        name="fourthQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.fourthQuestion"
                         value="Regular"
@@ -465,7 +405,7 @@ definePageMeta({
                       }}</label>
                       <input
                         type="radio"
-                        name="radio-4"
+                        name="fourthQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.fourthQuestion"
                         value="Buena"
@@ -477,7 +417,7 @@ definePageMeta({
                       }}</label>
                       <input
                         type="radio"
-                        name="radio-4"
+                        name="fourthQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.fourthQuestion"
                         value="Excelente"
@@ -506,7 +446,7 @@ definePageMeta({
                       }}</label>
                       <input
                         type="radio"
-                        name="radio-5"
+                        name="fifthQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.fifthQuestion"
                         value="Malo"
@@ -516,7 +456,7 @@ definePageMeta({
                       <label for="" class="text-base">Regular</label>
                       <input
                         type="radio"
-                        name="radio-5"
+                        name="fifthQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.fifthQuestion"
                         value="Regular"
@@ -528,7 +468,7 @@ definePageMeta({
                       }}</label>
                       <input
                         type="radio"
-                        name="radio-5"
+                        name="fifthQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.fifthQuestion"
                         value="Bueno"
@@ -540,7 +480,7 @@ definePageMeta({
                       }}</label>
                       <input
                         type="radio"
-                        name="radio-5"
+                        name="fifthQuestion"
                         class="radio-primary radio"
                         v-model="surveyData.fifthQuestion"
                         value="Excelente"
@@ -560,7 +500,7 @@ definePageMeta({
                 </label>
                 <textarea
                   v-model="surveyData.comment"
-                  class="textarea-bordered textarea border-[#d1d5db] transition-all focus:ring focus:ring-primary"
+                  class="textarea textarea-bordered border-[#d1d5db] transition-all focus:ring focus:ring-primary"
                   name="comment"
                   id="comment"
                   :placeholder="language === 'es' ? 'Escribe aquí...' : 'Write here...'"
@@ -568,22 +508,14 @@ definePageMeta({
               </div>
 
               <div class="form-control mt-6">
-                <label @click="openModal" for="my-modal-6" class="btn-primary btn text-base-100">{{
+                <!-- <label @click="openModal" for="my-modal-6" class="btn btn-primary text-base-100">{{
                   language === 'es' ? 'Enviar' : 'Submit'
-                }}</label>
+                }}</label> -->
+                <button type="submit" class="btn btn-primary text-base-100">
+                  {{ language === 'es' ? 'Enviar' : 'Submit' }}
+                </button>
               </div>
             </form>
-            <!-- <div v-else class="card-body">
-              <h2 class="text-center text-2xl text-primary">
-                Inicia sesion para contestar la encuesta.
-              </h2>
-              <button class="btn-accent btn flex items-center text-white" @click="googleAuth">
-                Iniciar sesion con <Icon name="logos:google-icon" class="mx-2 text-2xl" />
-              </button>
-              <button class="btn-accent btn flex items-center text-white" @click="googleAuth">
-                Iniciar sesion con <Icon name="mdi:apple" class="mx-2 text-3xl" />
-              </button>
-            </div> -->
           </div>
         </div>
       </div>

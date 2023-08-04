@@ -1,16 +1,21 @@
 <script setup>
-import { useMainStore } from '@/stores/menu';
-
 const supabase = useSupabaseClient();
 
 const store = useMainStore();
 const { getSurveys } = store;
 
-const { data: surveys } = await useAsyncData(
-  'surveys',
-  async () => supabase.from('surveys').select('*'),
-  { transform: (result) => result.data }
-);
+const { data: surveys } = await useFetch('/api/notion');
+
+// const { data: surveys } = await useAsyncData(
+//   'surveys',
+//   async () => supabase.from('surveys').select('*'),
+//   { transform: (result) => result.data }
+// );
+
+// console.log({
+//   supabase: surveys.value,
+//   notion: data.value,
+// });
 
 const ascendingSurveys = ref(false);
 
@@ -350,7 +355,7 @@ definePageMeta({
         </div>
 
         <!-- Mobile stats -->
-        <div class="background carousel-center carousel w-screen gap-4 p-4 lg:hidden">
+        <div class="background carousel carousel-center w-screen gap-4 p-4 lg:hidden">
           <div
             class="carousel-item flex w-1/2 flex-col justify-between rounded-xl bg-base-100 p-2 lg:stat lg:rounded-none lg:rounded-bl-xl lg:rounded-tl-xl"
           >
@@ -784,8 +789,8 @@ definePageMeta({
 
         <div class="mt-8 grid w-full gap-8 p-4">
           <div class="flex justify-end">
-            <div class="dropdown-end dropdown">
-              <label tabindex="0" class="btn-primary btn m-1 hover:text-white">
+            <div class="dropdown dropdown-end">
+              <label tabindex="0" class="btn btn-primary m-1 hover:text-white">
                 <Icon
                   :name="ascendingSurveys ? 'cil:sort-ascending' : 'cil:sort-descending'"
                   size="28"
@@ -795,7 +800,7 @@ definePageMeta({
               </label>
               <ul
                 tabindex="0"
-                class="dropdown-content menu rounded-box z-[1] w-52 bg-base-100 p-2 shadow"
+                class="menu dropdown-content rounded-box z-[1] w-52 bg-base-100 p-2 shadow"
               >
                 <li>
                   <button @click="ascendingSurveys = true">
@@ -817,10 +822,6 @@ definePageMeta({
             <SurveyCard v-for="survey in sortedSurveys" :key="survey.id" :survey="survey" />
           </section>
         </div>
-        <!-- <div class="join grid grid-cols-2">
-          <button class="btn-outline join-item btn" @click="previousPage">Anteriores</button>
-          <button class="btn-outline join-item btn" @click="nextPage">Siguientes</button>
-        </div> -->
       </div>
     </section>
   </section>
