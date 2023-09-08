@@ -736,7 +736,7 @@ export default [
               {
                 id: 2,
                 name: 'Shot',
-                price: '$135.00',
+                price: '$145.00',
               },
             ],
           },
@@ -828,7 +828,7 @@ export default [
               {
                 id: 2,
                 name: 'Shot',
-                price: '$125.00',
+                price: '$130.00',
               },
             ],
           },
@@ -888,7 +888,7 @@ export default [
               {
                 id: 2,
                 name: 'Trago',
-                price: '$95.00',
+                price: '$140.00',
               },
             ],
           },
@@ -905,7 +905,7 @@ export default [
               {
                 id: 2,
                 name: 'Trago',
-                price: '$95.00',
+                price: '$110.00',
               },
             ],
           },
@@ -923,7 +923,7 @@ export default [
               {
                 id: 2,
                 name: 'Trago',
-                price: '$110.00',
+                price: '$140.00',
               },
             ],
           },
@@ -1058,7 +1058,7 @@ export default [
               {
                 id: 2,
                 name: 'Trago',
-                price: '$140.00',
+                price: '$165.00',
               },
             ],
           },
@@ -1116,7 +1116,7 @@ export default [
               {
                 id: 2,
                 name: 'Trago',
-                price: '$140.00',
+                price: '$195.00',
               },
             ],
           },
@@ -1133,7 +1133,7 @@ export default [
               {
                 id: 2,
                 name: 'Trago',
-                price: '$145.00',
+                price: '$170.00',
               },
             ],
           },
@@ -1150,7 +1150,7 @@ export default [
               {
                 id: 2,
                 name: 'Trago',
-                price: '$170.00',
+                price: '$150.00',
               },
             ],
           },
@@ -1353,44 +1353,64 @@ export default [
           'https://images.pexels.com/photos/110472/pexels-photo-110472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         items: [
           {
+            name: 'Cantarito',
+            description: '',
+            price: '$145.00',
+          },
+          {
             name: 'Martini',
             description: '',
-            price: '$95.00',
+            price: '$120.00',
+          },
+          {
+            name: 'Martini sucio',
+            description: '',
+            price: '$195.00',
+          },
+          {
+            name: 'Martini seco',
+            description: '',
+            price: '$195.00',
+          },
+          {
+            name: 'Goodbye mother fucker',
+            description: '',
+            price: '$150.00',
           },
           {
             name: 'Margarita',
             description: '',
-            price: '$95.00',
+            price: '$120.00',
           },
           {
             name: 'Paloma',
             description: '',
-            price: '$95.00',
+            price: '$120.00',
           },
           {
             name: 'Tequila sunrise',
             description: '',
-            price: '$100.00',
+            price: '$135.00',
           },
           {
             name: 'Long island',
             description: '',
-            price: '$100.00',
+            price: '$150.00',
           },
           {
             name: 'Cuba',
             description: '',
-            price: '$100.00',
+            price: '$110.00',
           },
           {
             name: 'Sangría preparada',
             description: '',
-            price: '$110.00',
+            price: '$120.00',
           },
           {
             name: 'Piña colada',
             description: '',
-            price: '$110.00',
+            price: '$120.00',
           },
           {
             name: 'Mimosas',
@@ -1400,7 +1420,7 @@ export default [
           {
             name: 'Sex on the beach',
             description: '',
-            price: '$110.00',
+            price: '$135.00',
           },
 
           {
@@ -1444,7 +1464,7 @@ export default [
           {
             name: 'Carajillo',
             description: '',
-            price: '$135.00',
+            price: '$150.00',
           },
         ],
       },
@@ -1457,30 +1477,30 @@ export default [
           {
             name: 'Tecate',
             description: '',
-            price: '$50.00',
+            price: '$55.00',
           },
           {
             name: 'Tecate light',
             description: '',
-            price: '$50.00',
+            price: '$55.00',
           },
 
           {
             name: 'Indio',
             description: '',
-            price: '$50.00',
+            price: '$55.00',
           },
 
           {
             name: 'XX Lager',
             description: '',
-            price: '$50.00',
+            price: '$55.00',
           },
 
           {
             name: 'Ultra Amstel',
             description: '',
-            price: '$55.00',
+            price: '$60.00',
           },
         ],
       },
@@ -1503,19 +1523,19 @@ export default [
           {
             name: 'Modelo clara',
             description: '',
-            price: '$50.00',
+            price: '$60.00',
           },
 
           {
-            name: 'Modelo negra',
+            name: 'Modelo oscura',
             description: '',
-            price: '$50.00',
+            price: '$60.00',
           },
 
           {
             name: 'Michelob Ultra',
             description: '',
-            price: '$55.00',
+            price: '$60.00',
           },
         ],
       },
@@ -1612,7 +1632,7 @@ export default [
           {
             name: 'Clamato sin alcohol',
             description: '',
-            price: '$60.00',
+            price: '$80.00',
           },
           {
             name: 'Piñada',
@@ -1622,7 +1642,7 @@ export default [
           {
             name: 'Sodas',
             description: '',
-            price: '$35.00',
+            price: '$50.00',
           },
           {
             name: 'Agua mineral Ciel',
@@ -1632,22 +1652,22 @@ export default [
           {
             name: 'Agua mineral Topo Chico',
             description: '',
-            price: '$55.00',
+            price: '$60.00',
           },
           {
             name: 'Chocomilk',
             description: '',
-            price: '$45.00',
+            price: '$55.00',
           },
           {
             name: 'Café',
             description: '',
-            price: '$45.00',
+            price: '$55.00',
           },
           {
             name: 'Vaso de leche',
             description: '',
-            price: '$30.00',
+            price: '$40.00',
           },
           {
             name: 'Malteada de vainilla',
@@ -1659,6 +1679,11 @@ export default [
             name: 'Naranjada - Limonada',
             description: '',
             price: '$55.00',
+          },
+          {
+            name: 'Jarra de Naranjada',
+            description: '',
+            price: '$220.00',
           },
 
           {
@@ -1685,38 +1710,40 @@ export default [
         items: [
           {
             name: 'Candela',
-            description:
-              'Mezcal joven espadín, conserva de Jamaica, pulpa de maracuya, jugo de limón, sal de chile tatemado. Decorado con twist de naranja y caramelos de Jamaica.',
+            description: 'Mezcal, conserva de jamaica y maracuyá, limón y sal de chiles ahumados.',
             price: '$210.00',
           },
           {
             name: 'Eros',
-            description:
-              'Ginebra infusionado con pétalos de rosa, licor de naranja, conserva de frutos rojos, licor de hierbas aromáticas, jarabe de rosas, bittter artesanal de Jamaica y pimienta. Decorado con coral comestible y frutos del bosque.',
+            description: 'Gin, compota de frutos rojos, limón, tonic top & soda.',
             price: '$210.00',
           },
           {
-            name: 'Kukulkán',
+            name: "Piña pa'la niña ",
             description:
-              'Tequila, licor de naranja, miel de agave, piña asada, rodajas de pepino, 1 Hoja santa tatemada. Decorado con hojas de piña',
+              'Ron blanco, pera piña, jugo de piña, Angostura, crema batida y coco tostado..',
+            price: '$210.00',
+          },
+          // {
+          //   name: 'Kukulkán',
+          //   description:
+          //     'Tequila, licor de naranja, miel de agave, piña asada, rodajas de pepino, 1 Hoja santa tatemada. Decorado con hojas de piña',
+          //   price: '$210.00 ',
+          // },
+          {
+            name: 'Brunette & Tonic',
+            description: 'Gin, lemon grass, limón amarillo, menta, tonic y perfume de Damiana.',
             price: '$210.00 ',
           },
           // {
-          //   name: 'Brunette & Tonic',
+          //   name: 'Mula arriera',
           //   description:
-          //     'Ginebra, jarabe de lemon grass, jugos cítricos, agua quina perfumado con damiana. Decorado con zest de naranja y romero fresco.',
-          //   price: '$180.00 ',
+          //     'Mezcal joven espadín, Sal artesanal de chiles ahumados, pulpa de tamarindo natural, menta fresca, bitter artesanal de naranja y toronja, jugos cítricos, top de cerveza de jengibre, conserva de piña y apio. Decorado con menta fresca coral comestible y caramelos de jengibre coreano',
+          //   price: '$210.00 ',
           // },
           {
-            name: 'Mula arriera',
-            description:
-              'Mezcal joven espadín, Sal artesanal de chiles ahumados, pulpa de tamarindo natural, menta fresca, bitter artesanal de naranja y toronja, jugos cítricos, top de cerveza de jengibre, conserva de piña y apio. Decorado con menta fresca coral comestible y caramelos de jengibre coreano',
-            price: '$210.00 ',
-          },
-          {
             name: 'El matador',
-            description:
-              'Mezcal Tobalá reposado, sal de gusano y hormiga chicatana, miel de agave, piña tatemada, pulpa de tuna, jugos cítricos, albahaca, pepino fresco , bitter artesanal de cardamomo y especias Indias. Decorado con una brocheta de piña asada y chapulines.',
+            description: 'Mezcal, jugo de cítricos, piña, albahaca y miel de agave.',
             price: '$210.00 ',
           },
         ],

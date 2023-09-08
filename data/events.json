@@ -1,17 +1,42 @@
 [
   {
     "id": 1,
+    "title": "Hola Septiembre",
+    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1694193510/events/WhatsApp_Image_2023-09-07_at_11.49.58_PM_xm3ajl.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Noche Mexicana",
+    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1694193509/events/WhatsApp_Image_2023-09-07_at_11.48.05_PM_za1au2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Noche Mexicana",
+    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1694193510/events/WhatsApp_Image_2023-09-07_at_11.48.05_PM_1_pk0col.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Concurso de canto",
+    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1694193510/events/WhatsApp_Image_2023-09-07_at_11.49.17_PM_slb1vf.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Concurso de canto",
+    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1694193510/events/WhatsApp_Image_2023-09-07_at_11.49.34_PM_nyrgpf.jpg"
+  },
+  {
+    "id": 6,
     "title": "Happy Miércoles",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1675114127/menu/eventos/HappyMiercoles_riy0ac.jpg"
   },
 
   {
-    "id": 2,
+    "id": 7,
     "title": "Viernes de Karaoke",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1675114127/menu/eventos/LAURONA_VIERNES_yg6jwy.jpg"
   },
   {
-    "id": 3,
+    "id": 8,
     "title": "Sábado música en vivo",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1675114127/menu/eventos/LAURONA_SABADO_wp0mkg.jpg"
   }

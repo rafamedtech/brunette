@@ -123,7 +123,7 @@ definePageMeta({
 
               <div class="indicator w-full">
                 <span
-                  class="badge badge-secondary indicator-item"
+                  class="badge indicator-item badge-secondary"
                   v-if="unreadSurveys.length > 0"
                 ></span>
                 <div class="background stat rounded-xl shadow-xl">

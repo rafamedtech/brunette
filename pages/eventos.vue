@@ -84,23 +84,27 @@ definePageMeta({
           class="carousel-item w-full flex-col p-4 lg:px-0"
         >
           <h2 class="text-center text-2xl uppercase text-primary">{{ title }}</h2>
-          <!-- <img class="h-[40rem] rounded-2xl md:mx-auto md:object-cover" :src="cover" alt="" /> -->
-          <nuxt-img
+          <img
+            class="h-[40rem] rounded-2xl md:mx-auto md:object-cover lg:max-w-sm"
+            :src="cover"
+            alt=""
+          />
+          <!-- <nuxt-img
             :src="cover"
             densities="x1 x2"
             format="webp"
             quality="80"
             loading="lazy"
-            class="h-[40rem] rounded-2xl md:mx-auto md:object-cover"
-          />
+            class="h-[40rem] max-w-md rounded-2xl md:mx-auto md:object-cover" 
+          />-->
         </div>
       </div>
-      <div class="carousel-center carousel mx-auto w-screen max-w-md lg:hidden">
+      <div class="carousel carousel-center mx-auto w-screen max-w-md lg:hidden">
         <div
           v-for="(event, index) in events"
           :key="event.id"
           :id="`slide${index + 1}`"
-          class="carousel-item relative w-80 flex-col p-2"
+          class="carousel-item relative h-[30rem] w-80 flex-col p-2"
         >
           <h2 class="text-center text-2xl uppercase text-primary">{{ event.title }}</h2>
           <!-- <img
@@ -114,17 +118,17 @@ definePageMeta({
             format="webp"
             quality="80"
             loading="lazy"
-            class="w-full rounded-2xl md:mx-auto md:h-96 md:w-96 md:object-cover"
+            class="h-full min-h-full w-full rounded-2xl object-cover md:mx-auto md:h-96 md:w-96"
           />
           <div
             class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
           >
-            <a :href="index === 0 ? '#' : `#slide${index}`" class="btn-secondary btn-circle btn"
+            <a :href="index === 0 ? '#' : `#slide${index}`" class="btn btn-circle btn-secondary"
               >❮</a
             >
             <a
               :href="index + 1 === events.length ? '#' : `#slide${index + 2}`"
-              class="btn-secondary btn-circle btn"
+              class="btn btn-circle btn-secondary"
               >❯</a
             >
           </div>

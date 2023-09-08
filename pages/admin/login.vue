@@ -26,8 +26,7 @@ watchEffect(async () => {
   if (user.value) {
     email.value = '';
     password.value = '';
-    // console.log(user.value);
-    // return navigateTo({ path: '/admin' });
+
     await navigateTo('/admin', { replace: true });
   }
 });
