@@ -67,14 +67,14 @@ definePageMeta({
     </section>
     <div class="divider mx-auto w-1/2"></div>
     <div
-      class="container hero-content w-full flex-col items-center justify-center text-center lg:flex-row"
+      class="container hero-content w-full flex-col items-center justify-center pt-0 text-center lg:flex-row"
     >
       <p class="text-center text-2xl text-black">
         {{ language === 'es' ? 'Conoce los próximos eventos' : 'Find the next events' }}
       </p>
     </div>
 
-    <section class="mb-8 w-full">
+    <section class="w-full">
       <div
         class="container rounded-box hidden gap-8 bg-[#ffffff] p-4 pb-8 shadow-pinterest lg:grid lg:grid-cols-2"
       >
@@ -104,7 +104,7 @@ definePageMeta({
           v-for="(event, index) in events"
           :key="event.id"
           :id="`slide${index + 1}`"
-          class="carousel-item relative h-[30rem] w-80 flex-col p-2"
+          class="carousel-item relative min-h-full w-80 flex-col p-2"
         >
           <h2 class="text-center text-2xl uppercase text-primary">{{ event.title }}</h2>
           <!-- <img
@@ -118,7 +118,7 @@ definePageMeta({
             format="webp"
             quality="80"
             loading="lazy"
-            class="h-full min-h-full w-full rounded-2xl object-cover md:mx-auto md:h-96 md:w-96"
+            class="h-full w-full rounded-2xl object-cover md:mx-auto md:h-96 md:w-96"
           />
           <div
             class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
