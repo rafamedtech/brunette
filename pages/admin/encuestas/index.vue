@@ -1,21 +1,16 @@
 <script setup>
+import { useMainStore } from '@/stores/menu';
+
 const supabase = useSupabaseClient();
 
 const store = useMainStore();
 const { getSurveys } = store;
 
-const { data: surveys } = await useFetch('/api/notion');
-
-// const { data: surveys } = await useAsyncData(
-//   'surveys',
-//   async () => supabase.from('surveys').select('*'),
-//   { transform: (result) => result.data }
-// );
-
-// console.log({
-//   supabase: surveys.value,
-//   notion: data.value,
-// });
+const { data: surveys } = await useAsyncData(
+  'surveys',
+  async () => supabase.from('surveys').select('*'),
+  { transform: (result) => result.data }
+);
 
 const ascendingSurveys = ref(false);
 
@@ -822,6 +817,10 @@ definePageMeta({
             <SurveyCard v-for="survey in sortedSurveys" :key="survey.id" :survey="survey" />
           </section>
         </div>
+        <!-- <div class="join grid grid-cols-2">
+          <button class="btn-outline join-item btn" @click="previousPage">Anteriores</button>
+          <button class="btn-outline join-item btn" @click="nextPage">Siguientes</button>
+        </div> -->
       </div>
     </section>
   </section>
