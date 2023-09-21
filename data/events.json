@@ -8,26 +8,31 @@
   {
     "id": 2,
     "title": "Concurso de canto",
-    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1694193510/events/WhatsApp_Image_2023-09-07_at_11.49.17_PM_slb1vf.jpg"
+    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695338967/menu/karaoke_mczgn0.jpg"
   },
   {
     "id": 3,
-    "title": "Concurso de canto",
-    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1694193510/events/WhatsApp_Image_2023-09-07_at_11.49.34_PM_nyrgpf.jpg"
+    "title": "Jueves de sangrías",
+    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695338967/menu/sangrias_lte6av.jpg"
   },
   {
     "id": 4,
+    "title": "Canelo vs Charlo",
+    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695338967/menu/canelo-vs-charlo_psir17.jpg"
+  },
+  {
+    "id": 5,
     "title": "Happy Miércoles",
-    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1675114127/menu/eventos/HappyMiercoles_riy0ac.jpg"
+    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695339685/menu/happy-hour_1_vtpzhj.png"
   },
 
   {
-    "id": 5,
+    "id": 6,
     "title": "Viernes de Karaoke",
-    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1675114127/menu/eventos/LAURONA_VIERNES_yg6jwy.jpg"
+    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695339452/menu/laura-torres_ztrjyx.jpg"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Sábado música en vivo",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1675114127/menu/eventos/LAURONA_SABADO_wp0mkg.jpg"
   }

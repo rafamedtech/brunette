@@ -498,7 +498,7 @@ export default [
     title: 'the Bar',
     slug: 'the-bar',
     cover:
-      'https://res.cloudinary.com/rafamed-dev/image/upload/v1674092641/menu/IMG_0400_x3aeis_b7fxn7.jpg',
+      'https://res.cloudinary.com/rafamed-dev/image/upload/v1695338606/menu/WhatsApp_Image_2023-09-21_at_10.02.54_AM_jl8bzk.jpg',
     sections: [
       {
         title: 'Casa Magoni wines',
@@ -1541,51 +1541,7 @@ export default [
           },
         ],
       },
-      {
-        title: 'Craft Beer',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/1796698/pexels-photo-1796698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Peanut butter milk stout belching beaver',
-            description: '',
-            price: '$110.00',
-          },
-          {
-            name: 'Nitro Peanut butter',
-            description: '',
-            price: '$110.00',
-          },
-          {
-            name: 'Alesmith.394',
-            description: '',
-            price: '$110.00',
-          },
-          {
-            name: '.394 Hazy',
-            description: '',
-            price: '$125.00',
-          },
-          {
-            name: 'Alesmith sublime',
-            description: '',
-            price: '$110.00',
-          },
 
-          {
-            name: 'Jambi IPA',
-            description: '',
-            price: '$125.00',
-          },
-
-          {
-            name: 'Ghosthawk',
-            description: '',
-            price: '$125.00',
-          },
-        ],
-      },
       {
         title: 'Extras',
         description: '',
