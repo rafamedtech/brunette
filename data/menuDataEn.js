@@ -1479,30 +1479,30 @@ export default [
           {
             name: 'Tecate',
             description: '',
-            price: '$55.00',
+            price: '$60.00',
           },
           {
             name: 'Tecate light',
             description: '',
-            price: '$55.00',
+            price: '$60.00',
           },
 
           {
             name: 'Indio',
             description: '',
-            price: '$55.00',
+            price: '$60.00',
           },
 
           {
             name: 'XX Lager',
             description: '',
-            price: '$55.00',
+            price: '$60.00',
           },
 
           {
             name: 'Ultra Amstel',
             description: '',
-            price: '$60.00',
+            price: '$65.00',
           },
         ],
       },
@@ -1525,19 +1525,19 @@ export default [
           {
             name: 'Modelo clara',
             description: '',
-            price: '$60.00',
+            price: '$65.00',
           },
 
           {
             name: 'Modelo oscura',
             description: '',
-            price: '$60.00',
+            price: '$65.00',
           },
 
           {
             name: 'Michelob Ultra',
             description: '',
-            price: '$60.00',
+            price: '$65.00',
           },
         ],
       },
