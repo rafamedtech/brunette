@@ -25,7 +25,7 @@ export default [
             name: 'Nachos real',
             description:
               'Totopo bañado en salsa de queso, aguacate y coronado con camarones salteados',
-            price: '$195.00',
+            price: '$210.00',
           },
           {
             name: 'Nacho sencillo',
@@ -35,7 +35,7 @@ export default [
           {
             name: 'Elote pop',
             description: 'Elote con mantequilla, queso y aderezo de la casa',
-            price: '$85.00',
+            price: '$110.00',
           },
           {
             name: 'Alitas',
@@ -46,12 +46,12 @@ export default [
               {
                 id: 1,
                 name: '10pz',
-                price: '$175',
+                price: '$220',
               },
               {
                 id: 2,
                 name: '20pz',
-                price: '$315',
+                price: '$395',
               },
             ],
           },
@@ -100,7 +100,7 @@ export default [
           {
             name: 'Ensalada del bosque',
             description: 'Lechugas mixtas, nuez garapiñada, queso feta, frutos rojos y manzana',
-            price: '$185.00 ',
+            price: '$195.00 ',
           },
           {
             name: 'Crema de elote rostizado',
@@ -199,12 +199,12 @@ export default [
           {
             name: 'Costillas BBQ',
             description: 'Costillas, elote y papas a la francesa',
-            price: '$365.00',
+            price: '$385.00',
           },
           {
             name: 'Arrachera de la casa (250gr)',
             description: 'Arrachera, frijol de la chef, guacamole, cebolla y chile asado',
-            price: '$355.00',
+            price: '$365.00',
           },
 
           {
@@ -255,28 +255,28 @@ export default [
           {
             name: 'Peperoni',
             description: '',
-            price: '$180.00',
+            price: '$200.00',
           },
           {
             name: 'Mexicana',
             description: '',
-            price: '$195.00',
+            price: '$220.00',
           },
           {
             name: 'Margarita',
             description: 'Queso, pesto, tomates y albahaca',
-            price: '$185.00',
+            price: '$200.00',
           },
 
           {
             name: 'Mar y tierra',
             description: 'Arrachera y camarón',
-            price: '$235.00',
+            price: '$265.00',
           },
           {
             name: 'Taquera',
             description: 'Carne asada y carne al pastor',
-            price: '$235.00',
+            price: '$265.00',
           },
           {
             name: '',

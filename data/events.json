@@ -1,38 +1,22 @@
 [
   {
     "id": 1,
-    "title": "Hola Septiembre",
-    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1694193510/events/WhatsApp_Image_2023-09-07_at_11.49.58_PM_xm3ajl.jpg"
-  },
-
-  {
-    "id": 2,
-    "title": "Concurso de canto",
-    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695338967/menu/karaoke_mczgn0.jpg"
-  },
-  {
-    "id": 3,
     "title": "Jueves de sangrías",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695338967/menu/sangrias_lte6av.jpg"
   },
   {
-    "id": 4,
-    "title": "Canelo vs Charlo",
-    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695338967/menu/canelo-vs-charlo_psir17.jpg"
-  },
-  {
-    "id": 5,
+    "id": 2,
     "title": "Happy Miércoles",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695339685/menu/happy-hour_1_vtpzhj.png"
   },
 
   {
-    "id": 6,
+    "id": 3,
     "title": "Viernes de Karaoke",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695339452/menu/laura-torres_ztrjyx.jpg"
   },
   {
-    "id": 7,
+    "id": 4,
     "title": "Sábado música en vivo",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1675114127/menu/eventos/LAURONA_SABADO_wp0mkg.jpg"
   }

@@ -25,7 +25,7 @@ export default [
             name: 'Nachos real',
             description:
               'Tortilla chips bathed in cheese sauce, avocado and topped with sautéed shrimp',
-            price: '$195.00',
+            price: '$210.00',
           },
           {
             name: 'Regular nachos',
@@ -35,7 +35,7 @@ export default [
           {
             name: 'Elote pop',
             description: 'Corn with butter, cheese and house dressing',
-            price: '$85.00',
+            price: '$110.00',
           },
           {
             name: 'Wings',
@@ -45,12 +45,12 @@ export default [
               {
                 id: 1,
                 name: '10pz ',
-                price: '$175.00',
+                price: '$220.00',
               },
               {
                 id: 2,
                 name: '20pz',
-                price: '$315.00',
+                price: '$395.00',
               },
             ],
           },
@@ -99,7 +99,7 @@ export default [
           {
             name: 'Del bosque salad',
             description: 'Mixed lettuce, praline, feta cheese, berries and apple',
-            price: '$185.00 ',
+            price: '$195.00 ',
           },
           {
             name: 'Roasted corn cream',
@@ -209,12 +209,12 @@ export default [
           {
             name: 'BBQ ribs',
             description: 'Ribs, corn and fries',
-            price: '$365.00',
+            price: '$385.00',
           },
           {
             name: 'House flank stake (250gr)',
             description: "Flank steak, chef's beans, guacamole, onion and roasted chili",
-            price: '$355.00',
+            price: '$365.00',
           },
 
           {
@@ -264,28 +264,28 @@ export default [
           {
             name: 'Peperoni',
             description: '',
-            price: '$180.00',
+            price: '$200.00',
           },
           {
             name: 'Mexican',
             description: '',
-            price: '$195.00',
+            price: '$220.00',
           },
           {
             name: 'Margarita',
             description: 'Cheese, pesto, tomatoes and basil',
-            price: '$185.00',
+            price: '$200.00',
           },
 
           {
             name: 'Sea and land',
             description: 'Flank steak and shrimp',
-            price: '$235.00',
+            price: '$265.00',
           },
           {
             name: 'Taquera',
             description: 'Half Carne asada and half  carne al pastor',
-            price: '$235.00',
+            price: '$265.00',
           },
           {
             name: '',
