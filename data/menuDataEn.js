@@ -133,7 +133,7 @@ export default [
           {
             name: 'Cheese board',
             description: '',
-            price: '$485.00',
+            price: '$450.00',
           },
         ],
       },
@@ -387,7 +387,7 @@ export default [
           {
             name: 'Sea and land',
             description: '',
-            price: '$205.00',
+            price: '$220.00',
           },
           {
             name: 'El chilaquil',
@@ -420,7 +420,7 @@ export default [
               {
                 id: 1,
                 name: 'Regular',
-                price: '$155.00',
+                price: '$175.00',
               },
               {
                 id: 2,
@@ -430,7 +430,7 @@ export default [
               {
                 id: 3,
                 name: 'With chicken',
-                price: '$195.00',
+                price: '$210.00',
               },
             ],
           },
@@ -481,7 +481,7 @@ export default [
             name: 'El del ingeniero',
             description:
               'Carne asada, 2 eggs, chilaquiles, beans, guacamole, grilled cheese and a quesadilla',
-            price: '$265.00',
+            price: '$275.00',
           },
 
           {
