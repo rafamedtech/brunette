@@ -4,7 +4,7 @@ import { storeToRefs } from 'pinia';
 
 const store = useMainStore();
 
-const { modal, language, isLoading } = storeToRefs(store);
+const { modal, language, eventModal } = storeToRefs(store);
 
 const lang = computed(() => (language.value ? language.value : 'es'));
 
@@ -18,6 +18,7 @@ useHead({ htmlAttrs: { lang } });
     </NuxtLayout>
 
     <Modal v-if="modal" />
+    <EventModal v-if="eventModal" />
 
     <!-- <div
       v-if="isLoading"

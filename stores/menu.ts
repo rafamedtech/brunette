@@ -2,6 +2,7 @@ import { defineStore } from 'pinia';
 
 export const useMainStore = defineStore('menu', () => {
   const modal = ref(false);
+  const eventModal = ref(true);
   const languageModal = ref(true);
   const isLoading = ref(false);
 
@@ -54,6 +55,7 @@ export const useMainStore = defineStore('menu', () => {
 
   return {
     modal,
+    eventModal,
     languageModal,
     isLoading,
     language,
