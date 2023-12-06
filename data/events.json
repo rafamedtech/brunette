@@ -1,23 +1,38 @@
 [
   {
     "id": 1,
+    "title": "Fiesta de fin de año",
+    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1701888850/events/NewYearsLogoa_g8oi9x.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Posada Brunette",
+    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1701888851/events/PosadaClientes_Brunette_Story_1_teajhj.jpg"
+  },
+  {
+    "id": 3,
     "title": "Jueves de sangrías",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695338967/menu/sangrias_lte6av.jpg"
   },
   {
-    "id": 2,
+    "id": 4,
     "title": "Happy Miércoles",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695339685/menu/happy-hour_1_vtpzhj.png"
   },
 
   {
-    "id": 3,
+    "id": 5,
     "title": "Viernes de Karaoke",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695339452/menu/laura-torres_ztrjyx.jpg"
   },
   {
-    "id": 4,
+    "id": 6,
     "title": "Sábado música en vivo",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1675114127/menu/eventos/LAURONA_SABADO_wp0mkg.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Domingo de brunch",
+    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1701888851/events/Sunday_Brunchhhhh_ckgwuz.jpg"
   }
 ]
