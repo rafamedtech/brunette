@@ -19,7 +19,11 @@
     "title": "Happy Miércoles",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695339685/menu/happy-hour_1_vtpzhj.png"
   },
-
+  {
+    "id": 4,
+    "title": "Miércoles de chilaquiles",
+    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1701889386/events/chilaquiles_kmnnhh.jpg"
+  },
   {
     "id": 5,
     "title": "Viernes de Karaoke",
