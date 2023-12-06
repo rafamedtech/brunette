@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import promo from '@/assets/images/promo.jpg';
+import promo from 'https://res.cloudinary.com/rafamed-dev/image/upload/v1701888850/events/NewYearsLogoa_g8oi9x.jpg';
 const store = useMainStore();
 const { eventModal } = storeToRefs(store);
 
