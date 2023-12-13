@@ -6,6 +6,7 @@ import { required, email, helpers, minLength, maxLength, minValue } from '@vueli
 import VueDatepickerUi from 'vue-datepicker-ui';
 import 'vue-datepicker-ui/lib/vuedatepickerui.css';
 import colors from 'tailwindcss/colors';
+import { Resend } from 'resend';
 
 const store = useMainStore();
 const { language } = storeToRefs(store);
@@ -88,6 +89,7 @@ const openModal = () => {
 
 const supabase = useSupabaseClient();
 // const dateOptions = { }
+const resend = new Resend('re_8AG4wH61_Gcwsb5uaEtX9mXUyAphddkHD');
 async function sendReservationSupabase() {
   const dateString = computed(
     () =>
@@ -99,6 +101,14 @@ async function sendReservationSupabase() {
 
   try {
     const { error } = await supabase.from('reservations').insert([reservationData]);
+
+    resend.emails.send({
+      from: 'onboarding@resend.dev',
+      to: 'rafamed.tech@gmail.com',
+      subject: 'Hello World',
+      html: '<p>Congrats on sending your <strong>first email</strong>!</p>',
+    });
+
     // console.log(data);
 
     if (error) throw error;
@@ -209,7 +219,7 @@ definePageMeta({
           <label class="text-primary" for="">{{ language === 'es' ? 'Hora' : 'Time' }}</label>
           <input
             v-model="reservationData.time"
-            class="input-bordered input border-[#d1d5db] transition-all focus:ring focus:ring-primary"
+            class="input input-bordered border-[#d1d5db] transition-all focus:ring focus:ring-primary"
             type="time"
             name=""
             id=""
@@ -222,7 +232,7 @@ definePageMeta({
             v-model="reservationData.name"
             type="text"
             placeholder="Ej. Juan Perez"
-            class="input-bordered input w-full max-w-xs border-[#d1d5db] transition-all focus:ring focus:ring-primary"
+            class="input input-bordered w-full max-w-xs border-[#d1d5db] transition-all focus:ring focus:ring-primary"
             :class="{ 'border-red-500': v$.name.$error }"
           />
           <Icon
@@ -242,7 +252,7 @@ definePageMeta({
             v-model="reservationData.phone"
             type="number"
             placeholder="Ej 6641234567"
-            class="input-bordered input w-full max-w-xs border-[#d1d5db] transition-all focus:ring focus:ring-primary"
+            class="input input-bordered w-full max-w-xs border-[#d1d5db] transition-all focus:ring focus:ring-primary"
             :class="{ 'border-red-500': v$.phone.$error }"
           />
           <Icon
@@ -263,7 +273,7 @@ definePageMeta({
           <input
             v-model="reservationData.qty"
             type="number"
-            class="input-bordered input w-full max-w-xs border-[#d1d5db] transition-all focus:ring focus:ring-primary"
+            class="input input-bordered w-full max-w-xs border-[#d1d5db] transition-all focus:ring focus:ring-primary"
             :class="{ 'border-red-500': v$.qty.$error }"
           />
           <Icon
@@ -274,7 +284,7 @@ definePageMeta({
           />
           <span v-if="v$.qty.$error" class="text-red-500">{{ v$.qty.$errors[0].$message }}</span>
         </div>
-        <button @click="openModal" for="my-modal-6" class="btn-primary btn text-base-100">
+        <button @click="openModal" for="my-modal-6" class="btn btn-primary text-base-100">
           {{ language === 'es' ? 'Reservar' : 'Submit' }}
         </button>
       </form>
@@ -345,10 +355,10 @@ definePageMeta({
             </li>
           </ul>
           <div class="flex justify-center gap-4">
-            <button class="btn-primary btn text-white" @click="openModal">
+            <button class="btn btn-primary text-white" @click="openModal">
               {{ language === 'es' ? 'Editar' : 'Edit' }}
             </button>
-            <label class="btn-accent btn text-white" @click="sendReservation">{{
+            <label class="btn btn-accent text-white" @click="sendReservation">{{
               language === 'es' ? 'Enviar' : 'Send'
             }}</label>
           </div>
@@ -366,7 +376,7 @@ definePageMeta({
               }}
             </p>
           </div>
-          <button class="btn-accent btn text-white" @click="submitReservation">
+          <button class="btn btn-accent text-white" @click="submitReservation">
             {{ language === 'es' ? 'Aceptar' : 'Accept' }}
           </button>
         </div>
@@ -387,7 +397,7 @@ definePageMeta({
 }
 
 .v-calendar .input-field input {
-  @apply input-bordered input pl-10 transition-all focus:ring focus:ring-primary;
+  @apply input input-bordered pl-10 transition-all focus:ring focus:ring-primary;
   border-color: v-bind(errorBorder);
 }
 

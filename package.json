@@ -26,6 +26,7 @@
     "@vuelidate/validators": "^2.0.2",
     "@vueuse/nuxt": "^10.2.1",
     "pinia": "^2.1.4",
+    "resend": "^2.0.0",
     "uid": "^2.0.2",
     "vue-datepicker-ui": "^3.1.1"
   },

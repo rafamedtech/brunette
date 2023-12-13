@@ -123,12 +123,14 @@ definePageMeta({
           <div
             class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
           >
-            <a :href="index === 0 ? '#' : `#slide${index}`" class="btn btn-circle btn-secondary"
+            <a
+              :href="index === 0 ? '#' : `#slide${index}`"
+              class="btn btn-circle border-primary bg-primary/30 text-white"
               >❮</a
             >
             <a
               :href="index + 1 === events.length ? '#' : `#slide${index + 2}`"
-              class="btn btn-circle btn-secondary"
+              class="btn btn-circle border-primary bg-primary/30 text-white"
               >❯</a
             >
           </div>
