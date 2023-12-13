@@ -89,8 +89,9 @@ const openModal = () => {
 
 const supabase = useSupabaseClient();
 // const dateOptions = { }
-const resend = new Resend('re_8AG4wH61_Gcwsb5uaEtX9mXUyAphddkHD');
+
 async function sendReservationSupabase() {
+  const resend = new Resend('re_8AG4wH61_Gcwsb5uaEtX9mXUyAphddkHD');
   const dateString = computed(
     () =>
       `${new Date(reservationData.date).getFullYear()}-${new Date(
