@@ -895,7 +895,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$650.00',
+                price: '$900.00',
               },
               {
                 id: 2,
