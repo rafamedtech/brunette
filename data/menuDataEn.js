@@ -288,6 +288,16 @@ export default [
             price: '$265.00',
           },
           {
+            name: 'Hawaian',
+            description: '',
+            price: '$200.00',
+          },
+          {
+            name: 'Mushrooms',
+            description: '',
+            price: '$215.00',
+          },
+          {
             name: '',
             description: 'Cheesy edge',
             price: '$60.00',
@@ -1267,6 +1277,23 @@ export default [
               },
             ],
           },
+          {
+            name: 'Blue Macallan',
+            description: '',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$2,400.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$150.00',
+              },
+            ],
+          },
 
           {
             name: 'Buchanans 18Y 750ml',
@@ -1518,7 +1545,7 @@ export default [
             price: '$50.00',
           },
           {
-            name: 'Victoria',
+            name: 'Coors light',
             description: '',
             price: '$50.00',
           },

@@ -24,7 +24,7 @@ const props = defineProps({
         <p class="text-secondary" :class="{ 'text-black': !item.description }" v-if="item.price">
           {{ item.price }}
         </p>
-        <div v-if="item.variants">
+        <div>
           <div
             v-for="variant in item.variants"
             :key="variant.id"

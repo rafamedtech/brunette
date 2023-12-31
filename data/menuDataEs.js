@@ -148,7 +148,18 @@ export default [
             name: 'Fetuccini Alfredo',
             description: 'Servido con cremosa salsa alfredo',
             price: '$185.00',
-            variants: ['Con pollo $240.00', 'Con camarón $275.00'],
+            variants: [
+              {
+                id: 1,
+                name: 'Con pollo',
+                price: '$240',
+              },
+              {
+                id: 2,
+                name: 'Con camarón',
+                price: '$275',
+              },
+            ],
           },
           {
             name: 'Lasagna Brunette',
@@ -277,6 +288,16 @@ export default [
             name: 'Taquera',
             description: 'Carne asada y carne al pastor',
             price: '$265.00',
+          },
+          {
+            name: 'Hawaiana',
+            description: '',
+            price: '$200.00',
+          },
+          {
+            name: 'Champiñones',
+            description: '',
+            price: '$215.00',
           },
           {
             name: '',
@@ -1265,6 +1286,23 @@ export default [
               },
             ],
           },
+          {
+            name: 'Blue Macallan',
+            description: '',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Botella',
+                price: '$2,400.00',
+              },
+              {
+                id: 2,
+                name: 'Trago',
+                price: '$150.00',
+              },
+            ],
+          },
 
           {
             name: 'Buchanans 18Y 750ml',
@@ -1516,7 +1554,7 @@ export default [
             price: '$50.00',
           },
           {
-            name: 'Victoria',
+            name: 'Coors light',
             description: '',
             price: '$50.00',
           },

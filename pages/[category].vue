@@ -16,6 +16,7 @@ const menu = computed(() => {
 });
 const { params } = useRoute();
 const category = menu.value.find((category) => category.slug === params.category);
+console.log(category);
 
 // watchEffect(() => {
 //   if (language.value === 'en') {
