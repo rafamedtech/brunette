@@ -1338,7 +1338,7 @@ export default [
               {
                 id: 1,
                 name: 'Botella',
-                price: '$600.00',
+                price: '$800.00',
               },
               {
                 id: 2,
@@ -1355,7 +1355,7 @@ export default [
               {
                 id: 1,
                 name: 'Botella',
-                price: '$650.00',
+                price: '$800.00',
               },
               {
                 id: 2,

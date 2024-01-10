@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const image =
+  'https://res.cloudinary.com/rafamed-dev/image/upload/v1701888851/events/Sunday_Brunchhhhh_ckgwuz.jpg';
+
 const store = useMainStore();
 const { eventModal } = storeToRefs(store);
 
@@ -13,10 +16,7 @@ function closeModal() {
   >
     <dialog class="bg-dark-strong h-9/10 card relative w-full max-w-lg rounded-xl shadow-xl">
       <figure class="rounded-xl lg:w-80">
-        <img
-          src="https://res.cloudinary.com/rafamed-dev/image/upload/v1701888850/events/NewYearsLogoa_g8oi9x.jpg"
-          alt=""
-        />
+        <img :src="image" alt="" />
       </figure>
       <button class="btn btn-primary absolute -top-4 right-0 rounded-xl" @click="closeModal">
         Cerrar
