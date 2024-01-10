@@ -23,7 +23,7 @@ defineProps<Props>();
     class="h-fit w-full text-center"
   >
     <span class="font-handlee text-2xl lg:text-3xl">{{ category.title }}</span>
-    <figure class="card h-52 shadow-xl lg:h-80">
+    <figure class="card h-72 shadow-xl lg:h-80">
       <nuxt-img
         :src="category.cover"
         densities="x1 x2"

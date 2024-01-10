@@ -3,7 +3,7 @@ export default [
     title: 'the Menu',
     slug: 'the-menu',
     cover:
-      'https://res.cloudinary.com/rafamed-dev/image/upload/v1674092920/menu/IMG_0327_wehtnc.jpg',
+      'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/r3i9indhf34cbjtevglw.jpg',
     sections: [
       {
         title: 'Entradas',
@@ -337,7 +337,7 @@ export default [
     title: 'Desayunos',
     slug: 'desayunos',
     cover:
-      'https://res.cloudinary.com/rafamed-dev/image/upload/v1675884394/menu/desayunos_qawxqt.jpg',
+      'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/zoclbz97b4zivibfpcoy.jpg',
     sections: [
       {
         title: 'Detox',
@@ -511,7 +511,7 @@ export default [
     title: 'the Bar',
     slug: 'the-bar',
     cover:
-      'https://res.cloudinary.com/rafamed-dev/image/upload/v1695338606/menu/WhatsApp_Image_2023-09-21_at_10.02.54_AM_jl8bzk.jpg',
+      'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/nuhzvsydok6rhzqsxklf.jpg',
     sections: [
       {
         title: 'Vinos Casa Magoni',
@@ -1694,7 +1694,7 @@ export default [
     title: 'Mixología',
     slug: 'mixologia',
     cover:
-      'https://res.cloudinary.com/rafamed-dev/image/upload/v1674092841/menu/IMG_0394_jnbkt4.jpg',
+      'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913834/menu/elfiwlslmmgwaguddc4x.jpg',
     sections: [
       {
         title: 'Menú Brunette',
