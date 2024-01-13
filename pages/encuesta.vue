@@ -176,7 +176,7 @@ definePageMeta({
       <div class="hero">
         <div class="flex-col">
           <div v-if="language === 'es'" class="text-center">
-            <h1 class="text-2xl text-secondary">Agradeceríamos tu opinión</h1>
+            <h1 class="text-2xl font-bold text-neutral">Agradeceríamos tu opinión</h1>
             <p class="pb-6 text-black">
               Con tus comentarios, podemos mejorar nuestros productos y servicios.
             </p>

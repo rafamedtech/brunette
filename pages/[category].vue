@@ -7,7 +7,6 @@ import { useMainStore } from '@/stores/menu';
 const store = useMainStore();
 const { language } = storeToRefs(store);
 
-// const { menu } = useMenu('en');
 const menu = computed(() => {
   if (language.value === 'en') {
     return menuEn;
@@ -15,15 +14,7 @@ const menu = computed(() => {
   return menuEs;
 });
 const { params } = useRoute();
-const category = menu.value.find((category) => category.slug === params.category);
-console.log(category);
-
-// watchEffect(() => {
-//   if (language.value === 'en') {
-//     return navigateTo(``);
-//   }
-// });
-
+const category = computed(() => menu.value.find((category) => category.slug === params.category));
 useHead({
   title: `Menú - ${category.title}`,
   meta: [
@@ -46,7 +37,7 @@ definePageMeta({
   <main class="container lg:mt-8">
     <section class="flex items-center pt-4">
       <NuxtLink class="absolute my-auto ml-5 text-primary" to="/">
-        <Icon name="ri:arrow-left-line" class="text-4xl font-bold text-secondary" />
+        <Icon name="ri:arrow-left-line" class="text-4xl font-bold text-neutral" />
       </NuxtLink>
       <h1 class="mx-auto px-2 text-center font-handlee text-4xl text-primary lg:px-32">
         {{ category.title }}

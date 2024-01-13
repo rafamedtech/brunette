@@ -5,7 +5,6 @@ import events from '@/data/events.json';
 
 const store = useMainStore();
 const { language } = storeToRefs(store);
-// const { events, language } = storeToRefs(store);
 
 const title = computed(
   () => `Brunette Kitchen & Drinks | ${language.value === 'es' ? 'Eventos' : 'Events'} 📅`
@@ -56,7 +55,7 @@ definePageMeta({
 </script>
 
 <template>
-  <main class="mt-4 pb-16 lg:mt-8">
+  <main class="mt-8 pb-16 lg:mt-8">
     <section class="container mt-4 flex items-center">
       <button class="absolute my-auto ml-5 text-primary" @click="$router.back()">
         <i class="fa-solid fa-arrow-left-long text-3xl"></i>

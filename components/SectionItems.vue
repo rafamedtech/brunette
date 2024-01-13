@@ -21,14 +21,14 @@ const props = defineProps({
       <div>
         <h4 class="text-base font-bold uppercase text-primary">{{ item.name }}</h4>
         <p v-if="item.description">{{ item.description }}</p>
-        <p class="text-secondary" :class="{ 'text-black': !item.description }" v-if="item.price">
+        <p class="font-bold" :class="{ 'text-black': !item.description }" v-if="item.price">
           {{ item.price }}
         </p>
         <div>
           <div
             v-for="variant in item.variants"
             :key="variant.id"
-            class="flex justify-between text-secondary"
+            class="flex justify-between font-bold"
           >
             <p class="text-black">{{ variant.name }}</p>
             <p>{{ variant.price }}</p>

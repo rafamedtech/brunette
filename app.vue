@@ -1,10 +1,8 @@
 <script setup>
-import { useMainStore } from '@/stores/menu';
-import { storeToRefs } from 'pinia';
-
 const store = useMainStore();
-
-const { modal, language, eventModal } = storeToRefs(store);
+const eventStore = useEventStore();
+const { eventModal } = storeToRefs(eventStore);
+const { modal, language } = storeToRefs(store);
 
 const lang = computed(() => (language.value ? language.value : 'es'));
 

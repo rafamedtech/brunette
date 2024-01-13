@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const image =
-  'https://res.cloudinary.com/rafamed-dev/image/upload/v1701888851/events/Sunday_Brunchhhhh_ckgwuz.jpg';
-
-const store = useMainStore();
+const store = useEventStore();
 const { eventModal } = storeToRefs(store);
+
+const modalImage =
+  'https://res.cloudinary.com/rafamed-dev/image/upload/v1705181113/events/WhatsApp_Image_2024-01-12_at_2.05.17_p.m._a7mtny.jpg';
 
 function closeModal() {
   eventModal.value = false;
@@ -16,9 +16,12 @@ function closeModal() {
   >
     <dialog class="bg-dark-strong h-9/10 card relative w-full max-w-lg rounded-xl shadow-xl">
       <figure class="rounded-xl lg:w-80">
-        <img :src="image" alt="" />
+        <img :src="modalImage" alt="" />
       </figure>
-      <button class="btn btn-primary absolute -top-4 right-0 rounded-xl" @click="closeModal">
+      <button
+        class="btn btn-primary absolute -top-4 right-0 rounded-xl normal-case"
+        @click="closeModal"
+      >
         Cerrar
       </button>
     </dialog>

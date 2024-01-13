@@ -332,7 +332,7 @@ export default [
 
   {
     title: 'Breakfast',
-    slug: 'breakfast',
+    slug: 'desayunos',
     cover:
       'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/zoclbz97b4zivibfpcoy.jpg',
     sections: [
@@ -1630,6 +1630,11 @@ export default [
             price: '$50.00',
           },
           {
+            name: 'Monster',
+            description: '',
+            price: '$90.00',
+          },
+          {
             name: 'Ciel mineral water',
             description: '',
             price: '$35.00',
@@ -1683,7 +1688,7 @@ export default [
 
   {
     title: 'Mixology',
-    slug: 'mixology',
+    slug: 'mixologia',
     cover:
       'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913834/menu/elfiwlslmmgwaguddc4x.jpg',
     sections: [

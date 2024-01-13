@@ -1639,6 +1639,11 @@ export default [
             price: '$50.00',
           },
           {
+            name: 'Monster',
+            description: '',
+            price: '$90.00',
+          },
+          {
             name: 'Agua mineral Ciel',
             description: '',
             price: '$35.00',

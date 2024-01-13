@@ -1,12 +1,11 @@
 <script setup>
-// import { useMainStore } from '@/stores/menu';
-// import { storeToRefs } from 'pinia';
+import logo from '@/assets/images/logo-new.svg';
 
 const store = useMainStore();
 const route = useRoute();
 const { language, isLoading } = storeToRefs(store);
 
-// const language = useLocalStorage('language', null);
+const dropdown = ref(false);
 
 const changeLanguage = () => {
   isLoading.value = true;
@@ -31,7 +30,7 @@ const changeLanguage = () => {
         <ul class="fixed flex w-fit flex-col gap-4">
           <li>
             <figure class="text-2xl text-neutral-content">
-              <img class="h-20" src="@/assets/images/logo.png" alt="logo" />
+              <img class="h-20" :src="logo" alt="logo" />
             </figure>
           </li>
 
@@ -90,7 +89,7 @@ const changeLanguage = () => {
                 {{ language === 'es' ? 'Idioma' : 'Language' }}
               </p>
               <button
-                class="btn-primary btn h-fit flex-col gap-0 px-2 text-base-100 opacity-0 transition-all duration-500 lg:flex-row lg:gap-2"
+                class="btn btn-primary h-fit flex-col gap-0 px-2 text-base-100 opacity-0 transition-all duration-500 lg:flex-row lg:gap-2"
                 :class="{
                   'opacity-100 transition-all duration-700':
                     route.path === '/' || route.path === '/en',
@@ -115,28 +114,21 @@ const changeLanguage = () => {
     <div class="divider"></div>
 
     <div class="w-full lg:w-4/5">
-      <div class="background navbar w-full bg-base-100 lg:hidden">
+      <div class="navbar w-full bg-neutral lg:hidden">
         <div class="navbar-start">
-          <div class="dropdown">
-            <label tabindex="0" class="btn-ghost btn-circle btn">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h7"
-                />
-              </svg>
-            </label>
+          <details class="dropdown">
+            <summary class="btn btn-neutral p-0" @click="() => (dropdown = !dropdown)">
+              <Icon
+                :name="dropdown ? 'heroicons-outline:x' : 'heroicons-outline:bars-3-bottom-left'"
+                size="28"
+                class="text-primary"
+              />
+            </summary>
+            <!-- <label tabindex="0" class="btn btn-circle btn-ghost text-primary">
+              <Icon name="heroicons-outline:bars-3-bottom-left" size="28" />
+            </label> -->
             <ul
-              tabindex="0"
-              class="dropdown-content menu rounded-box menu-sm z-50 mt-3 w-80 bg-base-100 p-2 shadow"
+              class="menu dropdown-content rounded-box menu-sm z-50 mt-3 w-80 border border-base-100/25 bg-neutral p-2 text-base-100 shadow"
             >
               <!-- <li><img class="mx-auto h-28 w-fit" src="@/assets/images/logo.png" alt="logo" /></li> -->
               <li class="flex w-full flex-row justify-center gap-4 text-5xl active:bg-transparent">
@@ -150,7 +142,7 @@ const changeLanguage = () => {
               <li><p class="mx-auto text-center font-bold text-primary">(664) 974 6842</p></li>
               <li>
                 <div class="flex flex-col text-center">
-                  <h4 class="font-handlee text-2xl uppercase text-black">
+                  <h4 class="font-handlee text-2xl uppercase">
                     {{ language === 'es' ? 'Horario' : 'Opening hours' }}
                   </h4>
                   <article>
@@ -180,30 +172,23 @@ const changeLanguage = () => {
                 </div>
               </li>
             </ul>
-          </div>
+          </details>
         </div>
         <div class="navbar-center">
           <figure class="text-2xl text-neutral-content">
-            <img class="h-20" src="@/assets/images/logo.png" alt="logo" />
+            <img class="h-20" :src="logo" alt="logo" />
           </figure>
         </div>
         <div class="navbar-end">
           <button
-            class="btn-primary btn h-fit flex-col gap-0 px-2 text-base-100 opacity-0 transition-all duration-500 lg:flex-row lg:gap-2"
+            class="btn btn-primary h-fit flex-col gap-0 bg-primary/75 px-2 text-base-100 transition-all duration-500 lg:flex-row lg:gap-2"
             :class="{
               'opacity-100 transition-all duration-700': route.path === '/' || route.path === '/en',
             }"
             @click="changeLanguage"
           >
-            <Icon
-              :name="
-                language === 'es'
-                  ? 'emojione-v1:flag-for-mexico'
-                  : 'emojione-v1:flag-for-united-states'
-              "
-              class="text-2xl"
-            />
-            <span class="text-xs">{{ language === 'es' ? 'ES' : 'EN' }}</span>
+            <Icon name="heroicons-outline:switch-vertical" class="text-2xl" />
+            <span class="text-xs normal-case">{{ language === 'es' ? 'English' : 'Español' }}</span>
           </button>
         </div>
       </div>
@@ -213,7 +198,7 @@ const changeLanguage = () => {
     <Transition name="fade-in">
       <div
         v-if="isLoading"
-        class="absolute inset-0 z-[99999] grid min-h-screen w-screen place-content-center backdrop-blur-xl"
+        class="fixed inset-0 z-[99999] grid min-h-screen w-screen place-content-center backdrop-blur-xl"
       >
         <Loader />
       </div>

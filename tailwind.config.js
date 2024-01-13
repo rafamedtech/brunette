@@ -40,13 +40,14 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          primary: '#7a8a3a',
+          primary: '#00673c',
+          // primary: '#7a8a3a',
 
           secondary: '#baa476',
 
           accent: '#baa476',
 
-          neutral: '#021431',
+          neutral: '#1a1a1a',
 
           'base-100': '#FFFFFF',
 
