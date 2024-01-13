@@ -25,13 +25,9 @@ const props = defineProps({
           {{ item.price }}
         </p>
         <div>
-          <div
-            v-for="variant in item.variants"
-            :key="variant.id"
-            class="flex justify-between font-bold"
-          >
-            <p class="text-black">{{ variant.name }}</p>
-            <p>{{ variant.price }}</p>
+          <div v-for="variant in item.variants" :key="variant.id" class="flex justify-between">
+            <p>{{ variant.name }}</p>
+            <p class="font-bold">{{ variant.price }}</p>
           </div>
         </div>
       </div>
