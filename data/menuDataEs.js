@@ -353,6 +353,11 @@ export default [
           'https://images.pexels.com/photos/2827263/pexels-photo-2827263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         items: [
           {
+            name: 'Camarones al coco',
+            description: '',
+            price: '$235.00',
+          },
+          {
             name: 'Volcán de pescado al pastor',
             description: 'Pescado al pastor, cilantro, cebolla y aguacate',
             price: '$175.00',
@@ -368,8 +373,8 @@ export default [
             price: '$235.00',
           },
           {
-            name: 'Atun Brunette',
-            description: 'lajas de atún en salsas negras',
+            name: 'Atún Brunette',
+            description: 'Lajas de atún en salsas negras',
             price: '$285.00',
           },
         ],
@@ -1401,12 +1406,17 @@ export default [
           {
             name: 'Martini sucio',
             description: '',
-            price: '$195.00',
+            price: '$180.00',
           },
           {
             name: 'Martini seco',
             description: '',
             price: '$195.00',
+          },
+          {
+            name: 'Old fashion',
+            description: '',
+            price: '$160.00',
           },
           {
             name: 'Goodbye mother fucker',

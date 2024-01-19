@@ -352,6 +352,11 @@ export default [
           'https://images.pexels.com/photos/2827263/pexels-photo-2827263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         items: [
           {
+            name: 'Coconut shrimp',
+            description: '',
+            price: '$235.00',
+          },
+          {
             name: 'Al pastor fish volcán',
             description: 'Al pastor fish, cilantro, onion and avocado',
             price: '$175.00',
@@ -1392,12 +1397,17 @@ export default [
           {
             name: 'Dirty Martini',
             description: '',
-            price: '$120.00',
+            price: '$180.00',
           },
           {
             name: 'Dry Martini',
             description: '',
             price: '$120.00',
+          },
+          {
+            name: 'Old fashion',
+            description: '',
+            price: '$160.00',
           },
           {
             name: 'Goodbye mother fucker',

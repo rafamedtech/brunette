@@ -2,7 +2,7 @@
 import { useMainStore } from '@/stores/menu';
 import { storeToRefs } from 'pinia';
 import { useVuelidate } from '@vuelidate/core';
-import { required, email, helpers, minLength, maxLength, minValue } from '@vuelidate/validators';
+import { required, helpers, minLength, maxLength, minValue } from '@vuelidate/validators';
 import VueDatepickerUi from 'vue-datepicker-ui';
 import 'vue-datepicker-ui/lib/vuedatepickerui.css';
 import colors from 'tailwindcss/colors';

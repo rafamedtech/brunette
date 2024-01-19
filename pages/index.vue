@@ -1,17 +1,9 @@
 <script setup>
 import menuEs from '@/data/menuDataEs';
 import menuEn from '@/data/menuDataEn';
-import { useMainStore } from '@/stores/menu';
-import { storeToRefs } from 'pinia';
-
-// const { getDatabase } = useSurveys();
-// await getDatabase();
 
 const store = useMainStore();
-
 const { language } = storeToRefs(store);
-// const { menu: menuDataES } = useMenu('es');
-// const { menu: menuDataEN } = useMenu('en');
 
 const menu = computed(() => {
   if (language.value === 'en') {
@@ -20,9 +12,6 @@ const menu = computed(() => {
   return menuEs;
 });
 
-// console.log(menu.value);
-
-// Metadata
 useHead({
   title: 'Brunette Kitchen & Drinks | Menú 📖',
   meta: [
