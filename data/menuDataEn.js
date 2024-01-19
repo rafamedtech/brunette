@@ -1709,39 +1709,34 @@ export default [
           {
             name: 'Candela',
             description: 'Mezcal, conserva de jamaica y maracuyá, limón y sal de chiles ahumados.',
+            image: '',
             price: '$210.00',
           },
           {
             name: 'Eros',
             description: 'Gin, compota de frutos rojos, limón, tonic top & soda.',
+            image: '',
             price: '$210.00',
           },
           {
             name: "Piña pa'la niña ",
             description:
               'Ron blanco, pera piña, jugo de piña, Angostura, crema batida y coco tostado..',
+            image: '',
             price: '$210.00',
           },
-          // {
-          //   name: 'Kukulkán',
-          //   description:
-          //     'Tequila, licor de naranja, miel de agave, piña asada, rodajas de pepino, 1 Hoja santa tatemada. Decorado con hojas de piña',
-          //   price: '$210.00 ',
-          // },
+
           {
             name: 'Brunette & Tonic',
             description: 'Gin, lemon grass, limón amarillo, menta, tonic y perfume de Damiana.',
+            image: '',
             price: '$210.00 ',
           },
-          // {
-          //   name: 'Mula arriera',
-          //   description:
-          //     'Mezcal joven espadín, Sal artesanal de chiles ahumados, pulpa de tamarindo natural, menta fresca, bitter artesanal de naranja y toronja, jugos cítricos, top de cerveza de jengibre, conserva de piña y apio. Decorado con menta fresca coral comestible y caramelos de jengibre coreano',
-          //   price: '$210.00 ',
-          // },
+
           {
             name: 'El matador',
             description: 'Mezcal, jugo de cítricos, piña, albahaca y miel de agave.',
+            image: '',
             price: '$210.00 ',
           },
         ],

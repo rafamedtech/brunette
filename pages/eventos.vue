@@ -40,7 +40,7 @@ useHead({
     {
       property: 'og:image',
       content:
-        'https://res.cloudinary.com/rafamed-dev/image/upload/v1675470741/menu/logobackground_qugh9v.png',
+        'https://res.cloudinary.com/rafamed-dev/image/upload/v1705703429/menu/OG_Image_cl4k6w.png',
     },
   ],
 });

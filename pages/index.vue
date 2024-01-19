@@ -19,7 +19,7 @@ useHead({
       name: 'description',
       content: 'Conoce nuestros deliciosos platillos y mixología.',
     },
-    // Facbebook Meta tags
+    // Facebook Meta tags
     {
       property: 'og:type',
       content: 'website',
@@ -39,7 +39,7 @@ useHead({
     {
       property: 'og:image',
       content:
-        'https://res.cloudinary.com/rafamed-dev/image/upload/v1675470741/menu/logobackground_qugh9v.png',
+        'https://res.cloudinary.com/rafamed-dev/image/upload/v1705703429/menu/OG_Image_cl4k6w.png',
     },
   ],
 });

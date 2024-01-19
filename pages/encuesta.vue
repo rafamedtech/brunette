@@ -1,9 +1,4 @@
 <script setup>
-import { useMainStore } from '@/stores/menu';
-import { storeToRefs } from 'pinia';
-// import { useVuelidate } from '@vuelidate/core';
-// import { required, helpers } from '@vuelidate/validators';
-
 const store = useMainStore();
 const { modal, language } = storeToRefs(store);
 
@@ -24,7 +19,6 @@ const supabase = useSupabaseClient();
 async function sendSurvey() {
   try {
     const { error } = await supabase.from('surveys').insert([surveyData]);
-    // console.log(data);
 
     if (error) throw error;
   } catch (error) {
@@ -32,35 +26,7 @@ async function sendSurvey() {
   }
 }
 
-// Validation Messages
-// const nameRequired = computed(() =>
-//   language.value === 'es' ? 'Es necesario ingresar un nombre' : 'Name field is required'
-// );
-// const meseroRequired = computed(() =>
-//   language.value === 'es' ? 'Es necesario ingresar un nombre' : 'Name field is required'
-// );
-
-//Form validation
-// const rules = computed(() => {
-//   return {
-//     name: {
-//       required: helpers.withMessage(nameRequired, required),
-//     },
-//     mesero: {
-//       required: helpers.withMessage(meseroRequired, required),
-//     },
-//   };
-// });
-
-// const v$ = useVuelidate(rules, surveyData);
-
-// const modalToggle = computed(() => (v$.value.$error ? '' : 'my-modal-6'));
 const openModal = () => {
-  // v$.value.$validate();
-  // if (v$.value.$error) {
-  //   return;
-  // }
-  // console.log(surveyData);
   if (
     !surveyData.firstQuestion ||
     !surveyData.secondQuestion ||
@@ -74,47 +40,6 @@ const openModal = () => {
   modal.value = true;
 };
 
-const meseroLog = () => {
-  console.log(surveyData.mesero);
-};
-
-// OAuth Authentication
-// const { auth } = useSupabaseClient();
-// const user = useSupabaseUser();
-
-// const googleAuth = async () => {
-//   try {
-//     const { error } = await auth.signInWithOAuth({
-//       provider: 'google',
-//     });
-
-//     if (error) throw error;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-
-// const logout = async () => {
-//   const { error } = await auth.signOut();
-
-//   if (error) {
-//     console.log(error);
-//     return;
-//   }
-//   // console.log(user.value);
-
-//   try {
-//     await $fetch('/api/_supabase/session', {
-//       method: 'POST',
-//       body: { event: 'SIGNED_OUT', session: null },
-//     });
-
-//     user.value = null;
-//   } catch (error) {
-//     console.error(error);
-//   }
-// };
-
 useHead({
   title: 'Brunette Kitchen & Drinks | Encuesta de satisfacción 📋',
   meta: [
@@ -122,7 +47,7 @@ useHead({
       name: 'description',
       content: 'Tu opinión es muy importante para nosotros.',
     },
-    // Facbebook Meta tags
+    // Facebook Meta tags
     {
       property: 'og:type',
       content: 'website',
@@ -142,7 +67,7 @@ useHead({
     {
       property: 'og:image',
       content:
-        'https://res.cloudinary.com/rafamed-dev/image/upload/v1675470741/menu/logobackground_qugh9v.png',
+        'https://res.cloudinary.com/rafamed-dev/image/upload/v1705703429/menu/OG_Image_cl4k6w.png',
     },
   ],
 });
@@ -164,10 +89,6 @@ definePageMeta({
       </h1>
     </section>
     <div class="divider mx-auto w-1/2"></div>
-    <!-- 
-    <button class="btn-accent btn flex items-center text-white" @click="logout">
-      Iniciar sesion con <Icon name="mdi:apple" class="mx-2 text-3xl" />
-    </button> -->
 
     <section>
       <div class="hero">
@@ -570,17 +491,6 @@ definePageMeta({
                 }}</label>
               </div>
             </form>
-            <!-- <div v-else class="card-body">
-              <h2 class="text-center text-2xl text-primary">
-                Inicia sesion para contestar la encuesta.
-              </h2>
-              <button class="btn-accent btn flex items-center text-white" @click="googleAuth">
-                Iniciar sesion con <Icon name="logos:google-icon" class="mx-2 text-2xl" />
-              </button>
-              <button class="btn-accent btn flex items-center text-white" @click="googleAuth">
-                Iniciar sesion con <Icon name="mdi:apple" class="mx-2 text-3xl" />
-              </button>
-            </div> -->
           </div>
         </div>
       </div>
