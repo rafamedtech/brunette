@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         handlee: ["'Handlee'", 'cursive'],
+        montserrat: ["'Montserrat'", 'sans-serif'],
       },
       container: {
         center: true,

@@ -157,12 +157,9 @@ definePageMeta({
 </script>
 
 <template>
-  <main class="mt-4 pb-16 lg:mt-8">
+  <main class="mt-8 pb-16">
     <section class="mt-4 flex items-center">
-      <button class="absolute my-auto ml-5 text-primary" @click="$router.back()">
-        <i class="fa-solid fa-arrow-left-long text-3xl"></i>
-      </button>
-      <h1 class="mx-auto px-2 text-center font-handlee text-4xl text-primary lg:px-32">
+      <h1 class="mx-auto px-2 text-center font-montserrat text-5xl text-primary lg:px-32">
         {{ language === 'es' ? 'Encuesta' : 'Survey' }}
       </h1>
     </section>
@@ -174,17 +171,17 @@ definePageMeta({
 
     <section>
       <div class="hero">
-        <div class="flex-col">
+        <div class="flex-col px-4">
           <div v-if="language === 'es'" class="text-center">
-            <h1 class="text-2xl font-bold text-neutral">Agradeceríamos tu opinión</h1>
-            <p class="pb-6 text-black">
-              Con tus comentarios, podemos mejorar nuestros productos y servicios.
+            <p class="pb-6 text-xl text-black">
+              ¡Agradeceríamos tu opinión! Con tus comentarios, podemos mejorar nuestros productos y
+              servicios.
             </p>
           </div>
           <div v-else class="text-center">
-            <h1 class="text-2xl text-primary">We would appreciate your feedback.</h1>
-            <p class="pb-6 text-black">
-              With your opinion, we can improve our products and services.
+            <p class="pb-6 text-xl text-black">
+              We would appreciate your feedback! With your opinion, we can improve our products and
+              services.
             </p>
           </div>
 

@@ -14,12 +14,12 @@ const props = defineProps({
 
 <template>
   <ul
-    class="grid grid-cols-1 gap-4 p-4 lg:grid-cols-2"
+    class="grid grid-cols-1 gap-4 px-2 py-4 lg:grid-cols-2"
     :class="{ 'grid-cols-2 text-left': !oneColumn }"
   >
     <li :class="{ 'mx-auto': items.length === 1 }" v-for="item in items" :key="item.name">
       <div>
-        <h4 class="text-base font-bold uppercase text-primary">{{ item.name }}</h4>
+        <h4 class="text-base font-bold text-primary">{{ item.name }}</h4>
         <p v-if="item.description">{{ item.description }}</p>
         <p class="font-bold" :class="{ 'text-black': !item.description }" v-if="item.price">
           {{ item.price }}

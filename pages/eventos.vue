@@ -57,10 +57,7 @@ definePageMeta({
 <template>
   <main class="mt-8 pb-16 lg:mt-8">
     <section class="container mt-4 flex items-center">
-      <button class="absolute my-auto ml-5 text-primary" @click="$router.back()">
-        <i class="fa-solid fa-arrow-left-long text-3xl"></i>
-      </button>
-      <h1 class="mx-auto px-2 text-center font-handlee text-4xl text-primary lg:px-32">
+      <h1 class="mx-auto px-2 text-center font-montserrat text-5xl text-primary lg:px-32">
         {{ language === 'es' ? 'Eventos' : 'Events' }}
       </h1>
     </section>
@@ -68,23 +65,17 @@ definePageMeta({
     <div
       class="container hero-content w-full flex-col items-center justify-center pt-0 text-center lg:flex-row"
     >
-      <p class="text-center text-2xl text-black">
+      <p class="text-center text-xl text-black">
         {{ language === 'es' ? 'Conoce los próximos eventos' : 'Find the next events' }}
       </p>
     </div>
 
     <section class="w-full">
-      <div
-        class="container rounded-box hidden gap-8 bg-[#ffffff] p-4 pb-8 shadow-pinterest lg:grid lg:grid-cols-2"
-      >
-        <div
-          v-for="{ id, title, cover } in events"
-          :key="id"
-          class="carousel-item w-full flex-col p-4 lg:px-0"
-        >
+      <div class="container rounded-box hidden gap-8 bg-[#ffffff] p-4 pb-8 md:grid md:grid-cols-2">
+        <div v-for="{ id, title, cover } in events" :key="id" class="w-full flex-col p-4 lg:px-0">
           <h2 class="text-center text-2xl uppercase text-primary">{{ title }}</h2>
           <img
-            class="h-[40rem] rounded-2xl md:mx-auto md:object-cover lg:max-w-sm"
+            class="mt-4 h-[40rem] w-full rounded-2xl shadow-md md:max-w-full md:object-cover"
             :src="cover"
             alt=""
           />
@@ -98,14 +89,14 @@ definePageMeta({
           />-->
         </div>
       </div>
-      <div class="carousel carousel-center mx-auto w-screen max-w-md lg:hidden">
+      <div class="carousel carousel-center mx-auto w-screen max-w-md md:hidden">
         <div
           v-for="(event, index) in events"
           :key="event.id"
           :id="`slide${index + 1}`"
           class="carousel-item relative min-h-full w-80 flex-col p-2"
         >
-          <h2 class="text-center text-2xl uppercase text-primary">{{ event.title }}</h2>
+          <h2 class="text-center text-2xl text-primary">{{ event.title }}</h2>
           <!-- <img
             class="w-full rounded-2xl md:mx-auto md:h-96 md:w-96 md:object-cover"
             :src="event.cover"
@@ -117,7 +108,7 @@ definePageMeta({
             format="webp"
             quality="80"
             loading="lazy"
-            class="h-full w-full rounded-2xl object-cover md:mx-auto md:h-96 md:w-96"
+            class="mt-4 h-full w-full rounded-2xl object-cover md:mx-auto md:h-96 md:w-96"
           />
           <div
             class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
@@ -125,9 +116,11 @@ definePageMeta({
             <a
               :href="index === 0 ? '#' : `#slide${index}`"
               class="btn btn-circle border-primary bg-primary/30 text-white"
+              :class="{ 'pointer-events-none opacity-0': index === 0 }"
               >❮</a
             >
             <a
+              v-if="index + 1 !== events.length"
               :href="index + 1 === events.length ? '#' : `#slide${index + 2}`"
               class="btn btn-circle border-primary bg-primary/30 text-white"
               >❯</a
@@ -138,3 +131,9 @@ definePageMeta({
     </section>
   </main>
 </template>
+
+<style scoped>
+html {
+  scroll-behavior: smooth;
+}
+</style>

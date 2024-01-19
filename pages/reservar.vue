@@ -175,19 +175,16 @@ definePageMeta({
 </script>
 
 <template>
-  <main class="mt-4 pb-16 lg:mt-8">
+  <main class="mt-8 pb-16">
     <section class="container mt-4 flex items-center">
-      <button class="absolute my-auto ml-5 text-primary" @click="$router.back()">
-        <i class="fa-solid fa-arrow-left-long text-3xl"></i>
-      </button>
-      <h1 class="mx-auto px-2 text-center font-handlee text-4xl text-primary lg:px-32">
+      <h1 class="mx-auto px-2 text-center font-montserrat text-5xl text-primary lg:px-32">
         {{ language === 'es' ? 'Reservación' : 'Reservation' }}
       </h1>
     </section>
     <div class="divider mx-auto w-1/2"></div>
     <div class="hero-content mx-auto flex-col lg:flex-row">
       <div class="text-center">
-        <p class="text-2xl text-black">
+        <p class="text-xl text-black">
           {{ language === 'es' ? 'Asegura tu fecha especial' : 'Save your special date' }}
         </p>
         <!-- <p class="py-6">Con tus comentarios, podemos mejorar nuestros productos y servicios.</p> -->

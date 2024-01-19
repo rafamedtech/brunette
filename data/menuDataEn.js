@@ -1,5 +1,178 @@
 export default [
   {
+    title: 'Breakfast',
+    slug: 'desayunos',
+    cover:
+      'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/zoclbz97b4zivibfpcoy.jpg',
+    sections: [
+      {
+        title: 'Detox',
+        description: '',
+        cover:
+          'https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        items: [
+          {
+            name: 'Orange juice',
+            description: '',
+            price: '$75.00',
+          },
+          {
+            name: 'Green juice',
+            description: '',
+            price: '$75.00',
+          },
+          {
+            name: 'Berries smoothie',
+            description: '',
+            price: '$90.00',
+          },
+
+          {
+            name: 'Oatmeal pancakes',
+            description: 'Accompanied by seasonal fruit',
+            price: '$165.00',
+          },
+        ],
+      },
+      {
+        title: 'Eggs',
+        description: '',
+        cover:
+          'https://images.pexels.com/photos/588776/pexels-photo-588776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        items: [
+          {
+            name: 'Eggs as you like',
+            description: 'Chorizo, ham, bacon',
+            price: '$165.00',
+          },
+          {
+            name: 'Huevos rancheros',
+            description: '',
+            price: '$175.00',
+          },
+        ],
+      },
+      {
+        title: 'Omelette',
+        description: '',
+        cover:
+          'https://images.pexels.com/photos/6529924/pexels-photo-6529924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        items: [
+          {
+            name: 'Vegetarian',
+            description: '',
+            price: '$175.00',
+          },
+          {
+            name: 'Sea and land',
+            description: '',
+            price: '$220.00',
+          },
+          {
+            name: 'El chilaquil',
+            description: 'Chilaquiles stuffed with mole poblano',
+            price: '$185.00',
+          },
+          {
+            name: 'La chicharronera',
+            description: 'Stuffed with pressed pork rinds in red sauce',
+            price: '$195.00',
+          },
+          {
+            name: 'House omelette',
+            description: 'Chile stuffed with cheese, bathed in tomato sauce',
+            price: '$185.00',
+          },
+        ],
+      },
+      {
+        title: 'Chilaquiles',
+        description: '',
+        cover:
+          'https://images.pexels.com/photos/10305696/pexels-photo-10305696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        items: [
+          {
+            name: 'Red, green, mole, chipotle',
+            description: '',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Regular',
+                price: '$175.00',
+              },
+              {
+                id: 2,
+                name: 'With eggs',
+                price: '$175.00',
+              },
+              {
+                id: 3,
+                name: 'With chicken',
+                price: '$210.00',
+              },
+            ],
+          },
+        ],
+      },
+
+      {
+        title: 'The classics',
+        description: '',
+        cover:
+          'https://images.pexels.com/photos/7116796/pexels-photo-7116796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        items: [
+          {
+            name: 'Pancakes (3)',
+            description: '',
+            price: '$165.00',
+          },
+          {
+            name: 'Carrot pancakes (3)',
+            description: '',
+            price: '$195.00',
+          },
+          {
+            name: 'French toasts',
+            description: '',
+            price: '$185.00',
+          },
+
+          {
+            name: 'Tabla Arilu',
+            description: 'pancakes 6 pz, waffles 6 pz  and bacon strips, to share',
+            price: '$385.00',
+          },
+        ],
+      },
+      {
+        title: 'Brunette specials',
+        description: '',
+        cover:
+          'https://images.pexels.com/photos/2662875/pexels-photo-2662875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        items: [
+          {
+            name: 'Flank steak Brunette',
+            description: '230 gr of flank steak, 2 eggs, house potatoes and chilaquiles',
+            price: '$285.00',
+          },
+          {
+            name: 'El del ingeniero',
+            description:
+              'Carne asada, 2 eggs, chilaquiles, beans, guacamole, grilled cheese and a quesadilla',
+            price: '$275.00',
+          },
+
+          {
+            name: 'Don Luis',
+            description: 'Eggs, bacon, ham, grated potato, and pancakes',
+            price: '$245.00',
+          },
+        ],
+      },
+    ],
+  },
+  {
     title: 'the Menu',
     slug: 'the-menu',
     cover:
@@ -329,181 +502,6 @@ export default [
       },
     ],
   },
-
-  {
-    title: 'Breakfast',
-    slug: 'desayunos',
-    cover:
-      'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/zoclbz97b4zivibfpcoy.jpg',
-    sections: [
-      {
-        title: 'Detox',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Orange juice',
-            description: '',
-            price: '$75.00',
-          },
-          {
-            name: 'Green juice',
-            description: '',
-            price: '$75.00',
-          },
-          {
-            name: 'Berries smoothie',
-            description: '',
-            price: '$90.00',
-          },
-
-          {
-            name: 'Oatmeal pancakes',
-            description: 'Accompanied by seasonal fruit',
-            price: '$165.00',
-          },
-        ],
-      },
-      {
-        title: 'Eggs',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/588776/pexels-photo-588776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Eggs as you like',
-            description: 'Chorizo, ham, bacon',
-            price: '$165.00',
-          },
-          {
-            name: 'Huevos rancheros',
-            description: '',
-            price: '$175.00',
-          },
-        ],
-      },
-      {
-        title: 'Omelette',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/6529924/pexels-photo-6529924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Vegetarian',
-            description: '',
-            price: '$175.00',
-          },
-          {
-            name: 'Sea and land',
-            description: '',
-            price: '$220.00',
-          },
-          {
-            name: 'El chilaquil',
-            description: 'Chilaquiles stuffed with mole poblano',
-            price: '$185.00',
-          },
-          {
-            name: 'La chicharronera',
-            description: 'Stuffed with pressed pork rinds in red sauce',
-            price: '$195.00',
-          },
-          {
-            name: 'House omelette',
-            description: 'Chile stuffed with cheese, bathed in tomato sauce',
-            price: '$185.00',
-          },
-        ],
-      },
-      {
-        title: 'Chilaquiles',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/10305696/pexels-photo-10305696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Red, green, mole, chipotle',
-            description: '',
-            price: '',
-            variants: [
-              {
-                id: 1,
-                name: 'Regular',
-                price: '$175.00',
-              },
-              {
-                id: 2,
-                name: 'With eggs',
-                price: '$175.00',
-              },
-              {
-                id: 3,
-                name: 'With chicken',
-                price: '$210.00',
-              },
-            ],
-          },
-        ],
-      },
-
-      {
-        title: 'The classics',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/7116796/pexels-photo-7116796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Pancakes (3)',
-            description: '',
-            price: '$165.00',
-          },
-          {
-            name: 'Carrot pancakes (3)',
-            description: '',
-            price: '$195.00',
-          },
-          {
-            name: 'French toasts',
-            description: '',
-            price: '$185.00',
-          },
-
-          {
-            name: 'Tabla Arilu',
-            description: 'pancakes 6 pz, waffles 6 pz  and bacon strips, to share',
-            price: '$385.00',
-          },
-        ],
-      },
-      {
-        title: 'Brunette specials',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/2662875/pexels-photo-2662875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Flank steak Brunette',
-            description: '230 gr of flank steak, 2 eggs, house potatoes and chilaquiles',
-            price: '$285.00',
-          },
-          {
-            name: 'El del ingeniero',
-            description:
-              'Carne asada, 2 eggs, chilaquiles, beans, guacamole, grilled cheese and a quesadilla',
-            price: '$275.00',
-          },
-
-          {
-            name: 'Don Luis',
-            description: 'Eggs, bacon, ham, grated potato, and pancakes',
-            price: '$245.00',
-          },
-        ],
-      },
-    ],
-  },
-
   {
     title: 'the Bar',
     slug: 'the-bar',

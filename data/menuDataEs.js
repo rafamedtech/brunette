@@ -1,5 +1,178 @@
 export default [
   {
+    title: 'Desayunos',
+    slug: 'desayunos',
+    cover:
+      'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/zoclbz97b4zivibfpcoy.jpg',
+    sections: [
+      {
+        title: 'Detox',
+        description: '',
+        cover:
+          'https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        items: [
+          {
+            name: 'Jugo de Naranja',
+            description: '',
+            price: '$75.00',
+          },
+          {
+            name: 'Jugo Verde',
+            description: '',
+            price: '$75.00',
+          },
+          {
+            name: 'Smoothie Frutos Rojos',
+            description: '',
+            price: '$90.00',
+          },
+
+          {
+            name: 'Pancakes de Avena',
+            description: 'Acompañado de fruta de temporada',
+            price: '$165.00',
+          },
+        ],
+      },
+      {
+        title: 'Huevos',
+        description: '',
+        cover:
+          'https://images.pexels.com/photos/588776/pexels-photo-588776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        items: [
+          {
+            name: 'Huevos al gusto',
+            description: 'Chorizo, jamón, tocino',
+            price: '$165.00',
+          },
+          {
+            name: 'Huevos rancheros',
+            description: '',
+            price: '$175.00',
+          },
+        ],
+      },
+      {
+        title: 'Omelette',
+        description: '',
+        cover:
+          'https://images.pexels.com/photos/6529924/pexels-photo-6529924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        items: [
+          {
+            name: 'Vegetariano',
+            description: '',
+            price: '$175.00',
+          },
+          {
+            name: 'Mar y tierra',
+            description: '',
+            price: '$220.00',
+          },
+          {
+            name: 'El chilaquil',
+            description: 'Rellenos de chilaquiles de mole poblano',
+            price: '$185.00',
+          },
+          {
+            name: 'La chicharronera',
+            description: 'Relleno de chicharron prensado en salsa roja',
+            price: '$195.00',
+          },
+          {
+            name: 'Omelette de la casa',
+            description: 'Chile relleno de queso, bañado en salsa de tomate',
+            price: '$185.00',
+          },
+        ],
+      },
+      {
+        title: 'Chilaquiles',
+        description: '',
+        cover:
+          'https://images.pexels.com/photos/10305696/pexels-photo-10305696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        items: [
+          {
+            name: 'Rojos, verdes, Mole, Chipotle',
+            description: '',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Sencillos',
+                price: '$175.00',
+              },
+              {
+                id: 2,
+                name: 'Con huevo',
+                price: '$175.00',
+              },
+              {
+                id: 3,
+                name: 'Con pollo',
+                price: '$210.00',
+              },
+            ],
+          },
+        ],
+      },
+
+      {
+        title: 'Los clásicos',
+        description: '',
+        cover:
+          'https://images.pexels.com/photos/7116796/pexels-photo-7116796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        items: [
+          {
+            name: 'Pancakes (3)',
+            description: '',
+            price: '$165.00',
+          },
+          {
+            name: 'Pancakes zanahoria (3)',
+            description: '',
+            price: '$195.00',
+          },
+          {
+            name: 'Pan frances',
+            description: '',
+            price: '$185.00',
+          },
+
+          {
+            name: 'Tabla Arilu',
+            description: '6 pz de pancakes, 6 pz waffles y tiras de tocino, para compartir',
+            price: '$385.00',
+          },
+        ],
+      },
+      {
+        title: 'Especiales Brunette',
+        description: '',
+        cover:
+          'https://images.pexels.com/photos/2662875/pexels-photo-2662875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        items: [
+          {
+            name: 'Arrachera Brunette',
+            description: '230gr de arrachera, 2 huevos, papas de la casa y chilaquiles',
+            price: '$285.00',
+          },
+          {
+            name: 'El del ingeniero',
+            description:
+              'Carne asada, 2 huevos, chilaquiles, frijol, guacamole, queso asado y quesadilla',
+            price: '$275.00',
+          },
+
+          {
+            name: 'Don Luis',
+            description: 'Huevos, tocino, jamón, papa rallada, y pancakes',
+            price: '$245.00',
+          },
+        ],
+      },
+    ],
+  },
+  {
     title: 'the Menu',
     slug: 'the-menu',
     cover:
@@ -332,181 +505,6 @@ export default [
       },
     ],
   },
-
-  {
-    title: 'Desayunos',
-    slug: 'desayunos',
-    cover:
-      'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/zoclbz97b4zivibfpcoy.jpg',
-    sections: [
-      {
-        title: 'Detox',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Jugo Naranja',
-            description: '',
-            price: '$75.00',
-          },
-          {
-            name: 'Jugo Verde',
-            description: '',
-            price: '$75.00',
-          },
-          {
-            name: 'Smoothie Frutos Rojos',
-            description: '',
-            price: '$90.00',
-          },
-
-          {
-            name: 'Pancakes de Avena',
-            description: 'Acompañado de fruta de temporada',
-            price: '$165.00',
-          },
-        ],
-      },
-      {
-        title: 'Huevos',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/588776/pexels-photo-588776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Huevos al gusto',
-            description: 'Chorizo, jamón, tocino',
-            price: '$165.00',
-          },
-          {
-            name: 'Huevos rancheros',
-            description: '',
-            price: '$175.00',
-          },
-        ],
-      },
-      {
-        title: 'Omelette',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/6529924/pexels-photo-6529924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Vegetariano',
-            description: '',
-            price: '$175.00',
-          },
-          {
-            name: 'Mar y tierra',
-            description: '',
-            price: '$220.00',
-          },
-          {
-            name: 'El chilaquil',
-            description: 'Rellenos de chilaquiles de mole poblano',
-            price: '$185.00',
-          },
-          {
-            name: 'La chicharronera',
-            description: 'Relleno de chicharron prensado en salsa roja',
-            price: '$195.00',
-          },
-          {
-            name: 'Omelette de la casa',
-            description: 'Chile relleno de queso, bañado en salsa de tomate',
-            price: '$185.00',
-          },
-        ],
-      },
-      {
-        title: 'Chilaquiles',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/10305696/pexels-photo-10305696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Rojos, verdes, Mole, Chipotle',
-            description: '',
-            price: '',
-            variants: [
-              {
-                id: 1,
-                name: 'Sencillos',
-                price: '$175.00',
-              },
-              {
-                id: 2,
-                name: 'Con huevo',
-                price: '$175.00',
-              },
-              {
-                id: 3,
-                name: 'Con pollo',
-                price: '$210.00',
-              },
-            ],
-          },
-        ],
-      },
-
-      {
-        title: 'Los clásicos',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/7116796/pexels-photo-7116796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Pancakes (3)',
-            description: '',
-            price: '$165.00',
-          },
-          {
-            name: 'Pancakes zanahoria (3)',
-            description: '',
-            price: '$195.00',
-          },
-          {
-            name: 'Pan frances',
-            description: '',
-            price: '$185.00',
-          },
-
-          {
-            name: 'Tabla Arilu',
-            description: '6 pz de pancakes, 6 pz waffles y tiras de tocino, para compartir',
-            price: '$385.00',
-          },
-        ],
-      },
-      {
-        title: 'Especiales Brunette',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/2662875/pexels-photo-2662875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Arrachera Brunette',
-            description: '230gr de arrachera, 2 huevos, papas de la casa y chilaquiles',
-            price: '$285.00',
-          },
-          {
-            name: 'El del ingeniero',
-            description:
-              'Carne asada, 2 huevos, chilaquiles, frijol, guacamole, queso asado y quesadilla',
-            price: '$275.00',
-          },
-
-          {
-            name: 'Don Luis',
-            description: 'Huevos, tocino, jamón, papa rallada, y pancakes',
-            price: '$245.00',
-          },
-        ],
-      },
-    ],
-  },
-
   {
     title: 'the Bar',
     slug: 'the-bar',

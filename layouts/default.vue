@@ -16,9 +16,7 @@ const changeLanguage = () => {
   }, 1000);
 
   setTimeout(() => {
-    store.$patch({
-      isLoading: false,
-    });
+    isLoading.value = false;
   }, 1000);
 };
 </script>
@@ -30,12 +28,11 @@ const changeLanguage = () => {
         <ul class="fixed flex w-fit flex-col gap-4">
           <li>
             <figure class="text-2xl text-neutral-content">
-              <img class="h-20" :src="logo" alt="logo" />
+              <img class="h-20 invert" :src="logo" alt="logo" />
             </figure>
           </li>
 
           <li>
-            <!-- :to="{ path: language === 'es' ? '/' : '/en' }" -->
             <NuxtLink
               to="/"
               active-class="text-primary font-bold underline"
@@ -190,10 +187,19 @@ const changeLanguage = () => {
             <Icon name="heroicons-outline:switch-vertical" class="text-2xl" />
             <span class="text-xs normal-case">{{ language === 'es' ? 'English' : 'Español' }}</span>
           </button>
+          <!-- <label class="form-control w-fit">
+            <div class="label">
+              <span class="label-text text-primary">Idioma actual</span>
+            </div>
+            <select class="select select-bordered bg-neutral text-base-100">
+              <option>Español</option>
+              <option>Inglés</option>
+            </select>
+          </label> -->
         </div>
       </div>
       <slot> </slot>
-      <BottomNav />
+      <BottomNavbar />
     </div>
     <Transition name="fade-in">
       <div
