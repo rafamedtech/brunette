@@ -1,23 +1,23 @@
 [
   {
     "id": 1,
-    "title": "Jueves de sangrías",
-    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695338967/menu/sangrias_lte6av.jpg"
-  },
-  {
-    "id": 2,
     "title": "Happy Miércoles",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695339685/menu/happy-hour_1_vtpzhj.png"
   },
   {
-    "id": 3,
+    "id": 2,
     "title": "Chilaquiles 2x1",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1702435496/events/chilaquiles_qg9arf.jpg"
   },
   {
-    "id": 4,
+    "id": 3,
     "title": "Todo lo que puedas comer",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1706122283/events/allyoucaneat_rbxihs.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Superbowl",
+    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1706125314/events/superbowl_vbcqdu.jpg"
   },
   {
     "id": 5,
@@ -30,7 +30,7 @@
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1675114127/menu/eventos/LAURONA_SABADO_wp0mkg.jpg"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Domingo de brunch",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1706122682/events/brunch_zujbz9.jpg"
   }
