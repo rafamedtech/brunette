@@ -7,9 +7,9 @@ const { language } = storeToRefs(store);
 </script>
 
 <template>
-  <div class="drawer-side z-50">
+  <div class="z-50 w-screen min-w-max">
     <label for="my-drawer-3" class="drawer-overlay"></label>
-    <ul class="background menu min-h-screen w-80 overflow-y-auto p-4">
+    <ul class="background menu min-h-screen w-full min-w-max overflow-y-auto p-4">
       <!-- Sidebar content here -->
       <li><img class="mx-auto h-28 w-fit" src="@/assets/images/logo.png" alt="logo" /></li>
       <li class="flex w-full flex-row justify-center gap-4 text-5xl active:bg-transparent">

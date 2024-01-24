@@ -82,9 +82,9 @@ definePageMeta({
 </script>
 
 <template>
-  <main class="mt-8 pb-16">
+  <main class="mt-4 pb-16 lg:mt-8">
     <section class="mt-4 flex items-center">
-      <h1 class="mx-auto px-2 text-center font-montserrat text-5xl text-primary lg:px-32">
+      <h1 class="mx-auto px-2 text-center font-montserrat text-4xl text-primary lg:px-32">
         {{ language === 'es' ? 'Encuesta' : 'Survey' }}
       </h1>
     </section>
@@ -93,22 +93,22 @@ definePageMeta({
     <section>
       <div class="hero">
         <div class="flex-col px-4">
-          <div v-if="language === 'es'" class="text-center">
+          <div v-if="language === 'es'" class="md:mx-auto md:w-1/2">
             <p class="pb-6 text-xl text-black">
               ¡Agradeceríamos tu opinión! Con tus comentarios, podemos mejorar nuestros productos y
               servicios.
             </p>
           </div>
-          <div v-else class="text-center">
+          <div v-else class="md:mx-auto md:w-1/2">
             <p class="pb-6 text-xl text-black">
               We would appreciate your feedback! With your opinion, we can improve our products and
               services.
             </p>
           </div>
 
-          <div class="card mx-auto w-full max-w-sm flex-shrink-0 px-2">
-            <form class="card-body rounded-xl bg-base-100 shadow-pinterest">
-              <div class="form-control relative flex flex-col">
+          <div class="card mx-auto w-full max-w-sm flex-shrink-0 lg:px-2">
+            <form class="card-body gap-4 rounded-xl bg-base-100 p-0 pb-8">
+              <div class="form-control relative flex flex-col gap-2">
                 <label class="text-primary" for="name">{{
                   language === 'es' ? 'Tu nombre (opcional)' : 'Your name (optional)'
                 }}</label>
@@ -119,7 +119,7 @@ definePageMeta({
                   class="input input-bordered border-[#d1d5db] transition-all focus:ring focus:ring-primary"
                 />
               </div>
-              <div class="form-control relative flex flex-col">
+              <div class="form-control relative flex flex-col gap-2">
                 <label class="text-primary" for="name">{{
                   language === 'es' ? 'Teléfono (opcional)' : 'Phone (optional)'
                 }}</label>
@@ -130,7 +130,7 @@ definePageMeta({
                   class="input input-bordered border-[#d1d5db] transition-all focus:ring focus:ring-primary"
                 />
               </div>
-              <div class="form-control relative flex flex-col">
+              <div class="form-control relative flex flex-col gap-2">
                 <label class="text-primary" for="mesero">{{
                   language === 'es' ? 'Mesero' : 'Waiter'
                 }}</label>

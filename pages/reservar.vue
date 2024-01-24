@@ -1,15 +1,14 @@
 <script setup>
-import { useMainStore } from '@/stores/menu';
-import { storeToRefs } from 'pinia';
 import { useVuelidate } from '@vuelidate/core';
-import { required, helpers, minLength, maxLength, minValue } from '@vuelidate/validators';
 import VueDatepickerUi from 'vue-datepicker-ui';
 import 'vue-datepicker-ui/lib/vuedatepickerui.css';
 import colors from 'tailwindcss/colors';
 import { Resend } from 'resend';
 
 const store = useMainStore();
+const reservationStore = useReservationStore();
 const { language } = storeToRefs(store);
+const { reservationRules: rules } = storeToRefs(reservationStore);
 
 const reservationData = reactive({
   date: '',
@@ -19,53 +18,6 @@ const reservationData = reactive({
   qty: 1,
 });
 
-// Validation Messages
-const dateRequired = computed(() =>
-  language.value === 'es' ? 'Es necesario ingresar una fecha' : 'Date field is needed'
-);
-const dateMinValue = computed(() =>
-  language.value === 'es' ? 'La fecha es inválida' : 'Invalid date'
-);
-const nameRequired = computed(() =>
-  language.value === 'es' ? 'Es necesario ingresar un nombre' : 'Name field is needed'
-);
-const phoneRequired = computed(() =>
-  language.value === 'es' ? 'Es necesario ingresar un teléfono' : 'Phone field is needed'
-);
-const phoneLength = computed(() =>
-  language.value === 'es'
-    ? 'Favor de ingresar el numero a 10 dígitos'
-    : 'Please add a 10 digits number'
-);
-const qtyRequired = computed(() =>
-  language.value === 'es' ? 'Este campo es requerido' : 'This field is required'
-);
-const qtyMinValue = computed(() =>
-  language.value === 'es' ? 'La cantidad debe ser mínimo 1' : 'Number must be at least 1'
-);
-
-// Form validation
-const rules = computed(() => {
-  return {
-    date: {
-      required: helpers.withMessage(dateRequired, required),
-      minValue: helpers.withMessage(dateMinValue, minValue(Date.now())),
-    },
-    name: {
-      required: helpers.withMessage(nameRequired, required),
-    },
-    phone: {
-      // email: helpers.withMessage(emailValid, email),
-      required: helpers.withMessage(phoneRequired, required),
-      minLength: helpers.withMessage(phoneLength, minLength(10)),
-      maxLength: helpers.withMessage(phoneLength, maxLength(10)),
-    },
-    qty: {
-      required: helpers.withMessage(qtyRequired, required),
-      minValue: helpers.withMessage(qtyMinValue, minValue(1)),
-    },
-  };
-});
 const errorBorder = computed(() => (v$.value.date.$error ? colors.red[500] : colors.gray[300]));
 const v$ = useVuelidate(rules, reservationData);
 
@@ -88,7 +40,6 @@ const openModal = () => {
 };
 
 const supabase = useSupabaseClient();
-// const dateOptions = { }
 
 async function sendReservationSupabase() {
   const resend = new Resend('re_8AG4wH61_Gcwsb5uaEtX9mXUyAphddkHD');
@@ -98,7 +49,6 @@ async function sendReservationSupabase() {
         reservationData.date
       ).getMonth()}-${new Date(reservationData.date).getDay()}`
   );
-  // reservationData.date = dateString.value;
 
   try {
     const { error } = await supabase.from('reservations').insert([reservationData]);
@@ -110,14 +60,10 @@ async function sendReservationSupabase() {
       html: '<p>Congrats on sending your <strong>first email</strong>!</p>',
     });
 
-    // console.log(data);
-
     if (error) throw error;
   } catch (error) {
     console.log(error);
   }
-
-  // reservationData.date = '';
 }
 
 // Opens the thank you message and sends data to database
@@ -175,26 +121,25 @@ definePageMeta({
 </script>
 
 <template>
-  <main class="mt-8 pb-16">
+  <main class="mt-4 pb-16 lg:mt-8">
     <section class="container mt-4 flex items-center">
-      <h1 class="mx-auto px-2 text-center font-montserrat text-5xl text-primary lg:px-32">
+      <h1 class="mx-auto px-2 text-center font-montserrat text-4xl text-primary lg:px-32">
         {{ language === 'es' ? 'Reservación' : 'Reservation' }}
       </h1>
     </section>
+
     <div class="divider mx-auto w-1/2"></div>
-    <div class="hero-content mx-auto flex-col lg:flex-row">
-      <div class="text-center">
-        <p class="text-xl text-black">
-          {{ language === 'es' ? 'Asegura tu fecha especial' : 'Save your special date' }}
-        </p>
-        <!-- <p class="py-6">Con tus comentarios, podemos mejorar nuestros productos y servicios.</p> -->
-      </div>
+
+    <div class="hero-content mx-auto flex-col pt-0 lg:flex-row">
+      <p class="text-center text-xl text-black">
+        {{ language === 'es' ? 'Asegura tu fecha especial' : 'Save your special date' }}
+      </p>
     </div>
 
-    <div class="card mx-auto w-full max-w-sm flex-shrink-0 px-2">
+    <div class="card mx-auto w-full max-w-sm flex-shrink-0">
       <form
         @submit.prevent
-        class="card-body flex flex-col gap-6 rounded-xl bg-base-100 shadow-pinterest"
+        class="card-body flex flex-col gap-4 rounded-xl bg-base-100 p-0 px-4 pb-4"
       >
         <div class="relative flex flex-col">
           <label class="text-primary" for="">{{ language === 'es' ? 'Fecha' : 'Date' }}</label>
@@ -230,7 +175,7 @@ definePageMeta({
             v-model="reservationData.name"
             type="text"
             placeholder="Ej. Juan Perez"
-            class="input input-bordered w-full max-w-xs border-[#d1d5db] transition-all focus:ring focus:ring-primary"
+            class="input input-bordered w-full border-[#d1d5db] transition-all focus:ring focus:ring-primary"
             :class="{ 'border-red-500': v$.name.$error }"
           />
           <Icon
@@ -250,7 +195,7 @@ definePageMeta({
             v-model="reservationData.phone"
             type="number"
             placeholder="Ej 6641234567"
-            class="input input-bordered w-full max-w-xs border-[#d1d5db] transition-all focus:ring focus:ring-primary"
+            class="input input-bordered w-full border-[#d1d5db] transition-all focus:ring focus:ring-primary"
             :class="{ 'border-red-500': v$.phone.$error }"
           />
           <Icon
@@ -271,7 +216,7 @@ definePageMeta({
           <input
             v-model="reservationData.qty"
             type="number"
-            class="input input-bordered w-full max-w-xs border-[#d1d5db] transition-all focus:ring focus:ring-primary"
+            class="input input-bordered w-full border-[#d1d5db] transition-all focus:ring focus:ring-primary"
             :class="{ 'border-red-500': v$.qty.$error }"
           />
           <Icon
@@ -325,15 +270,11 @@ definePageMeta({
             </li>
             <li>
               <label class="text-primary" for="">{{ language === 'es' ? 'Hora' : 'Time' }}</label>
-              <p>
-                {{ useTime(reservationData.time) }}
-              </p>
+              <p>{{ useTime(reservationData.time) }}</p>
             </li>
             <li>
               <label class="text-primary" for="">{{ language === 'es' ? 'Nombre' : 'Name' }}</label>
-              <p class="capitalize">
-                {{ reservationData.name }}
-              </p>
+              <p class="capitalize">{{ reservationData.name }}</p>
             </li>
             <li>
               <label class="text-primary" for="">{{
@@ -344,9 +285,9 @@ definePageMeta({
               </p>
             </li>
             <li>
-              <label class="text-primary" for="">{{
-                language === 'es' ? 'Cantidad de personas' : 'Qty of people'
-              }}</label>
+              <label class="text-primary" for="">
+                {{ language === 'es' ? 'Cantidad de personas' : 'Qty of people' }}
+              </label>
               <p>
                 {{ reservationData.qty }}
               </p>
@@ -356,12 +297,12 @@ definePageMeta({
             <button class="btn btn-primary text-white" @click="openModal">
               {{ language === 'es' ? 'Editar' : 'Edit' }}
             </button>
-            <label class="btn btn-accent text-white" @click="sendReservation">{{
-              language === 'es' ? 'Enviar' : 'Send'
-            }}</label>
+            <label class="btn btn-accent text-white" @click="sendReservation">
+              {{ language === 'es' ? 'Enviar' : 'Send' }}
+            </label>
           </div>
         </div>
-        <div v-else class="bg-base card-body mx-4 rounded-2xl shadow-xl">
+        <div v-else class="card-body mx-4 rounded-2xl bg-base-100 shadow-xl">
           <div>
             <h3 class="text-center text-xl uppercase text-primary">
               {{ language === 'es' ? 'Gracias por su solicitud' : 'Thanks for your request' }}

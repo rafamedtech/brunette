@@ -1,13 +1,12 @@
 import { defineStore } from 'pinia';
+import { StorageSerializers } from '@vueuse/core';
 
 export const useMainStore = defineStore('menu', () => {
   const modal = ref(false);
 
   const languageModal = ref(true);
   const isLoading = ref(false);
-
-  const language = ref<string>('es');
-  // const language = useLocalStorage('language', 'none');
+  const language = ref('es');
   const events = reactive([]);
   const surveys = ref<any>([]);
 
@@ -43,8 +42,6 @@ export const useMainStore = defineStore('menu', () => {
     }
   }
 
-  const currentMenu = ref([]);
-
   const menu = ref<any>([]);
 
   const menu_en = reactive<any>([]);
@@ -67,7 +64,6 @@ export const useMainStore = defineStore('menu', () => {
     currentSection,
     getSurveys,
     getReservations,
-
     getByCategory,
     getByCategoryEn,
   };

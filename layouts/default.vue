@@ -75,8 +75,8 @@ const changeLanguage = () => {
           </li>
 
           <li>
-            <div>
-              <p
+            <div class="form-control gap-2">
+              <label
                 class="opacity-0 transition-all duration-500"
                 :class="{
                   'opacity-100 transition-all duration-700':
@@ -84,24 +84,13 @@ const changeLanguage = () => {
                 }"
               >
                 {{ language === 'es' ? 'Idioma' : 'Language' }}
-              </p>
+              </label>
               <button
-                class="btn btn-primary h-fit flex-col gap-0 px-2 text-base-100 opacity-0 transition-all duration-500 lg:flex-row lg:gap-2"
-                :class="{
-                  'opacity-100 transition-all duration-700':
-                    route.path === '/' || route.path === '/en',
-                }"
+                class="btn btn-primary h-fit flex-col gap-0 px-2 normal-case text-base-100 transition-all duration-500 lg:flex-row lg:gap-2"
                 @click="changeLanguage"
               >
-                <Icon
-                  :name="
-                    language === 'es'
-                      ? 'emojione-v1:flag-for-mexico'
-                      : 'emojione-v1:flag-for-united-states'
-                  "
-                  class="text-2xl"
-                />
-                <span class="text-xs">{{ language === 'es' ? 'ESPANOL' : 'ENGLISH' }}</span>
+                <Icon name="heroicons-outline:switch-vertical" class="text-2xl" />
+                <span class="text-xs">{{ language === 'es' ? 'Español' : 'English' }}</span>
               </button>
             </div>
           </li>
@@ -113,7 +102,7 @@ const changeLanguage = () => {
     <div class="w-full lg:w-4/5">
       <div class="navbar w-full bg-neutral lg:hidden">
         <div class="navbar-start">
-          <details class="dropdown">
+          <details class="dropdown transition-all">
             <summary class="btn btn-neutral p-0" @click="() => (dropdown = !dropdown)">
               <Icon
                 :name="dropdown ? 'heroicons-outline:x' : 'heroicons-outline:bars-3-bottom-left'"
@@ -121,13 +110,9 @@ const changeLanguage = () => {
                 class="text-primary"
               />
             </summary>
-            <!-- <label tabindex="0" class="btn btn-circle btn-ghost text-primary">
-              <Icon name="heroicons-outline:bars-3-bottom-left" size="28" />
-            </label> -->
             <ul
-              class="menu dropdown-content rounded-box menu-sm z-50 mt-3 w-80 border border-base-100/25 bg-neutral p-2 text-base-100 shadow"
+              class="menu dropdown-content rounded-box menu-sm left-0 z-50 mt-3 h-full min-h-screen w-screen border border-base-100/25 bg-neutral p-2 text-base-100 shadow transition-all"
             >
-              <!-- <li><img class="mx-auto h-28 w-fit" src="@/assets/images/logo.png" alt="logo" /></li> -->
               <li class="flex w-full flex-row justify-center gap-4 text-5xl active:bg-transparent">
                 <NuxtLink to="https://www.facebook.com/brunette.realdelmar" target="_blank">
                   <Icon name="ri:facebook-circle-fill" size="34" />
@@ -169,6 +154,7 @@ const changeLanguage = () => {
                 </div>
               </li>
             </ul>
+            <!-- <Sidebar /> -->
           </details>
         </div>
         <div class="navbar-center">
@@ -187,18 +173,12 @@ const changeLanguage = () => {
             <Icon name="heroicons-outline:switch-vertical" class="text-2xl" />
             <span class="text-xs normal-case">{{ language === 'es' ? 'English' : 'Español' }}</span>
           </button>
-          <!-- <label class="form-control w-fit">
-            <div class="label">
-              <span class="label-text text-primary">Idioma actual</span>
-            </div>
-            <select class="select select-bordered bg-neutral text-base-100">
-              <option>Español</option>
-              <option>Inglés</option>
-            </select>
-          </label> -->
         </div>
       </div>
+
+      <!-- Page content -->
       <slot> </slot>
+
       <BottomNavbar />
     </div>
     <Transition name="fade-in">
