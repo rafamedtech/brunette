@@ -27,7 +27,7 @@ defineProps<Props>();
     >
       <span class="font-montserrat text-3xl text-base-100 lg:text-3xl">{{ category.title }}</span>
     </section>
-    <figure class="card h-56 shadow-xl md:h-[25rem] lg:h-80">
+    <figure class="card h-44 shadow-xl md:h-[25rem] lg:h-80">
       <NuxtImg
         :src="category.cover"
         densities="x1 x2"

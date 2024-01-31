@@ -111,7 +111,7 @@ const changeLanguage = () => {
               />
             </summary>
             <ul
-              class="menu dropdown-content rounded-box menu-sm left-0 z-50 mt-3 h-full min-h-screen w-screen border border-base-100/25 bg-neutral p-2 text-base-100 shadow transition-all"
+              class="menu dropdown-content rounded-box menu-sm z-50 mt-3 h-fit w-72 border border-base-100/25 bg-neutral p-2 text-base-100 shadow transition-all"
             >
               <li class="flex w-full flex-row justify-center gap-4 text-5xl active:bg-transparent">
                 <NuxtLink to="https://www.facebook.com/brunette.realdelmar" target="_blank">
