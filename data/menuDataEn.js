@@ -357,6 +357,11 @@ export default [
             price: '$235.00',
           },
           {
+            name: 'Lobster',
+            description: '',
+            price: '$980.00',
+          },
+          {
             name: 'Al pastor fish volcán',
             description: 'Al pastor fish, cilantro, onion and avocado',
             price: '$175.00',
@@ -1506,7 +1511,7 @@ export default [
         ],
       },
       {
-        title: 'Tecate Beer',
+        title: 'Beer',
         description: '',
         cover:
           'https://images.pexels.com/photos/667986/pexels-photo-667986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -1539,14 +1544,6 @@ export default [
             description: '',
             price: '$65.00',
           },
-        ],
-      },
-      {
-        title: 'Corona Beer',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/667986/pexels-photo-667986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
           {
             name: 'Corona',
             description: '',

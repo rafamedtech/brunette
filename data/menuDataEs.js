@@ -353,6 +353,11 @@ export default [
           'https://images.pexels.com/photos/2827263/pexels-photo-2827263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         items: [
           {
+            name: 'Langosta',
+            description: '',
+            price: '$980.00',
+          },
+          {
             name: 'Camarones al coco',
             description: '',
             price: '$235.00',
@@ -1515,7 +1520,7 @@ export default [
         ],
       },
       {
-        title: 'Cerveza Tecate',
+        title: 'Cerveza',
         description: '',
         cover:
           'https://images.pexels.com/photos/667986/pexels-photo-667986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -1548,14 +1553,6 @@ export default [
             description: '',
             price: '$65.00',
           },
-        ],
-      },
-      {
-        title: 'Cerveza Corona',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/667986/pexels-photo-667986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
           {
             name: 'Corona',
             description: '',
