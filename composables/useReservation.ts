@@ -3,21 +3,17 @@ export const useReservation = async () => {
   const store = useMainStore();
 
   const { reservations } = storeToRefs(store);
-  // const reservations = ref<any>([]);
 
   const { data, error } = await supabase
     .from('reservations')
     .select('*')
     .order('date', { ascending: false });
-  // .gte('date', new Date(Date.now()));
+
   reservations.value = data;
 
   if (error) {
     console.log(error);
   }
-  // console.log(data);
-
-  // const;
 
   const filteredReservations = computed(() => {
     return reservations.value.filter((r: any) => new Date(r.date) >= new Date(Date.now()));

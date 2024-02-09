@@ -21,16 +21,21 @@
   },
   {
     "id": 5,
+    "title": "Valentine's Day",
+    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1707442853/events/valentine_kxkkdx.jpg"
+  },
+  {
+    "id": 6,
     "title": "Viernes de Karaoke",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695339452/menu/laura-torres_ztrjyx.jpg"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Sábado música en vivo",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1675114127/menu/eventos/LAURONA_SABADO_wp0mkg.jpg"
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Domingo de brunch",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1706122682/events/brunch_zujbz9.jpg"
   }
