@@ -1,20 +1,9 @@
 <script setup>
-import menuEs from '@/data/menuDataEs';
-import menuEn from '@/data/menuDataEn';
-import { storeToRefs } from 'pinia';
-import { useMainStore } from '@/stores/menu';
+const { menu } = useMenu();
 
-const store = useMainStore();
-const { language } = storeToRefs(store);
-
-const menu = computed(() => {
-  if (language.value === 'en') {
-    return menuEn;
-  }
-  return menuEs;
-});
 const { params } = useRoute();
 const category = computed(() => menu.value.find((category) => category.slug === params.category));
+
 useHead({
   title: `Menú - ${category.title}`,
   meta: [
@@ -23,13 +12,6 @@ useHead({
       content: `Nuestro menú de ${category.title}`,
     },
   ],
-});
-
-definePageMeta({
-  pageTransition: {
-    name: 'up',
-    mode: 'out-in',
-  },
 });
 </script>
 
@@ -40,9 +22,6 @@ definePageMeta({
         <Icon name="ri:arrow-left-line" class="font-bold text-base-100" size="43" />
       </NuxtLink>
       <CategoryItem :category="category" />
-      <!-- <h1 class="mx-auto px-2 text-center font-handlee text-4xl text-primary lg:px-32">
-        {{ category.title }}
-      </h1> -->
     </section>
 
     <section

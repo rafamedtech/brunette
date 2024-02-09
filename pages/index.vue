@@ -1,16 +1,8 @@
 <script setup>
-import menuEs from '@/data/menuDataEs';
-import menuEn from '@/data/menuDataEn';
-
 const store = useMainStore();
 const { language } = storeToRefs(store);
 
-const menu = computed(() => {
-  if (language.value === 'en') {
-    return menuEn;
-  }
-  return menuEs;
-});
+const { menu } = useMenu();
 
 useHead({
   title: 'Brunette Kitchen & Drinks | Menú 📖',
@@ -42,13 +34,6 @@ useHead({
         'https://res.cloudinary.com/rafamed-dev/image/upload/v1705703429/menu/OG_Image_cl4k6w.png',
     },
   ],
-});
-
-definePageMeta({
-  pageTransition: {
-    name: 'up',
-    mode: 'out-in',
-  },
 });
 </script>
 
