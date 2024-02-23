@@ -3,7 +3,7 @@ const store = useEventStore();
 const { eventModal } = storeToRefs(store);
 
 const modalImage =
-  'https://res.cloudinary.com/rafamed-dev/image/upload/v1708030747/events/valentine-friday_gmvdif.jpg';
+  'https://res.cloudinary.com/rafamed-dev/image/upload/v1706122283/events/allyoucaneat_rbxihs.jpg';
 
 function closeModal() {
   eventModal.value = false;
