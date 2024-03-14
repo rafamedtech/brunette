@@ -739,12 +739,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$5,700.00',
+                price: '$5,900.00',
               },
               {
                 id: 2,
                 name: 'Shot',
-                price: '$360.00',
+                price: '$450.00',
               },
             ],
           },
@@ -1265,6 +1265,23 @@ export default [
                 id: 2,
                 name: 'Drink',
                 price: '$150.00',
+              },
+            ],
+          },
+          {
+            name: 'Johnnie Walker Blue Label',
+            description: '',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Bottle',
+                price: '$8,500.00',
+              },
+              {
+                id: 2,
+                name: 'Drink',
+                price: '$600.00',
               },
             ],
           },

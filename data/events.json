@@ -2,31 +2,27 @@
   {
     "id": 1,
     "title": "Happy Miércoles",
-    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695339685/menu/happy-hour_1_vtpzhj.png"
+    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1710444033/events/happy-hour_cbunmi.jpg"
   },
+
   {
     "id": 2,
-    "title": "Chilaquiles 2x1",
-    "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1702435496/events/chilaquiles_qg9arf.jpg"
-  },
-  {
-    "id": 3,
     "title": "Todo lo que puedas comer",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1706122283/events/allyoucaneat_rbxihs.jpg"
   },
 
   {
-    "id": 4,
+    "id": 3,
     "title": "Viernes de Karaoke",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1695339452/menu/laura-torres_ztrjyx.jpg"
   },
   {
-    "id": 5,
+    "id": 4,
     "title": "Sábado música en vivo",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1675114127/menu/eventos/LAURONA_SABADO_wp0mkg.jpg"
   },
   {
-    "id": 6,
+    "id": 5,
     "title": "Domingo de brunch",
     "cover": "https://res.cloudinary.com/rafamed-dev/image/upload/v1706122682/events/brunch_zujbz9.jpg"
   }

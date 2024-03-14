@@ -173,7 +173,7 @@ export default [
     ],
   },
   {
-    title: 'the Menu',
+    title: 'Menú principal',
     slug: 'the-menu',
     cover:
       'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/r3i9indhf34cbjtevglw.jpg',
@@ -516,7 +516,7 @@ export default [
     ],
   },
   {
-    title: 'the Bar',
+    title: 'Barra',
     slug: 'the-bar',
     cover:
       'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/nuhzvsydok6rhzqsxklf.jpg',
@@ -742,12 +742,12 @@ export default [
               {
                 id: 1,
                 name: 'Botella',
-                price: '$5,700.00',
+                price: '$5,900.00',
               },
               {
                 id: 2,
                 name: 'Shot',
-                price: '$360.00',
+                price: '$450.00',
               },
             ],
           },
@@ -1274,6 +1274,23 @@ export default [
                 id: 2,
                 name: 'Trago',
                 price: '$150.00',
+              },
+            ],
+          },
+          {
+            name: 'Johnnie Walker Blue Label',
+            description: '',
+            price: '',
+            variants: [
+              {
+                id: 1,
+                name: 'Botella',
+                price: '$8,500.00',
+              },
+              {
+                id: 2,
+                name: 'Trago',
+                price: '$600.00',
               },
             ],
           },

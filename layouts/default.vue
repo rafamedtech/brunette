@@ -22,8 +22,8 @@ const changeLanguage = () => {
 </script>
 
 <template>
-  <main class="container flex w-full justify-center">
-    <div class="mt-8 hidden justify-between lg:flex lg:w-1/5">
+  <main class="container flex w-full justify-center lg:px-4">
+    <div class="hidden justify-between pt-8 lg:flex lg:w-1/5">
       <Transition name="up" appear>
         <ul class="fixed flex w-fit flex-col gap-4">
           <li>
@@ -177,6 +177,7 @@ const changeLanguage = () => {
       </div>
 
       <!-- Page content -->
+
       <slot> </slot>
 
       <BottomNavbar />
