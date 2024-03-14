@@ -5,11 +5,11 @@ const { params } = useRoute();
 const category = computed(() => menu.value.find((category) => category.slug === params.category));
 
 useHead({
-  title: `Menú - ${category.title}`,
+  title: `Menú - ${category.value.title}`,
   meta: [
     {
       name: 'description',
-      content: `Nuestro menú de ${category.title}`,
+      content: `Nuestro menú de ${category.value.title}`,
     },
   ],
 });
