@@ -76,13 +76,7 @@ const changeLanguage = () => {
 
           <li>
             <div class="form-control gap-2">
-              <label
-                class="opacity-0 transition-all duration-500"
-                :class="{
-                  'opacity-100 transition-all duration-700':
-                    route.path === '/' || route.path === '/en',
-                }"
-              >
+              <label class="transition-all duration-500">
                 {{ language === 'es' ? 'Idioma' : 'Language' }}
               </label>
               <button
