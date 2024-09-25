@@ -16,6 +16,6 @@ useHead({ htmlAttrs: { lang } });
     </NuxtLayout>
 
     <Modal v-if="modal" />
-    <!-- <EventModal v-if="eventModal" /> -->
+    <EventModal v-if="eventModal" />
   </section>
 </template>
