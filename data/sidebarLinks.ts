@@ -4,7 +4,7 @@ export const sidebarLinks: SidebarLink[] = [
       es: 'Menú',
       en: 'Menu',
     },
-    icon: 'gala:brochure',
+    icon: 'heroicons:clipboard-document-list',
     to: '/',
   },
   {
@@ -12,23 +12,23 @@ export const sidebarLinks: SidebarLink[] = [
       es: 'Eventos',
       en: 'Events',
     },
-    icon: 'ri:calendar-todo-fill',
+    icon: 'heroicons:calendar-date-range',
     to: '/eventos',
   },
-  {
-    name: {
-      es: 'Encuesta',
-      en: 'Survey',
-    },
-    icon: 'ri:survey-fill',
-    to: '/encuesta',
-  },
-  {
-    name: {
-      es: 'Reservar',
-      en: 'Reservation',
-    },
-    icon: 'ri:health-book-fill',
-    to: '/reservar',
-  },
+  // {
+  //   name: {
+  //     es: 'Encuesta',
+  //     en: 'Survey',
+  //   },
+  //   icon: 'heroicons:rectangle-stack',
+  //   to: '/encuesta',
+  // },
+  // {
+  //   name: {
+  //     es: 'Info',
+  //     en: 'About',
+  //   },
+  //   icon: 'heroicons:information-circle',
+  //   to: '/reservar',
+  // },
 ];

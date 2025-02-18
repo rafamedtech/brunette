@@ -65,7 +65,7 @@ const changeLanguage = () => {
               class="flex items-center gap-2"
             >
               <Icon class="text-xl text-primary" name="gala:book" />
-              <span>{{ language === 'es' ? 'Reservar' : 'Reservation' }}</span></NuxtLink
+              <span>{{ language === 'es' ? 'Acerca de' : 'About' }}</span></NuxtLink
             >
             <div class="divider"></div>
           </li>
