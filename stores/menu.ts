@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia';
-import { StorageSerializers } from '@vueuse/core';
 
 export const useMainStore = defineStore('menu', () => {
   const modal = ref(false);
@@ -16,10 +15,7 @@ export const useMainStore = defineStore('menu', () => {
   const getSurveys = async () => {
     const supabase = useSupabaseClient();
     try {
-      const { data: surveysData, error } = await supabase
-        .from('surveys')
-        .select('*')
-        .order('created_at');
+      const { data: surveysData, error } = await supabase.from('surveys').select('*').order('created_at');
 
       surveys.value = surveysData;
 
