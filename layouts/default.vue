@@ -33,11 +33,7 @@ const changeLanguage = () => {
           </li>
 
           <li>
-            <NuxtLink
-              to="/"
-              active-class="text-primary font-bold underline"
-              class="flex items-center gap-2"
-            >
+            <NuxtLink to="/" active-class="text-primary font-bold underline" class="flex items-center gap-2">
               <Icon class="text-xl text-primary" name="gala:brochure" />
               <span>{{ language === 'es' ? 'Menú' : 'Menu' }}</span>
             </NuxtLink>
@@ -97,7 +93,7 @@ const changeLanguage = () => {
       <div class="navbar w-full bg-neutral lg:hidden">
         <div class="navbar-start">
           <details class="dropdown transition-all">
-            <summary class="btn btn-neutral p-0" @click="() => (dropdown = !dropdown)">
+            <summary class="btn btn-neutral p-0" @click="dropdown = !dropdown">
               <Icon
                 :name="dropdown ? 'heroicons-outline:x' : 'heroicons-outline:bars-3-bottom-left'"
                 size="28"
