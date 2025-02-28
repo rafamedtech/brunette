@@ -3,7 +3,7 @@ const store = useEventStore();
 const { eventModal } = storeToRefs(store);
 
 const modalImage =
-  'https://res.cloudinary.com/rafamed-dev/image/upload/v1706122283/events/allyoucaneat_rbxihs.jpg';
+  'https://res.cloudinary.com/rafamed-dev/image/upload/v1740784871/events/WhatsApp_Image_2025-02-28_at_11.12.50_a.m._va3h59.jpg';
 
 function closeModal() {
   eventModal.value = false;
@@ -18,12 +18,7 @@ function closeModal() {
       <figure class="rounded-xl lg:w-80">
         <img :src="modalImage" alt="" />
       </figure>
-      <button
-        class="btn btn-primary absolute -top-4 right-0 rounded-xl normal-case"
-        @click="closeModal"
-      >
-        Cerrar
-      </button>
+      <button class="btn btn-primary absolute -top-4 right-0 rounded-xl normal-case" @click="closeModal">Cerrar</button>
     </dialog>
   </section>
 </template>
