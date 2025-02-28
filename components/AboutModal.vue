@@ -2,8 +2,7 @@
 const store = useEventStore();
 const { eventModal } = storeToRefs(store);
 
-const modalImage =
-  'https://res.cloudinary.com/rafamed-dev/image/upload/v1740784871/events/WhatsApp_Image_2025-02-28_at_11.12.50_a.m._va3h59.jpg';
+const modalImage = 'https://res.cloudinary.com/rafamed-dev/image/upload/v1706122283/events/allyoucaneat_rbxihs.jpg';
 
 function closeModal() {
   eventModal.value = false;

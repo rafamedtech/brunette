@@ -2,8 +2,7 @@ export default [
   {
     title: 'Breakfast',
     slug: 'desayunos',
-    cover:
-      'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/zoclbz97b4zivibfpcoy.jpg',
+    cover: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/zoclbz97b4zivibfpcoy.jpg',
     sections: [
       {
         title: 'Detox',
@@ -158,8 +157,7 @@ export default [
           },
           {
             name: 'El del ingeniero',
-            description:
-              'Carne asada, 2 eggs, chilaquiles, beans, guacamole, grilled cheese and a quesadilla',
+            description: 'Carne asada, 2 eggs, chilaquiles, beans, guacamole, grilled cheese and a quesadilla',
             price: '$275.00',
           },
 
@@ -175,8 +173,7 @@ export default [
   {
     title: 'the Menu',
     slug: 'the-menu',
-    cover:
-      'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/r3i9indhf34cbjtevglw.jpg',
+    cover: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/r3i9indhf34cbjtevglw.jpg',
     sections: [
       {
         title: 'Appetizers',
@@ -196,8 +193,7 @@ export default [
           },
           {
             name: 'Nachos real',
-            description:
-              'Tortilla chips bathed in cheese sauce, avocado and topped with sautéed shrimp',
+            description: 'Tortilla chips bathed in cheese sauce, avocado and topped with sautéed shrimp',
             price: '$210.00',
           },
           {
@@ -252,8 +248,7 @@ export default [
 
           {
             name: 'Brunette Board',
-            description:
-              'Sliders, boneless, wings, nachos with cheese, quesadillas, French fries, guacamole',
+            description: 'Sliders, boneless, wings, nachos with cheese, quesadillas, French fries, guacamole',
             price: '$610.00',
           },
         ],
@@ -299,8 +294,7 @@ export default [
           },
           {
             name: 'Tour real',
-            description:
-              'Parmigiana chicken breast, mashed potatoes, butter spaghetti and del bosque salad',
+            description: 'Parmigiana chicken breast, mashed potatoes, butter spaghetti and del bosque salad',
             price: '$295.00',
           },
           {
@@ -515,8 +509,7 @@ export default [
   {
     title: 'the Bar',
     slug: 'the-bar',
-    cover:
-      'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/nuhzvsydok6rhzqsxklf.jpg',
+    cover: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/nuhzvsydok6rhzqsxklf.jpg',
     sections: [
       {
         title: 'Casa Magoni wines',
@@ -532,7 +525,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$520.00',
+                price: '$670.00',
               },
             ],
           },
@@ -544,7 +537,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$520.00',
+                price: '$670.00',
               },
             ],
           },
@@ -556,7 +549,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$540.00',
+                price: '$690.00',
               },
             ],
           },
@@ -568,7 +561,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$660.00',
+                price: '$820.00',
               },
             ],
           },
@@ -580,7 +573,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$525.00',
+                price: '$675.00',
               },
             ],
           },
@@ -592,7 +585,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$550.00',
+                price: '$700.00',
               },
             ],
           },
@@ -604,7 +597,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$600.00',
+                price: '$750.00',
               },
             ],
           },
@@ -617,7 +610,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$750.00',
+                price: '$900.00',
               },
             ],
           },
@@ -637,7 +630,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$430.00',
+                price: '$580.00',
               },
             ],
           },
@@ -649,7 +642,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$430.00',
+                price: '$580.00',
               },
             ],
           },
@@ -661,7 +654,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$450.00',
+                price: '$600.00',
               },
             ],
           },
@@ -673,7 +666,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$450.00',
+                price: '$600.00',
               },
             ],
           },
@@ -686,7 +679,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$450.00',
+                price: '$600.00',
               },
             ],
           },
@@ -699,7 +692,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$590.00',
+                price: '$740.00',
               },
             ],
           },
@@ -719,7 +712,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$450.00',
+                price: '$600.00',
               },
             ],
           },
@@ -739,12 +732,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$5,900.00',
+                price: '$6,050.00',
               },
               {
                 id: 2,
                 name: 'Shot',
-                price: '$450.00',
+                price: '$470.00',
               },
             ],
           },
@@ -756,12 +749,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$2,200.00',
+                price: '$2,350.00',
               },
               {
                 id: 2,
                 name: 'Shot',
-                price: '$145.00',
+                price: '$165.00',
               },
             ],
           },
@@ -773,12 +766,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$1,500.00',
+                price: '$1,650.00',
               },
               {
                 id: 2,
                 name: 'Shot',
-                price: '$110.00',
+                price: '$130.00',
               },
             ],
           },
@@ -790,12 +783,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$1,650.00',
+                price: '$1,800.00',
               },
               {
                 id: 2,
                 name: 'Shot',
-                price: '$120.00',
+                price: '$140.00',
               },
             ],
           },
@@ -807,12 +800,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$1,800.00',
+                price: '$1,950.00',
               },
               {
                 id: 2,
                 name: 'Shot',
-                price: '$130.00',
+                price: '$150.00',
               },
             ],
           },
@@ -825,12 +818,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$1,400.00',
+                price: '$1,550.00',
               },
               {
                 id: 2,
                 name: 'Shot',
-                price: '$115.00',
+                price: '$135.00',
               },
             ],
           },
@@ -843,12 +836,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$1,650.00',
+                price: '$1,800.00',
               },
               {
                 id: 2,
                 name: 'Shot',
-                price: '$130.00',
+                price: '$150.00',
               },
             ],
           },
@@ -861,12 +854,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$1,300.00',
+                price: '$1,450.00',
               },
               {
                 id: 2,
                 name: 'Shot',
-                price: '$110.00',
+                price: '$130.00',
               },
             ],
           },
@@ -963,12 +956,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$950.00',
+                price: '$1,100.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$110.00',
+                price: '$125.00',
               },
             ],
           },
@@ -980,12 +973,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$1,600.00',
+                price: '$1,750.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$120.00',
+                price: '$135.00',
               },
             ],
           },
@@ -997,12 +990,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$1,500.00',
+                price: '$1,650.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$135.00',
+                price: '$150.00',
               },
             ],
           },
@@ -1014,12 +1007,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$1,600.00',
+                price: '$1,750.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$140.00',
+                price: '$155.00',
               },
             ],
           },
@@ -1044,7 +1037,7 @@ export default [
               {
                 id: 2,
                 name: 'Drink',
-                price: '$135.00',
+                price: '$125.00',
               },
             ],
           },
@@ -1056,12 +1049,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$1,200.00',
+                price: '$1,350.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$135.00',
+                price: '$125.00',
               },
             ],
           },
@@ -1073,12 +1066,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$1,800.00',
+                price: '$1,950.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$165.00',
+                price: '$185.00',
               },
             ],
           },
@@ -1098,7 +1091,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$2,250.00',
+                price: '$2,600.00',
               },
             ],
           },
@@ -1110,7 +1103,7 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$2,950.00',
+                price: '$3,300.00',
               },
             ],
           },
@@ -1131,12 +1124,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$1,700.00',
+                price: '$1,880.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$195.00',
+                price: '$215.00',
               },
             ],
           },
@@ -1148,12 +1141,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$1,900.00',
+                price: '$2,080.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$170.00',
+                price: '$190.00',
               },
             ],
           },
@@ -1165,12 +1158,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$2,200.00',
+                price: '$2,380.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$150.00',
+                price: '$170.00',
               },
             ],
           },
@@ -1191,12 +1184,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$950.00',
+                price: '$1,110.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$110.00',
+                price: '$140.00',
               },
             ],
           },
@@ -1208,12 +1201,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$1,200.00',
+                price: '$1,350.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$120.00',
+                price: '$150.00',
               },
             ],
           },
@@ -1225,12 +1218,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$1,600.00',
+                price: '$1,750.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$135.00',
+                price: '$165.00',
               },
             ],
           },
@@ -1242,12 +1235,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$1,900.00',
+                price: '$2,050.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$150.00',
+                price: '$180.00',
               },
             ],
           },
@@ -1259,12 +1252,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$2,000.00',
+                price: '$2,150.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$150.00',
+                price: '$180.00',
               },
             ],
           },
@@ -1281,7 +1274,7 @@ export default [
               {
                 id: 2,
                 name: 'Drink',
-                price: '$600.00',
+                price: '$650.00',
               },
             ],
           },
@@ -1293,29 +1286,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$2,900.00',
+                price: '$3,050.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$195.00',
-              },
-            ],
-          },
-          {
-            name: 'Blue Macallan',
-            description: '',
-            price: '',
-            variants: [
-              {
-                id: 1,
-                name: 'Bottle',
-                price: '$2,400.00',
-              },
-              {
-                id: 2,
-                name: 'Drink',
-                price: '$150.00',
+                price: '$225.00',
               },
             ],
           },
@@ -1333,7 +1309,7 @@ export default [
               {
                 id: 2,
                 name: 'Drink',
-                price: '$245.00',
+                price: '$295.00',
               },
             ],
           },
@@ -1354,12 +1330,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$800.00',
+                price: '$980.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$90.00',
+                price: '$110.00',
               },
             ],
           },
@@ -1371,12 +1347,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$800.00',
+                price: '$980.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$90.00',
+                price: '$110.00',
               },
             ],
           },
@@ -1389,12 +1365,12 @@ export default [
               {
                 id: 1,
                 name: 'Bottle',
-                price: '$2,100.00',
+                price: '$2,280.00',
               },
               {
                 id: 2,
                 name: 'Drink',
-                price: '$145.00',
+                price: '$165.00',
               },
             ],
           },
@@ -1409,89 +1385,89 @@ export default [
           {
             name: 'Cantarito',
             description: '',
-            price: '$145.00',
+            price: '$180.00',
           },
           {
             name: 'Martini',
             description: '',
-            price: '$120.00',
+            price: '$155.00',
           },
           {
             name: 'Dirty Martini',
             description: '',
-            price: '$180.00',
+            price: '$215.00',
           },
           {
             name: 'Dry Martini',
             description: '',
-            price: '$120.00',
+            price: '$230.00',
           },
           {
             name: 'Old fashion',
             description: '',
-            price: '$160.00',
+            price: '$195.00',
           },
           {
             name: 'Goodbye mother fucker',
             description: '',
-            price: '$150.00',
+            price: '$185.00',
           },
           {
             name: 'Margarita',
             description: '',
-            price: '$120.00',
+            price: '$155.00',
           },
           {
             name: 'Paloma',
             description: '',
-            price: '$120.00',
+            price: '$155.00',
           },
           {
             name: 'Tequila sunrise',
             description: '',
-            price: '$135.00',
+            price: '$170.00',
           },
           {
             name: 'Long island',
             description: '',
-            price: '$150.00',
+            price: '$185.00',
           },
           {
             name: 'Cuba',
             description: '',
-            price: '$110.00',
+            price: '$145.00',
           },
           {
             name: 'Sangria',
             description: '',
-            price: '$120.00',
+            price: '$155.00',
           },
           {
             name: 'Piña colada',
             description: '',
-            price: '$120.00',
+            price: '$155.00',
           },
           {
             name: 'Mimosas',
             description: '',
-            price: '$110.00',
+            price: '$145.00',
           },
           {
             name: 'Sex on the beach',
             description: '',
-            price: '$135.00',
+            price: '$170.00',
           },
 
           {
             name: 'Mojito',
             description: '',
-            price: '$130.00',
+            price: '$165.00',
           },
 
           {
             name: 'Sangria especial',
             description: '',
-            price: '$160.00',
+            price: '$195.00',
           },
         ],
       },
@@ -1503,27 +1479,27 @@ export default [
           {
             name: 'Jagermeister',
             description: '',
-            price: '$95.00',
+            price: '$120.00',
           },
           {
             name: 'Baileys irish cream',
             description: '',
-            price: '$95.00',
+            price: '$120.00',
           },
           {
             name: 'Kahlúa',
             description: '',
-            price: '$95.00',
+            price: '$120.00',
           },
           {
             name: 'Frangelico',
             description: '',
-            price: '$95.00',
+            price: '$120.00',
           },
           {
             name: 'Carajillo',
             description: '',
-            price: '$150.00',
+            price: '$175.00',
           },
         ],
       },
@@ -1536,57 +1512,42 @@ export default [
           {
             name: 'Tecate',
             description: '',
-            price: '$60.00',
+            price: '$70.00',
           },
           {
             name: 'Tecate light',
             description: '',
-            price: '$60.00',
+            price: '$70.00',
           },
 
           {
             name: 'Indio',
             description: '',
-            price: '$60.00',
+            price: '$70.00',
           },
 
           {
             name: 'XX Lager',
             description: '',
+            price: '$70.00',
+          },
+
+          {
+            name: 'Corona',
+            description: '',
             price: '$60.00',
           },
 
           {
-            name: 'Ultra Amstel',
-            description: '',
-            price: '$65.00',
-          },
-          {
-            name: 'Corona',
-            description: '',
-            price: '$50.00',
-          },
-          {
-            name: 'Coors light',
-            description: '',
-            price: '$50.00',
-          },
-          {
             name: 'Modelo clara',
             description: '',
-            price: '$65.00',
-          },
-
-          {
-            name: 'Modelo oscura',
-            description: '',
-            price: '$65.00',
+            price: '$75.00',
           },
 
           {
             name: 'Michelob Ultra',
             description: '',
-            price: '$65.00',
+            price: '$75.00',
           },
         ],
       },
@@ -1600,32 +1561,32 @@ export default [
           {
             name: 'Michelado glass',
             description: '',
-            price: '$40.00',
+            price: '$55.00',
           },
           {
             name: 'Cubano glass',
             description: '',
-            price: '$40.00',
+            price: '$55.00',
           },
           {
             name: 'Chabela glass',
             description: '',
-            price: '$40.00',
+            price: '$55.00',
           },
           {
             name: 'Olives',
             description: '',
-            price: '$85.00',
+            price: '$100.00',
           },
           {
             name: 'Peanuts',
             description: '',
-            price: '$65.00',
+            price: '$80.00',
           },
           {
             name: 'Brunette snack',
             description: '',
-            price: '$115.00',
+            price: '$130.00',
           },
         ],
       },
@@ -1639,69 +1600,60 @@ export default [
           {
             name: 'Clamato',
             description: '',
-            price: '$80.00',
+            price: '$95.00',
           },
           {
             name: 'Piñada',
             description: '',
-            price: '$80.00',
+            price: '$95.00',
           },
           {
             name: 'Sodas',
             description: '',
-            price: '$50.00',
+            price: '$65.00',
           },
-          {
-            name: 'Monster',
-            description: '',
-            price: '$90.00',
-          },
+
           {
             name: 'Ciel mineral water',
             description: '',
-            price: '$35.00',
+            price: '$50.00',
           },
           {
             name: 'Topo Chico mineral water',
             description: '',
-            price: '$60.00',
+            price: '$75.00',
           },
           {
             name: 'Chocomilk',
             description: '',
-            price: '$55.00',
+            price: '$70.00',
           },
           {
             name: 'Coffee',
             description: '',
-            price: '$55.00',
+            price: '$65.00',
           },
           {
             name: 'Glass of milk',
             description: '',
-            price: '$40.00',
-          },
-          {
-            name: 'Vanilla milkshake',
-            description: '',
-            price: '$75.00',
+            price: '$50.00',
           },
 
           {
             name: 'Orangeade - Lemonade',
             description: '',
-            price: '$55.00',
+            price: '$70.00',
           },
           {
             name: 'Orangeade Jar',
             description: '',
-            price: '$220.00',
+            price: '$260.00',
           },
 
           {
             name: 'Bottle of water',
             description: '',
-            price: '$35.00',
+            price: '$50.00',
           },
         ],
       },
@@ -1711,8 +1663,7 @@ export default [
   {
     title: 'Mixology',
     slug: 'mixologia',
-    cover:
-      'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913834/menu/elfiwlslmmgwaguddc4x.jpg',
+    cover: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913834/menu/elfiwlslmmgwaguddc4x.jpg',
     sections: [
       {
         title: 'Brunette Menu',
@@ -1724,34 +1675,33 @@ export default [
             name: 'Candela',
             description: 'Mezcal, conserva de jamaica y maracuyá, limón y sal de chiles ahumados.',
             image: '',
-            price: '$210.00',
+            price: '$245.00',
           },
           {
             name: 'Eros',
             description: 'Gin, compota de frutos rojos, limón, tonic top & soda.',
             image: '',
-            price: '$210.00',
+            price: '$245.00',
           },
           {
             name: "Piña pa'la niña ",
-            description:
-              'Ron blanco, pera piña, jugo de piña, Angostura, crema batida y coco tostado..',
+            description: 'Ron blanco, pera piña, jugo de piña, Angostura, crema batida y coco tostado..',
             image: '',
-            price: '$210.00',
+            price: '$245.00',
           },
 
           {
             name: 'Brunette & Tonic',
             description: 'Gin, lemon grass, limón amarillo, menta, tonic y perfume de Damiana.',
             image: '',
-            price: '$210.00 ',
+            price: '$245.00 ',
           },
 
           {
             name: 'El matador',
             description: 'Mezcal, jugo de cítricos, piña, albahaca y miel de agave.',
             image: '',
-            price: '$210.00 ',
+            price: '$245.00 ',
           },
         ],
       },
