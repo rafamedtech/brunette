@@ -33,15 +33,6 @@
   }
 }
 
-@layer components {
-  .background {
-    background-image: url('./assets/images/menu-background.jpeg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-
 @layer utilities {
   .flex-no-wrap {
     flex-wrap: nowrap;
