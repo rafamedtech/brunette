@@ -46,13 +46,11 @@ definePageMeta({
 
 <template>
   <main>
-    <section
-      class="container mx-auto flex flex-col flex-wrap items-center justify-center px-5 py-24 text-gray-400"
-    >
+    <section class="container mx-auto flex flex-col flex-wrap items-center justify-center px-5 py-24 text-gray-400">
       <section class="flex flex-col items-center">
-        <figure class="text-2xl text-neutral-content">
+        <!-- <figure class="text-2xl text-neutral-content">
           <img class="h-14" src="@/assets/images/logo.png" alt="logo" />
-        </figure>
+        </figure> -->
         <h1 class="w-fit text-3xl text-primary">Administración</h1>
       </section>
       <form
