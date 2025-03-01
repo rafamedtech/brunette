@@ -32,9 +32,9 @@ async function userLogout() {
       <Transition name="up" appear>
         <ul class="fixed flex w-fit flex-col gap-4">
           <li>
-            <figure class="text-2xl text-neutral-content">
+            <!-- <figure class="text-2xl text-neutral-content">
               <img class="h-24" src="@/assets/images/logo.png" alt="logo" />
-            </figure>
+            </figure> -->
             <p class="text-center font-handlee text-xl text-primary">Administración</p>
             <div class="divider mt-0"></div>
           </li>
@@ -135,9 +135,7 @@ async function userLogout() {
             class="btn border border-gray-300 bg-gray-300 text-black hover:border-gray-300 hover:bg-gray-300/75"
             >Cancelar</label
           >
-          <button for="my-modal-6" class="btn btn-primary text-white" @click="userLogout">
-            Aceptar
-          </button>
+          <button for="my-modal-6" class="btn btn-primary text-white" @click="userLogout">Aceptar</button>
         </div>
       </div>
     </div>
