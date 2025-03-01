@@ -112,9 +112,9 @@ async function userLogout() {
     </div>
 
     <div class="lg:w-3/4">
-      <figure class="">
+      <!-- <figure class="">
         <img src="@/assets/images/logo.png" alt="" class="mx-auto mt-4 w-32 lg:hidden" />
-      </figure>
+      </figure> -->
       <!-- <p class="text-center font-handlee text-xl text-primary">Administración</p> -->
       <h1 class="text-center text-lg lg:hidden">Administración</h1>
       <div class="divider mx-auto w-1/2 lg:hidden"></div>
