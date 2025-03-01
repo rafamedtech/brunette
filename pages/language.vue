@@ -42,9 +42,9 @@ definePageMeta({
   <section class="background grid h-screen place-content-center bg-white">
     <Transition name="up">
       <article class="card-body items-center rounded-2xl lg:w-[30rem]">
-        <figure class="text-2xl text-neutral-content">
+        <!-- <figure class="text-2xl text-neutral-content">
           <img class="h-24" src="@/assets/images/logo.png" alt="logo" />
-        </figure>
+        </figure> -->
         <h1 class="text-4xl text-accent">Menú</h1>
         <h2>Selecciona idioma / Select language</h2>
         <div class="flex justify-center gap-4">
