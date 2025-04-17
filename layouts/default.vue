@@ -90,10 +90,10 @@ const changeLanguage = () => {
     <div class="divider"></div>
 
     <div class="w-full lg:w-4/5">
-      <div class="navbar w-full bg-neutral lg:hidden">
+      <div class="navbar w-full bg-primary lg:hidden">
         <div class="navbar-start">
           <details class="dropdown transition-all">
-            <summary class="btn btn-neutral p-0" @click="dropdown = !dropdown">
+            <summary class="btn btn-square" @click="dropdown = !dropdown">
               <Icon
                 :name="dropdown ? 'heroicons-outline:x' : 'heroicons-outline:bars-3-bottom-left'"
                 size="28"
@@ -101,7 +101,7 @@ const changeLanguage = () => {
               />
             </summary>
             <ul
-              class="menu dropdown-content rounded-box menu-sm z-50 mt-3 h-fit w-72 border border-base-100/25 bg-neutral p-2 text-base-100 shadow transition-all"
+              class="menu dropdown-content rounded-box menu-sm z-50 mt-3 h-fit w-72 border border-base-100/25 bg-white p-2 shadow transition-all"
             >
               <li class="flex w-full flex-row justify-center gap-4 text-5xl active:bg-transparent">
                 <NuxtLink to="https://www.facebook.com/brunette.realdelmar" target="_blank">
@@ -153,7 +153,7 @@ const changeLanguage = () => {
           </figure>
         </div>
         <div class="navbar-end">
-          <button
+          <!-- <button
             class="btn btn-primary h-fit flex-col gap-0 bg-primary/75 px-2 text-base-100 transition-all duration-500 lg:flex-row lg:gap-2"
             :class="{
               'opacity-100 transition-all duration-700': route.path === '/' || route.path === '/en',
@@ -162,7 +162,7 @@ const changeLanguage = () => {
           >
             <Icon name="heroicons-outline:switch-vertical" class="text-2xl" />
             <span class="text-xs normal-case">{{ language === 'es' ? 'English' : 'Español' }}</span>
-          </button>
+          </button> -->
         </div>
       </div>
 

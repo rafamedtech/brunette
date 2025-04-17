@@ -3,6 +3,7 @@ const { menu } = useMenu();
 
 const { params } = useRoute();
 const category = computed(() => menu.value.find((category) => category.slug === params.category));
+// console.log(category.value);
 
 useHead({
   title: `Menú - ${category.value.title}`,
@@ -21,7 +22,7 @@ useHead({
       <NuxtLink class="absolute z-10 my-auto ml-2" to="/">
         <Icon name="ri:arrow-left-line" class="font-bold text-base-100" size="43" />
       </NuxtLink>
-      <CategoryItem :category="category" />
+      <CategoryCover :category="category" />
     </section>
 
     <section

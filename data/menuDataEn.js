@@ -1,53 +1,78 @@
 export default [
+  // Desayunos
   {
-    title: 'Breakfast',
+    title: 'Desayunos',
     slug: 'desayunos',
     cover: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/zoclbz97b4zivibfpcoy.jpg',
     sections: [
       {
-        title: 'Detox',
+        title: 'Chilaquiles',
         description: '',
         cover:
-          'https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+          'https://images.pexels.com/photos/10305696/pexels-photo-10305696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         items: [
           {
-            name: 'Orange juice',
-            description: '',
-            price: '$75.00',
+            name: 'Chicharroneros',
+            description: 'Chicharrón en salsa verde - frijol.',
+            price: '190',
+            variants: [],
           },
           {
-            name: 'Green juice',
-            description: '',
-            price: '$75.00',
+            name: 'Tijuas',
+            description: 'Birria - frijoles.',
+            price: '210',
+            variants: [],
           },
           {
-            name: 'Berries smoothie',
-            description: '',
-            price: '$90.00',
+            name: 'El Inge',
+            description: 'Arrachera - huevo - guacamole - frijoles - queso panela asado.',
+            price: '235',
+            variants: [],
           },
-
           {
-            name: 'Oatmeal pancakes',
-            description: 'Accompanied by seasonal fruit',
-            price: '$165.00',
+            name: 'Los Cochicuinos',
+            description: 'Coronados con carnitas estilo Tijuana.',
+            price: '210',
+            variants: [],
+          },
+          {
+            name: 'Los habladores',
+            description: 'Lengua de res en salsa verde.',
+            price: '210',
+            variants: [],
           },
         ],
       },
       {
-        title: 'Eggs',
+        title: 'Huevos',
         description: '',
         cover:
           'https://images.pexels.com/photos/588776/pexels-photo-588776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         items: [
           {
-            name: 'Eggs as you like',
-            description: 'Chorizo, ham, bacon',
-            price: '$165.00',
+            name: 'Los Mexican',
+            description: 'Huevos sobre gordita de queso y frijol, bañados en salsa de chicharrón.',
+            price: '190',
           },
           {
-            name: 'Huevos rancheros',
-            description: '',
-            price: '$175.00',
+            name: 'Ahogados',
+            description: 'Huevos con chorizo, ahogados en salsa roja, frijol de la olla - queso y aguacate.',
+            price: '190',
+          },
+          {
+            name: 'Beef',
+            description: 'Huevos en salsa - Arrachera - frijol.',
+            price: '210',
+          },
+          {
+            name: 'Posh',
+            description: 'Huevos - pancakes - tocino - salchicha.',
+            price: '210',
+          },
+          {
+            name: 'Huevos al gusto',
+            description: 'Chorizo, jamón, tocino',
+            price: '165',
           },
         ],
       },
@@ -58,249 +83,176 @@ export default [
           'https://images.pexels.com/photos/6529924/pexels-photo-6529924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         items: [
           {
-            name: 'Vegetarian',
-            description: '',
-            price: '$175.00',
+            name: 'Carnívoro',
+            description: 'Arrachera - salsa roja - queso - frijol.',
+            price: '235',
           },
           {
-            name: 'Sea and land',
-            description: '',
-            price: '$220.00',
+            name: 'Hablador',
+            description: 'Legua en salsa verde - queso - frijol.',
+            price: '235',
           },
           {
-            name: 'El chilaquil',
-            description: 'Chilaquiles stuffed with mole poblano',
-            price: '$185.00',
+            name: 'Cochicuino',
+            description: 'Carnitas - queso - frijol.',
+            price: '235',
           },
           {
-            name: 'La chicharronera',
-            description: 'Stuffed with pressed pork rinds in red sauce',
-            price: '$195.00',
-          },
-          {
-            name: 'House omelette',
-            description: 'Chile stuffed with cheese, bathed in tomato sauce',
-            price: '$185.00',
+            name: 'Green',
+            description: 'Relleno de queso mozarella y verdura de temporada.',
+            price: '180',
           },
         ],
       },
       {
-        title: 'Chilaquiles',
+        title: 'Otros',
         description: '',
         cover:
-          'https://images.pexels.com/photos/10305696/pexels-photo-10305696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+          'https://images.pexels.com/photos/6529924/pexels-photo-6529924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         items: [
           {
-            name: 'Red, green, mole, chipotle',
+            name: 'Menudo',
             description: '',
             price: '',
-            variants: [
-              {
-                id: 1,
-                name: 'Regular',
-                price: '$175.00',
-              },
-              {
-                id: 2,
-                name: 'With eggs',
-                price: '$175.00',
-              },
-              {
-                id: 3,
-                name: 'With chicken',
-                price: '$210.00',
-              },
-            ],
           },
-        ],
-      },
-
-      {
-        title: 'The classics',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/7116796/pexels-photo-7116796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
           {
-            name: 'Pancakes (3)',
+            name: 'Birria',
             description: '',
-            price: '$165.00',
+            price: '',
           },
           {
-            name: 'Carrot pancakes (3)',
+            name: 'Molletes',
             description: '',
-            price: '$195.00',
+            price: '',
           },
           {
-            name: 'French toasts',
+            name: 'Torta de chilaquiles',
             description: '',
-            price: '$185.00',
-          },
-
-          {
-            name: 'Tabla Arilu',
-            description: 'pancakes 6 pz, waffles 6 pz  and bacon strips, to share',
-            price: '$385.00',
-          },
-        ],
-      },
-      {
-        title: 'Brunette specials',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/2662875/pexels-photo-2662875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Flank steak Brunette',
-            description: '230 gr of flank steak, 2 eggs, house potatoes and chilaquiles',
-            price: '$285.00',
-          },
-          {
-            name: 'El del ingeniero',
-            description: 'Carne asada, 2 eggs, chilaquiles, beans, guacamole, grilled cheese and a quesadilla',
-            price: '$275.00',
-          },
-
-          {
-            name: 'Don Luis',
-            description: 'Eggs, bacon, ham, grated potato, and pancakes',
-            price: '$245.00',
+            price: '',
           },
         ],
       },
     ],
   },
+  // Menu
   {
-    title: 'the Menu',
+    title: 'Menú principal',
     slug: 'the-menu',
     cover: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/r3i9indhf34cbjtevglw.jpg',
     sections: [
       {
-        title: 'Appetizers',
+        title: 'Entradas',
         description: '',
         cover:
           'https://images.pexels.com/photos/2814828/pexels-photo-2814828.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         items: [
           {
-            name: 'Brunette Melted cheese',
-            description: 'Melted cheese with chicharrón prensado',
-            price: '$185.00',
+            name: 'Tablita de quesos',
+            description: 'Quesos de la región - Carnes Frías- Fruta - Pan.',
+            price: '475',
           },
           {
-            name: 'Sliders',
-            description: 'Selected meat in bread spread with tasty house dressing',
-            price: '$195.00',
+            name: 'Tostaditas de atún',
+            description: 'Cubos de atún fresco - salsa de la casa.',
+            price: '245',
           },
           {
-            name: 'Nachos real',
-            description: 'Tortilla chips bathed in cheese sauce, avocado and topped with sautéed shrimp',
-            price: '$210.00',
+            name: 'Camarones al Coco/Mango',
+            description: 'Camarón fresco empanizado con coco - salsa de mango.',
+            price: '265',
+          },
+        ],
+      },
+      {
+        title: 'Ensaladas y Cremas',
+        description: '',
+        cover:
+          'https://images.pexels.com/photos/9928322/pexels-photo-9928322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        items: [
+          {
+            name: 'Capresse',
+            description: 'Tomate - mozzarella -albahaca.',
+            price: '235',
           },
           {
-            name: 'Regular nachos',
+            name: 'Caesar',
+            description: 'Lechuga - aderezo - queso - pan tostado.',
+            price: '220',
+          },
+          {
+            name: 'Mora',
+            description: 'Espinacas - aragula - pera - fresa queso feta - nueces.',
+            price: '220',
+          },
+          {
+            name: 'Crema de almeja',
             description: '',
-            price: '$145.00',
+            price: '185',
+          },
+        ],
+      },
+      {
+        title: 'Pizzas',
+        description: '',
+        cover:
+          'https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        items: [
+          {
+            name: 'Taquera',
+            description: 'Queso - carne adobada - carne asada - aguacate - cilantro y cebolla.',
+            price: '285',
           },
           {
-            name: 'Elote pop',
-            description: 'Corn with butter, cheese and house dressing',
-            price: '$110.00',
-          },
-          {
-            name: 'Wings',
-            description: 'Buffalo / BBQ',
-            price: '',
-            variants: [
-              {
-                id: 1,
-                name: '10pz ',
-                price: '$220.00',
-              },
-              {
-                id: 2,
-                name: '20pz',
-                price: '$395.00',
-              },
-            ],
-          },
-          {
-            name: 'Boneless',
-            description: 'Buffalo / BBQ',
-            price: '',
-            variants: [
-              {
-                id: 1,
-                name: '10pz',
-                price: '$185.00',
-              },
-              {
-                id: 2,
-                name: '20pz',
-                price: '$325.00',
-              },
-            ],
-          },
-          {
-            name: 'Guacamole',
-            description: '',
-            price: '$140.00',
+            name: 'La Verde Mía',
+            description: 'Queso ricotta - tomates cherry - pesto.',
+            price: '285',
           },
 
           {
-            name: 'Brunette Board',
-            description: 'Sliders, boneless, wings, nachos with cheese, quesadillas, French fries, guacamole',
-            price: '$610.00',
-          },
-        ],
-      },
-      {
-        title: 'Soups and salads',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/9928322/pexels-photo-9928322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Tortilla soup',
-            description: 'Fried tortilla, avocado, cheese, cream and ancho chile',
-            price: '$155.00',
+            name: 'La Española',
+            description: 'Queso - jamón serrano - arúgula - tomate cherry.',
+            price: '285',
           },
           {
-            name: 'Del bosque salad',
-            description: 'Mixed lettuce, praline, feta cheese, berries and apple',
-            price: '$195.00 ',
+            name: 'Mar y Fuego',
+            description: 'Camarones marinados en crema de chipotle.',
+            price: '285',
           },
           {
-            name: 'Roasted corn cream',
-            description: '',
-            price: '$165.00',
+            name: 'La Norteña',
+            description: 'Queso - chicharrón prensado - frijoles puercos - chiles.',
+            price: '285',
           },
           {
-            name: 'Caesar salad',
-            description: '',
-            price: '$185.00',
-          },
-        ],
-      },
-      {
-        title: 'House specials',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/9928322/pexels-photo-9928322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Chile bonita',
-            description: 'Poblano pepper stuffed with red chilaquiles',
-            price: '$175.00',
+            name: 'Carnivora',
+            description: 'Queso - Peperoni - chorizo - beef bites - jamón.',
+            price: '285',
           },
           {
-            name: 'Tour real',
-            description: 'Parmigiana chicken breast, mashed potatoes, butter spaghetti and del bosque salad',
-            price: '$295.00',
+            name: 'Boneless & Fries',
+            description: 'Queso, boneless, papas fritas y aderezo de la casa.',
+            price: '285',
           },
           {
-            name: 'Cheese board',
-            description: '',
-            price: '$450.00',
+            name: 'La Vegetariana',
+            description: 'Queso - verduras de temporada.',
+            price: '255',
+          },
+          {
+            name: 'Flaming Cheese',
+            description: 'Queso, Flaming Hot y queso amarillo.',
+            price: '255',
+          },
+
+          {
+            name: 'Peperoni',
+            description: 'Queso - Peperoni.',
+            price: '235',
+          },
+          {
+            name: '',
+            description: '*Pide la Orilla de queso crema o mozarella.',
+            price: '60',
           },
         ],
       },
@@ -312,207 +264,84 @@ export default [
         items: [
           {
             name: 'Fetuccini Alfredo',
-            description: 'Served with creamy alfredo sauce',
-            price: '$185.00',
-            variants: [
-              {
-                id: 1,
-                name: 'with chicken',
-                price: '$240.00',
-              },
-              {
-                id: 2,
-                name: 'with shrimp',
-                price: '$275.00',
-              },
-            ],
+            description: '',
+            price: '260',
           },
           {
-            name: 'Lasagna Brunette',
-            description: 'Beef lasagna bolognese',
-            price: '$235.00',
+            name: "Penne all'Arrabbiata",
+            description: '',
+            price: '260',
           },
           {
-            name: 'Penne with chipotle cream',
-            description: 'With grilled chicken breast and toasted almonds',
-            price: '$245.00',
+            name: 'Spaghetti pomodoro',
+            description: '',
+            price: '260',
+          },
+          {
+            name: '',
+            description: '*Agrega pollo o camarón a cualquiera de tus pastas.',
+            price: '',
           },
         ],
       },
+
       {
-        title: 'Seafood',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/2827263/pexels-photo-2827263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Coconut shrimp',
-            description: '',
-            price: '$235.00',
-          },
-          {
-            name: 'Lobster',
-            description: '',
-            price: '$980.00',
-          },
-          {
-            name: 'Al pastor fish volcán',
-            description: 'Al pastor fish, cilantro, onion and avocado',
-            price: '$175.00',
-          },
-          {
-            name: 'Brunette Fish ceviche',
-            description: '',
-            price: '$195.00',
-          },
-          {
-            name: 'Aguachile Brunette',
-            description: '',
-            price: '$235.00',
-          },
-          {
-            name: 'Tuna Brunette',
-            description: 'Tuna loins in black sauces',
-            price: '$285.00',
-          },
-        ],
-      },
-      {
-        title: 'Meat',
+        title: 'Proteina',
         description: '',
         cover:
           'https://images.pexels.com/photos/3535383/pexels-photo-3535383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         items: [
           {
-            name: 'BBQ ribs',
-            description: 'Ribs, corn and fries',
-            price: '$385.00',
+            name: 'Ribeye',
+            description: 'Acompañado de Pure de papa - verduras salteadas.',
+            price: '595',
           },
           {
-            name: 'House flank stake (250gr)',
-            description: "Flank steak, chef's beans, guacamole, onion and roasted chili",
-            price: '$365.00',
-          },
-
-          {
-            name: 'Asado Brunette',
-            description:
-              'Chicken breast, carne asada, grilled chorizo, chiles with bacon and cheese, guacamole, beans, salsa',
-            price: '$490.00',
+            name: 'Salmón',
+            description: 'Crema de limón - arroz salvaje - verduras.',
+            price: '375',
           },
           {
-            name: 'Ribeye (400gr)',
-            description: 'Accompanied by chimichurri, mashed potatoes and vegetables',
-            price: '$585.00',
+            name: 'Tour Brunette',
+            description: 'Pechuga parmesana - puré papa - pasta - ensalada.',
+            price: '375',
           },
         ],
       },
 
       {
-        title: 'Chicken',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/2741458/pexels-photo-2741458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Grilled chicken',
-            description: 'With mashed potatoes and vegetables',
-            price: '$265.00',
-          },
-          {
-            name: 'Stuffed chicken breast',
-            description: 'Stuffed with ham and cheese, with butter pasta and vegatables',
-            price: '$285.00',
-          },
-          {
-            name: 'Chicken breast stuffed with shrimp mousse',
-            description:
-              'Filled with shrimp mousse, bathed in chipotle cream with mashed potatoes and tied with vegetables',
-            price: '$295.00',
-          },
-        ],
-      },
-      {
-        title: 'Pizzas',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Peperoni',
-            description: '',
-            price: '$200.00',
-          },
-          {
-            name: 'Mexican',
-            description: '',
-            price: '$220.00',
-          },
-          {
-            name: 'Margarita',
-            description: 'Cheese, pesto, tomatoes and basil',
-            price: '$200.00',
-          },
-
-          {
-            name: 'Sea and land',
-            description: 'Flank steak and shrimp',
-            price: '$265.00',
-          },
-          {
-            name: 'Taquera',
-            description: 'Half Carne asada and half  carne al pastor',
-            price: '$265.00',
-          },
-          {
-            name: 'Hawaian',
-            description: '',
-            price: '$200.00',
-          },
-          {
-            name: 'Mushrooms',
-            description: '',
-            price: '$215.00',
-          },
-          {
-            name: '',
-            description: 'Cheesy edge',
-            price: '$60.00',
-          },
-        ],
-      },
-      {
-        title: 'Desserts',
+        title: 'Postres',
         description: '',
         cover:
           'https://images.pexels.com/photos/3992131/pexels-photo-3992131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         items: [
           {
-            name: 'Bunuelo ice cream',
+            name: 'Flan con compota de Guayaba',
             description: '',
-            price: '$145.00',
+            price: '175',
           },
           {
-            name: 'Guava custard',
-            description: 'With guava compote and morita chile',
-            price: '$155.00',
+            name: 'Cheesecake de frutos rojos',
+            description: '',
+            price: '175',
           },
           {
-            name: 'Apple pie',
-            description: 'Served hot with vanilla ice cream',
-            price: '$155.00',
+            name: 'Pastel de Elote con helado de Vainilla',
+            description: '',
+            price: '175',
           },
         ],
       },
     ],
   },
+  // Barra
   {
-    title: 'the Bar',
+    title: 'Barra',
     slug: 'the-bar',
     cover: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/nuhzvsydok6rhzqsxklf.jpg',
     sections: [
       {
-        title: 'Casa Magoni wines',
+        title: 'Vinos Casa Magoni',
         description: '',
         cover:
           'https://images.pexels.com/photos/66636/pexels-photo-66636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -524,8 +353,8 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$670.00',
+                name: 'Botella',
+                price: '670',
               },
             ],
           },
@@ -536,8 +365,8 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$670.00',
+                name: 'Botella',
+                price: '670',
               },
             ],
           },
@@ -548,8 +377,8 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$690.00',
+                name: 'Botella',
+                price: '690',
               },
             ],
           },
@@ -560,8 +389,8 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$820.00',
+                name: 'Botella',
+                price: '820',
               },
             ],
           },
@@ -572,8 +401,8 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$675.00',
+                name: 'Botella',
+                price: '675',
               },
             ],
           },
@@ -584,8 +413,8 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$700.00',
+                name: 'Botella',
+                price: '700',
               },
             ],
           },
@@ -596,8 +425,8 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$750.00',
+                name: 'Botella',
+                price: '750',
               },
             ],
           },
@@ -609,15 +438,15 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$900.00',
+                name: 'Botella',
+                price: '900',
               },
             ],
           },
         ],
       },
       {
-        title: 'L.A. Cetto wines',
+        title: 'Vinos L.A. Cetto',
         description: '',
         cover:
           'https://images.pexels.com/photos/1494410/pexels-photo-1494410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -629,8 +458,8 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$580.00',
+                name: 'Botella',
+                price: '580',
               },
             ],
           },
@@ -641,8 +470,8 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$580.00',
+                name: 'Botella',
+                price: '580',
               },
             ],
           },
@@ -653,8 +482,8 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$600.00',
+                name: 'Botella',
+                price: '600',
               },
             ],
           },
@@ -665,8 +494,8 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$600.00',
+                name: 'Botella',
+                price: '600',
               },
             ],
           },
@@ -678,8 +507,8 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$600.00',
+                name: 'Botella',
+                price: '600',
               },
             ],
           },
@@ -691,15 +520,15 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$740.00',
+                name: 'Botella',
+                price: '740',
               },
             ],
           },
         ],
       },
       {
-        title: 'Other wines',
+        title: 'Otros vinos',
         description: '',
         cover:
           'https://images.pexels.com/photos/1494410/pexels-photo-1494410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -711,8 +540,8 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$600.00',
+                name: 'Botella',
+                price: '600',
               },
             ],
           },
@@ -731,13 +560,13 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$6,050.00',
+                name: 'Botella',
+                price: '6,050',
               },
               {
                 id: 2,
                 name: 'Shot',
-                price: '$470.00',
+                price: '470',
               },
             ],
           },
@@ -745,16 +574,17 @@ export default [
             name: 'Don Julio 70 Anejo Cristalino 700ml',
             description: '',
             price: '',
+
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$2,350.00',
+                name: 'Botella',
+                price: '2,350',
               },
               {
                 id: 2,
                 name: 'Shot',
-                price: '$165.00',
+                price: '165',
               },
             ],
           },
@@ -762,16 +592,17 @@ export default [
             name: 'Don Julio Blanco 700ml',
             description: '',
             price: '',
+
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$1,650.00',
+                name: 'Botella',
+                price: '1,650',
               },
               {
                 id: 2,
                 name: 'Shot',
-                price: '$130.00',
+                price: '130',
               },
             ],
           },
@@ -779,51 +610,17 @@ export default [
             name: 'Don Julio Reposado 700ml',
             description: '',
             price: '',
-            variants: [
-              {
-                id: 1,
-                name: 'Bottle',
-                price: '$1,800.00',
-              },
-              {
-                id: 2,
-                name: 'Shot',
-                price: '$140.00',
-              },
-            ],
-          },
-          {
-            name: '1800 Cristalino',
-            description: '',
-            price: '',
-            variants: [
-              {
-                id: 1,
-                name: 'Bottle',
-                price: '$1,950.00',
-              },
-              {
-                id: 2,
-                name: 'Shot',
-                price: '$150.00',
-              },
-            ],
-          },
 
-          {
-            name: 'Patron Reposado 750ml',
-            description: '',
-            price: '',
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$1,550.00',
+                name: 'Botella',
+                price: '1,800',
               },
               {
                 id: 2,
                 name: 'Shot',
-                price: '$135.00',
+                price: '140',
               },
             ],
           },
@@ -832,34 +629,17 @@ export default [
             name: 'Maestro Dobel',
             description: '',
             price: '',
-            variants: [
-              {
-                id: 1,
-                name: 'Bottle',
-                price: '$1,800.00',
-              },
-              {
-                id: 2,
-                name: 'Shot',
-                price: '$150.00',
-              },
-            ],
-          },
 
-          {
-            name: 'Patron Silver 750ml',
-            description: '',
-            price: '',
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$1,450.00',
+                name: 'Botella',
+                price: '1,800',
               },
               {
                 id: 2,
                 name: 'Shot',
-                price: '$130.00',
+                price: '150',
               },
             ],
           },
@@ -878,13 +658,13 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$600.00',
+                name: 'Botella',
+                price: '600',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$95.00',
+                name: 'Trago',
+                price: '95',
               },
             ],
           },
@@ -895,13 +675,13 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$900.00',
+                name: 'Botella',
+                price: '900',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$140.00',
+                name: 'Trago',
+                price: '140',
               },
             ],
           },
@@ -912,31 +692,31 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$700.00',
+                name: 'Botella',
+                price: '700',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$110.00',
+                name: 'Trago',
+                price: '110',
               },
             ],
           },
 
           {
-            name: 'Gray Goose',
+            name: 'Grey Goose',
             description: '',
             price: '',
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$1,600.00',
+                name: 'Botella',
+                price: '1,600',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$140.00',
+                name: 'Trago',
+                price: '140',
               },
             ],
           },
@@ -949,36 +729,19 @@ export default [
           'https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         items: [
           {
-            name: 'Gusano Rojo',
-            description: '',
-            price: '',
-            variants: [
-              {
-                id: 1,
-                name: 'Bottle',
-                price: '$1,100.00',
-              },
-              {
-                id: 2,
-                name: 'Drink',
-                price: '$125.00',
-              },
-            ],
-          },
-          {
             name: '400 Conejos Joven',
             description: '',
             price: '',
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$1,750.00',
+                name: 'Botella',
+                price: '1,750',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$135.00',
+                name: 'Trago',
+                price: '135',
               },
             ],
           },
@@ -989,13 +752,13 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$1,650.00',
+                name: 'Botella',
+                price: '1,650',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$150.00',
+                name: 'Trago',
+                price: '150',
               },
             ],
           },
@@ -1006,12 +769,12 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$1,750.00',
+                name: 'Botella',
+                price: '1,750',
               },
               {
                 id: 2,
-                name: 'Drink',
+                name: 'Trago',
                 price: '$155.00',
               },
             ],
@@ -1019,7 +782,7 @@ export default [
         ],
       },
       {
-        title: 'Gin',
+        title: 'Ginebra',
         description: '',
         cover:
           'https://images.pexels.com/photos/613182/pexels-photo-613182.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -1031,13 +794,13 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$1,200.00',
+                name: 'Botella',
+                price: '1,350',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$125.00',
+                name: 'Trago',
+                price: '125',
               },
             ],
           },
@@ -1048,13 +811,13 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$1,350.00',
+                name: 'Botella',
+                price: '1,350',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$125.00',
+                name: 'Trago',
+                price: '125',
               },
             ],
           },
@@ -1065,13 +828,13 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$1,950.00',
+                name: 'Botella',
+                price: '1,950',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$185.00',
+                name: 'Trago',
+                price: '185',
               },
             ],
           },
@@ -1090,8 +853,8 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$2,600.00',
+                name: 'Botella',
+                price: '2,600',
               },
             ],
           },
@@ -1102,8 +865,8 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$3,300.00',
+                name: 'Botella',
+                price: '3,300',
               },
             ],
           },
@@ -1123,13 +886,13 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$1,880.00',
+                name: 'Botella',
+                price: '1,880',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$215.00',
+                name: 'Trago',
+                price: '215',
               },
             ],
           },
@@ -1140,13 +903,13 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$2,080.00',
+                name: 'Botella',
+                price: '2,080',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$190.00',
+                name: 'Trago',
+                price: '190',
               },
             ],
           },
@@ -1157,13 +920,13 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$2,380.00',
+                name: 'Botella',
+                price: '2,380',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$170.00',
+                name: 'Trago',
+                price: '170',
               },
             ],
           },
@@ -1183,13 +946,13 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$1,110.00',
+                name: 'Botella',
+                price: '1,100',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$140.00',
+                name: 'Trago',
+                price: '140',
               },
             ],
           },
@@ -1200,13 +963,13 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$1,350.00',
+                name: 'Botella',
+                price: '1,350',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$150.00',
+                name: 'Trago',
+                price: '150',
               },
             ],
           },
@@ -1217,13 +980,13 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$1,750.00',
+                name: 'Botella',
+                price: '1,750',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$165.00',
+                name: 'Trago',
+                price: '165',
               },
             ],
           },
@@ -1234,13 +997,13 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$2,050.00',
+                name: 'Botella',
+                price: '2,050',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$180.00',
+                name: 'Trago',
+                price: '180',
               },
             ],
           },
@@ -1251,13 +1014,13 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$2,150.00',
+                name: 'Botella',
+                price: '2,150',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$180.00',
+                name: 'Trago',
+                price: '180',
               },
             ],
           },
@@ -1268,13 +1031,13 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$8,500.00',
+                name: 'Botella',
+                price: '8,500',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$650.00',
+                name: 'Trago',
+                price: '650',
               },
             ],
           },
@@ -1285,13 +1048,13 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$3,050.00',
+                name: 'Botella',
+                price: '3,050',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$225.00',
+                name: 'Trago',
+                price: '225',
               },
             ],
           },
@@ -1303,79 +1066,19 @@ export default [
             variants: [
               {
                 id: 1,
-                name: 'Bottle',
-                price: '$3,450.00',
+                name: 'Botella',
+                price: '3,450',
               },
               {
                 id: 2,
-                name: 'Drink',
-                price: '$295.00',
+                name: 'Trago',
+                price: '295',
               },
             ],
           },
         ],
       },
 
-      {
-        title: 'Ron',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/2360578/pexels-photo-2360578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Captain Morgan',
-            description: '',
-            price: '',
-            variants: [
-              {
-                id: 1,
-                name: 'Bottle',
-                price: '$980.00',
-              },
-              {
-                id: 2,
-                name: 'Drink',
-                price: '$110.00',
-              },
-            ],
-          },
-          {
-            name: 'Bacardi Blanco',
-            description: '',
-            price: '',
-            variants: [
-              {
-                id: 1,
-                name: 'Bottle',
-                price: '$980.00',
-              },
-              {
-                id: 2,
-                name: 'Drink',
-                price: '$110.00',
-              },
-            ],
-          },
-
-          {
-            name: 'Zacapa Solera',
-            description: '',
-            price: '',
-            variants: [
-              {
-                id: 1,
-                name: 'Bottle',
-                price: '$2,280.00',
-              },
-              {
-                id: 2,
-                name: 'Drink',
-                price: '$165.00',
-              },
-            ],
-          },
-        ],
-      },
       {
         title: 'Drinks',
         description: '',
@@ -1383,128 +1086,133 @@ export default [
           'https://images.pexels.com/photos/110472/pexels-photo-110472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         items: [
           {
-            name: 'Cantarito',
+            name: 'Candela',
+            description: 'Mezcal, conserva de jamaica y maracuyá, limón y sal de chiles ahumados.',
+            price: '245',
+          },
+          {
+            name: 'Cosmopólitan',
             description: '',
-            price: '$180.00',
+            price: '245',
           },
           {
             name: 'Martini',
             description: '',
-            price: '$155.00',
+            price: '155',
           },
           {
-            name: 'Dirty Martini',
+            name: 'Martini sucio',
             description: '',
-            price: '$215.00',
+            price: '215',
           },
           {
-            name: 'Dry Martini',
+            name: 'Martini seco',
             description: '',
-            price: '$230.00',
+            price: '230',
           },
           {
             name: 'Old fashion',
             description: '',
-            price: '$195.00',
+            price: '195',
           },
           {
             name: 'Goodbye mother fucker',
             description: '',
-            price: '$185.00',
+            price: '185',
           },
           {
             name: 'Margarita',
             description: '',
-            price: '$155.00',
+            price: '155',
           },
           {
             name: 'Paloma',
             description: '',
-            price: '$155.00',
+            price: '155',
           },
           {
             name: 'Tequila sunrise',
             description: '',
-            price: '$170.00',
+            price: '170',
           },
           {
             name: 'Long island',
             description: '',
-            price: '$185.00',
+            price: '185',
           },
           {
             name: 'Cuba',
             description: '',
-            price: '$145.00',
+            price: '145',
           },
           {
-            name: 'Sangria',
+            name: 'Sangría preparada',
             description: '',
-            price: '$155.00',
+            price: '155',
           },
           {
             name: 'Piña colada',
             description: '',
-            price: '$155.00',
+            price: '155',
           },
           {
             name: 'Mimosas',
             description: '',
-            price: '$145.00',
+            price: '145',
           },
           {
             name: 'Sex on the beach',
             description: '',
-            price: '$170.00',
+            price: '170',
           },
 
           {
             name: 'Mojito',
             description: '',
-            price: '$165.00',
+            price: '165',
           },
 
           {
-            name: 'Sangria especial',
+            name: 'Sangría especial',
             description: '',
-            price: '$195.00',
+            price: '195',
           },
         ],
       },
       {
-        title: 'Digestive',
+        title: 'Digestivos',
         description: '',
         cover: 'https://images.pexels.com/photos/4664307/pexels-photo-4664307.jpeg',
         items: [
           {
             name: 'Jagermeister',
             description: '',
-            price: '$120.00',
+            price: '120',
           },
           {
             name: 'Baileys irish cream',
             description: '',
-            price: '$120.00',
+            price: '120',
           },
           {
             name: 'Kahlúa',
             description: '',
-            price: '$120.00',
+            price: '120',
           },
           {
             name: 'Frangelico',
             description: '',
-            price: '$120.00',
+            price: '120',
           },
           {
             name: 'Carajillo',
             description: '',
-            price: '$175.00',
+            price: '175',
           },
         ],
       },
       {
-        title: 'Beer',
+        title: 'Cerveza',
         description: '',
         cover:
           'https://images.pexels.com/photos/667986/pexels-photo-667986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -1512,81 +1220,76 @@ export default [
           {
             name: 'Tecate',
             description: '',
-            price: '$70.00',
+            price: '70',
           },
           {
             name: 'Tecate light',
             description: '',
-            price: '$70.00',
+            price: '70',
           },
 
           {
             name: 'Indio',
             description: '',
-            price: '$70.00',
+            price: '70',
           },
 
           {
             name: 'XX Lager',
             description: '',
-            price: '$70.00',
+            price: '70',
           },
 
           {
             name: 'Corona',
             description: '',
-            price: '$60.00',
+            price: '60',
           },
 
           {
             name: 'Modelo clara',
             description: '',
-            price: '$75.00',
+            price: '75',
           },
 
           {
             name: 'Michelob Ultra',
             description: '',
-            price: '$75.00',
+            price: '75',
           },
         ],
       },
 
       {
-        title: 'Extras',
+        title: 'extras',
         description: '',
         cover:
           'https://images.pexels.com/photos/4109907/pexels-photo-4109907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         items: [
           {
-            name: 'Michelado glass',
+            name: 'Vaso michelado',
             description: '',
-            price: '$55.00',
+            price: '55',
           },
           {
-            name: 'Cubano glass',
+            name: 'Vaso cubano',
             description: '',
-            price: '$55.00',
+            price: '55',
           },
           {
-            name: 'Chabela glass',
+            name: 'Vaso chabela',
             description: '',
-            price: '$55.00',
+            price: '55',
           },
           {
-            name: 'Olives',
+            name: 'aceitunas',
             description: '',
-            price: '$100.00',
+            price: '100',
           },
           {
-            name: 'Peanuts',
+            name: 'Cacahuates',
             description: '',
-            price: '$80.00',
-          },
-          {
-            name: 'Brunette snack',
-            description: '',
-            price: '$130.00',
+            price: '80',
           },
         ],
       },
@@ -1598,110 +1301,62 @@ export default [
           'https://images.pexels.com/photos/544961/pexels-photo-544961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         items: [
           {
-            name: 'Clamato',
+            name: 'Clamato sin alcohol',
             description: '',
-            price: '$95.00',
+            price: '95',
           },
           {
             name: 'Piñada',
             description: '',
-            price: '$95.00',
+            price: '95',
           },
           {
             name: 'Sodas',
             description: '',
-            price: '$65.00',
+            price: '65',
           },
 
           {
-            name: 'Ciel mineral water',
+            name: 'Agua mineral Ciel',
             description: '',
-            price: '$50.00',
+            price: '50',
           },
           {
-            name: 'Topo Chico mineral water',
+            name: 'Agua mineral Topo Chico',
             description: '',
-            price: '$75.00',
+            price: '75',
           },
           {
             name: 'Chocomilk',
             description: '',
-            price: '$70.00',
+            price: '70',
           },
           {
-            name: 'Coffee',
+            name: 'Café',
             description: '',
-            price: '$65.00',
+            price: '65',
           },
           {
-            name: 'Glass of milk',
+            name: 'Vaso de leche',
             description: '',
-            price: '$50.00',
+            price: '50',
           },
 
           {
-            name: 'Orangeade - Lemonade',
+            name: 'Naranjada - Limonada',
             description: '',
-            price: '$70.00',
+            price: '70',
           },
           {
-            name: 'Orangeade Jar',
+            name: 'Jarra de Naranjada',
             description: '',
-            price: '$260.00',
+            price: '260',
           },
 
           {
-            name: 'Bottle of water',
+            name: 'Botella de agua',
             description: '',
-            price: '$50.00',
-          },
-        ],
-      },
-    ],
-  },
-
-  {
-    title: 'Mixology',
-    slug: 'mixologia',
-    cover: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913834/menu/elfiwlslmmgwaguddc4x.jpg',
-    sections: [
-      {
-        title: 'Brunette Menu',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/12336029/pexels-photo-12336029.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Candela',
-            description: 'Mezcal, conserva de jamaica y maracuyá, limón y sal de chiles ahumados.',
-            image: '',
-            price: '$245.00',
-          },
-          {
-            name: 'Eros',
-            description: 'Gin, compota de frutos rojos, limón, tonic top & soda.',
-            image: '',
-            price: '$245.00',
-          },
-          {
-            name: "Piña pa'la niña ",
-            description: 'Ron blanco, pera piña, jugo de piña, Angostura, crema batida y coco tostado..',
-            image: '',
-            price: '$245.00',
-          },
-
-          {
-            name: 'Brunette & Tonic',
-            description: 'Gin, lemon grass, limón amarillo, menta, tonic y perfume de Damiana.',
-            image: '',
-            price: '$245.00 ',
-          },
-
-          {
-            name: 'El matador',
-            description: 'Mezcal, jugo de cítricos, piña, albahaca y miel de agave.',
-            image: '',
-            price: '$245.00 ',
+            price: '50',
           },
         ],
       },

@@ -30,8 +30,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content:
-        'https://res.cloudinary.com/rafamed-dev/image/upload/v1705703429/menu/OG_Image_cl4k6w.png',
+      content: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1705703429/menu/OG_Image_cl4k6w.png',
     },
   ],
 });
@@ -39,7 +38,9 @@ useHead({
 
 <template>
   <main class="relative mt-4 overflow-x-hidden bg-base-100 lg:mt-8">
-    <h1 class="px-2 text-center font-montserrat text-4xl text-primary lg:px-32">
+    <h1
+      class="mx-auto w-fit border-b-4 border-primary px-2 text-center font-montserrat text-4xl font-semibold uppercase text-primary lg:px-32 lg:text-3xl"
+    >
       {{ language === 'es' ? 'Menú' : 'Menu' }}
     </h1>
 
