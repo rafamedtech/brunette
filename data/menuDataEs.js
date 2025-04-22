@@ -1,139 +1,4 @@
 export default [
-  // Desayunos
-  {
-    title: 'Desayunos',
-    slug: 'desayunos',
-    cover: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/zoclbz97b4zivibfpcoy.jpg',
-    sections: [
-      {
-        title: 'Chilaquiles',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/10305696/pexels-photo-10305696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Chicharroneros',
-            description: 'Chicharrón en salsa verde - frijol.',
-            price: '190',
-            variants: [],
-          },
-          {
-            name: 'Tijuas',
-            description: 'Birria - frijoles.',
-            price: '210',
-            variants: [],
-          },
-          {
-            name: 'El Inge',
-            description: 'Arrachera - huevo - guacamole - frijoles - queso panela asado.',
-            price: '235',
-            variants: [],
-          },
-          {
-            name: 'Los Cochicuinos',
-            description: 'Coronados con carnitas estilo Tijuana.',
-            price: '210',
-            variants: [],
-          },
-          {
-            name: 'Los habladores',
-            description: 'Lengua de res en salsa verde.',
-            price: '210',
-            variants: [],
-          },
-        ],
-      },
-      {
-        title: 'Huevos',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/588776/pexels-photo-588776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Los Mexican',
-            description: 'Huevos sobre gordita de queso y frijol, bañados en salsa de chicharrón.',
-            price: '190',
-          },
-          {
-            name: 'Ahogados',
-            description: 'Huevos con chorizo, ahogados en salsa roja, frijol de la olla - queso y aguacate.',
-            price: '190',
-          },
-          {
-            name: 'Beef',
-            description: 'Huevos en salsa - Arrachera - frijol.',
-            price: '210',
-          },
-          {
-            name: 'Posh',
-            description: 'Huevos - pancakes - tocino - salchicha.',
-            price: '210',
-          },
-          {
-            name: 'Huevos al gusto',
-            description: 'Chorizo, jamón, tocino',
-            price: '165',
-          },
-        ],
-      },
-      {
-        title: 'Omelette',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/6529924/pexels-photo-6529924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Carnívoro',
-            description: 'Arrachera - salsa roja - queso - frijol.',
-            price: '235',
-          },
-          {
-            name: 'Hablador',
-            description: 'Legua en salsa verde - queso - frijol.',
-            price: '235',
-          },
-          {
-            name: 'Cochicuino',
-            description: 'Carnitas - queso - frijol.',
-            price: '235',
-          },
-          {
-            name: 'Green',
-            description: 'Relleno de queso mozarella y verdura de temporada.',
-            price: '180',
-          },
-        ],
-      },
-      {
-        title: 'Otros',
-        description: '',
-        cover:
-          'https://images.pexels.com/photos/6529924/pexels-photo-6529924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        items: [
-          {
-            name: 'Menudo',
-            description: '',
-            price: '',
-          },
-          {
-            name: 'Birria',
-            description: '',
-            price: '',
-          },
-          {
-            name: 'Molletes',
-            description: '',
-            price: '',
-          },
-          {
-            name: 'Torta de chilaquiles',
-            description: '',
-            price: '',
-          },
-        ],
-      },
-    ],
-  },
   // Menu
   {
     title: 'Menú principal',
@@ -143,8 +8,7 @@ export default [
       {
         title: 'Entradas',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/2814828/pexels-photo-2814828.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Tablita de quesos',
@@ -166,8 +30,7 @@ export default [
       {
         title: 'Ensaladas y Cremas',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/9928322/pexels-photo-9928322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Capresse',
@@ -194,8 +57,7 @@ export default [
       {
         title: 'Pizzas',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Taquera',
@@ -204,7 +66,7 @@ export default [
           },
           {
             name: 'La Verde Mía',
-            description: 'Queso ricotta - tomates cherry - pesto.',
+            description: 'Queso crema - tomates cherry - pesto.',
             price: '285',
           },
 
@@ -240,7 +102,7 @@ export default [
           },
           {
             name: 'Flaming Cheese',
-            description: 'Queso, Flaming Hot y queso amarillo.',
+            description: 'Queso, papas fritas, Flaming Hot y queso amarillo.',
             price: '255',
           },
 
@@ -259,8 +121,7 @@ export default [
       {
         title: 'Pastas',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/5175537/pexels-photo-5175537.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Fetuccini Alfredo',
@@ -288,8 +149,7 @@ export default [
       {
         title: 'Proteina',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/3535383/pexels-photo-3535383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Ribeye',
@@ -299,7 +159,7 @@ export default [
           {
             name: 'Salmón',
             description: 'Crema de limón - arroz salvaje - verduras.',
-            price: '375',
+            price: '445',
           },
           {
             name: 'Tour Brunette',
@@ -312,8 +172,7 @@ export default [
       {
         title: 'Postres',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/3992131/pexels-photo-3992131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Flan con compota de Guayaba',
@@ -343,8 +202,7 @@ export default [
       {
         title: 'Vinos Casa Magoni',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/66636/pexels-photo-66636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Chardonay-Vermentino',
@@ -448,8 +306,7 @@ export default [
       {
         title: 'Vinos L.A. Cetto',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/1494410/pexels-photo-1494410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Chenin Black',
@@ -530,8 +387,7 @@ export default [
       {
         title: 'Otros vinos',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/1494410/pexels-photo-1494410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Sangre de Cristo',
@@ -550,8 +406,7 @@ export default [
       {
         title: 'Tequila',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/5791650/pexels-photo-5791650.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Don Julio 1942 750ml',
@@ -571,7 +426,7 @@ export default [
             ],
           },
           {
-            name: 'Don Julio 70 Anejo Cristalino 700ml',
+            name: 'Don Julio 70 700ml',
             description: '',
             price: '',
 
@@ -592,7 +447,6 @@ export default [
             name: 'Don Julio Blanco 700ml',
             description: '',
             price: '',
-
             variants: [
               {
                 id: 1,
@@ -610,7 +464,6 @@ export default [
             name: 'Don Julio Reposado 700ml',
             description: '',
             price: '',
-
             variants: [
               {
                 id: 1,
@@ -624,7 +477,6 @@ export default [
               },
             ],
           },
-
           {
             name: 'Maestro Dobel',
             description: '',
@@ -648,8 +500,7 @@ export default [
       {
         title: 'Vodka',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/209590/pexels-photo-209590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Smirnoff 750ml',
@@ -725,8 +576,7 @@ export default [
       {
         title: 'Mezcal',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: '400 Conejos Joven',
@@ -784,8 +634,7 @@ export default [
       {
         title: 'Ginebra',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/613182/pexels-photo-613182.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Bombay',
@@ -843,8 +692,7 @@ export default [
       {
         title: 'Champagne',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/5379876/pexels-photo-5379876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'CH Moet Brut 750ml',
@@ -876,8 +724,7 @@ export default [
       {
         title: 'Cognac',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/5947025/pexels-photo-5947025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Henessy',
@@ -936,8 +783,7 @@ export default [
       {
         title: 'Whisky',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/6638905/pexels-photo-6638905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Johnnie Walker Red Label',
@@ -1082,8 +928,7 @@ export default [
       {
         title: 'Drinks',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/110472/pexels-photo-110472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Candela',
@@ -1093,7 +938,7 @@ export default [
           {
             name: 'Cosmopólitan',
             description: '',
-            price: '245',
+            price: '165',
           },
           {
             name: 'Martini',
@@ -1113,7 +958,17 @@ export default [
           {
             name: 'Old fashion',
             description: '',
-            price: '195',
+            price: '215',
+          },
+          {
+            name: 'Aperol spritz',
+            description: '',
+            price: '215',
+          },
+          {
+            name: 'Negroni',
+            description: '',
+            price: '215',
           },
           {
             name: 'Goodbye mother fucker',
@@ -1182,7 +1037,7 @@ export default [
       {
         title: 'Digestivos',
         description: '',
-        cover: 'https://images.pexels.com/photos/4664307/pexels-photo-4664307.jpeg',
+        cover: '',
         items: [
           {
             name: 'Jagermeister',
@@ -1214,16 +1069,10 @@ export default [
       {
         title: 'Cerveza',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/667986/pexels-photo-667986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Tecate',
-            description: '',
-            price: '70',
-          },
-          {
-            name: 'Tecate light',
             description: '',
             price: '70',
           },
@@ -1251,20 +1100,13 @@ export default [
             description: '',
             price: '75',
           },
-
-          {
-            name: 'Michelob Ultra',
-            description: '',
-            price: '75',
-          },
         ],
       },
 
       {
         title: 'extras',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/4109907/pexels-photo-4109907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Vaso michelado',
@@ -1297,8 +1139,7 @@ export default [
       {
         title: 'No alcohol',
         description: '',
-        cover:
-          'https://images.pexels.com/photos/544961/pexels-photo-544961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        cover: '',
         items: [
           {
             name: 'Clamato sin alcohol',
@@ -1350,13 +1191,144 @@ export default [
           {
             name: 'Jarra de Naranjada',
             description: '',
-            price: '260',
+            price: '320',
           },
 
           {
             name: 'Botella de agua',
             description: '',
             price: '50',
+          },
+        ],
+      },
+    ],
+  },
+  // Desayunos
+  {
+    title: 'Desayunos',
+    slug: 'desayunos',
+    cover: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/zoclbz97b4zivibfpcoy.jpg',
+    sections: [
+      {
+        title: 'Chilaquiles',
+        description: '',
+        cover: '',
+        items: [
+          {
+            name: 'Chicharroneros',
+            description: 'Chicharrón en salsa verde - frijol.',
+            price: '190',
+            variants: [],
+          },
+          {
+            name: 'Tijuas',
+            description: 'Birria - frijoles.',
+            price: '210',
+            variants: [],
+          },
+          {
+            name: 'El Inge',
+            description: 'Arrachera - huevo - guacamole - frijoles.',
+            price: '235',
+            variants: [],
+          },
+          {
+            name: 'Los Cochicuinos',
+            description: 'Coronados con carnitas estilo Tijuana.',
+            price: '210',
+            variants: [],
+          },
+          {
+            name: 'Los habladores',
+            description: 'Lengua de res en salsa verde.',
+            price: '210',
+            variants: [],
+          },
+        ],
+      },
+      {
+        title: 'Huevos',
+        description: '',
+        cover: '',
+        items: [
+          {
+            name: 'Los Mexican',
+            description: 'Huevos sobre gordita de queso y frijol, bañados en salsa de chicharrón.',
+            price: '190',
+          },
+          {
+            name: 'Ahogados',
+            description: 'Huevos con chorizo, ahogados en salsa roja, frijol - queso y aguacate.',
+            price: '190',
+          },
+          {
+            name: 'Beef',
+            description: 'Huevos en salsa - Arrachera - frijol.',
+            price: '210',
+          },
+          {
+            name: 'Posh',
+            description: 'Huevos - pancakes - tocino - salchicha.',
+            price: '210',
+          },
+          {
+            name: 'Huevos al gusto',
+            description: 'Chorizo, jamón, tocino',
+            price: '165',
+          },
+        ],
+      },
+      {
+        title: 'Omelette',
+        description: '',
+        cover: '',
+        items: [
+          {
+            name: 'Carnívoro',
+            description: 'Arrachera - salsa roja - queso - frijol.',
+            price: '235',
+          },
+          {
+            name: 'Hablador',
+            description: 'Legua en salsa verde - queso - frijol.',
+            price: '235',
+          },
+          {
+            name: 'Cochicuino',
+            description: 'Carnitas - queso - frijol.',
+            price: '235',
+          },
+          {
+            name: 'Green',
+            description: 'Relleno de queso mozarella y verdura de temporada.',
+            price: '180',
+          },
+        ],
+      },
+      {
+        title: 'Otros',
+        description: '',
+        cover: '',
+        items: [
+          {
+            name: 'Menudo',
+            description: 'Incluye tortillas hechas a mano.',
+            price: '180',
+          },
+          {
+            name: 'Birria',
+            description: 'Incluye tortillas hechas a mano.',
+            price: '220',
+          },
+          {
+            name: 'Molletes',
+            description: '',
+            price: '165',
+          },
+          {
+            name: 'Torta de chilaquiles',
+            description: '',
+            price: '185',
           },
         ],
       },
