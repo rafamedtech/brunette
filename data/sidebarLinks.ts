@@ -15,6 +15,14 @@ export const sidebarLinks: SidebarLink[] = [
     icon: 'heroicons:calendar-date-range',
     to: '/eventos',
   },
+  {
+    name: {
+      es: 'Acerca de',
+      en: 'About',
+    },
+    icon: 'heroicons:information-circle',
+    to: '/acerca-del-restaurant',
+  },
   // {
   //   name: {
   //     es: 'Encuesta',

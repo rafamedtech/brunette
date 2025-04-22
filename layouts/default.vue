@@ -92,7 +92,7 @@ const changeLanguage = () => {
     <div class="w-full lg:w-4/5">
       <div class="navbar w-full bg-primary lg:hidden">
         <div class="navbar-start">
-          <details class="dropdown transition-all">
+          <!-- <details class="dropdown transition-all">
             <summary class="btn btn-square" @click="dropdown = !dropdown">
               <Icon
                 :name="dropdown ? 'heroicons-outline:x' : 'heroicons-outline:bars-3-bottom-left'"
@@ -144,8 +144,8 @@ const changeLanguage = () => {
                 </div>
               </li>
             </ul>
-            <!-- <Sidebar /> -->
-          </details>
+            
+          </details> -->
         </div>
         <div class="navbar-center">
           <figure class="text-2xl text-neutral-content">
