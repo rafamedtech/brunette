@@ -12,8 +12,12 @@ useSeoMeta({
 
 <template>
   <main class="p-4 pb-24 lg:pb-4">
-    <AppHeading title="Acerca del restaurant" />
-    <section class="text-dark-strong dark:text-base-100 lg:mt-4">
+    <h1
+      class="mx-auto w-fit border-b-4 border-primary px-2 text-center font-montserrat text-4xl font-semibold uppercase lg:px-32 lg:text-3xl"
+    >
+      Acerca de
+    </h1>
+    <section class="text-dark-strong pt-8 dark:text-base-100">
       <section class="md:mx-auto md:w-1/2">
         <figure class="relative mt-4 w-full rounded-xl">
           <img :src="mainCover" class="h-36 w-full min-w-full rounded-xl object-cover brightness-50 lg:h-52" alt="" />

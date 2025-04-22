@@ -6,12 +6,8 @@ import events from '@/data/events.json';
 const store = useMainStore();
 const { language } = storeToRefs(store);
 
-const title = computed(
-  () => `Brunette Kitchen & Drinks | ${language.value === 'es' ? 'Eventos' : 'Events'} 📅`
-);
-const content = computed(() =>
-  language.value === 'es' ? 'Nuestros eventos más recientes' : 'Our latest events'
-);
+const title = computed(() => `Brunette Kitchen & Drinks | ${language.value === 'es' ? 'Eventos' : 'Events'} 📅`);
+const content = computed(() => (language.value === 'es' ? 'Nuestros eventos más recientes' : 'Our latest events'));
 
 useHead({
   title,
@@ -39,8 +35,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content:
-        'https://res.cloudinary.com/rafamed-dev/image/upload/v1705703429/menu/OG_Image_cl4k6w.png',
+      content: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1705703429/menu/OG_Image_cl4k6w.png',
     },
   ],
 });
@@ -57,30 +52,24 @@ definePageMeta({
 <template>
   <main class="mt-4 pb-16 lg:mt-8">
     <section class="container mt-4 flex items-center">
-      <h1 class="mx-auto px-2 text-center font-montserrat text-4xl text-primary lg:px-32">
+      <h1
+        class="mx-auto w-fit border-b-4 border-primary px-2 text-center font-montserrat text-4xl font-semibold uppercase lg:px-32 lg:text-3xl"
+      >
         {{ language === 'es' ? 'Eventos' : 'Events' }}
       </h1>
     </section>
 
-    <div class="divider mx-auto w-1/2"></div>
-
-    <div
-      class="container hero-content w-full flex-col items-center justify-center pt-0 text-center lg:flex-row"
-    >
+    <!-- <div class="container hero-content w-full flex-col items-center justify-center pt-4 text-center lg:flex-row">
       <p class="text-center text-xl text-black">
         {{ language === 'es' ? 'Conoce los próximos eventos' : 'Find the next events' }}
       </p>
-    </div>
+    </div> -->
 
-    <section class="w-full pb-4">
+    <section class="w-full pb-4 pt-8">
       <div class="container rounded-box hidden gap-8 bg-base-100 p-4 pb-8 md:grid md:grid-cols-2">
         <div v-for="{ id, title, cover } in events" :key="id" class="w-full flex-col p-4 lg:px-0">
           <h2 class="text-center text-2xl text-primary">{{ title }}</h2>
-          <img
-            class="mt-4 h-[40rem] w-full rounded-2xl shadow-md md:max-w-full md:object-cover"
-            :src="cover"
-            alt=""
-          />
+          <img class="mt-4 h-[40rem] w-full rounded-2xl shadow-md md:max-w-full md:object-cover" :src="cover" alt="" />
         </div>
       </div>
 
