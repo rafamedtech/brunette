@@ -15,7 +15,7 @@ useSeoMeta({
 <template>
   <main class="relative mt-4 overflow-x-hidden bg-base-100 lg:mt-8">
     <h1
-      class="mx-auto w-fit border-b-4 border-primary px-2 text-center font-montserrat text-4xl font-semibold uppercase text-primary lg:px-32 lg:text-3xl"
+      class="mx-auto w-fit border-b-4 border-primary px-2 text-center font-montserrat text-4xl font-semibold uppercase lg:px-32 lg:text-3xl"
     >
       {{ language === 'es' ? 'Menú' : 'Menu' }}
     </h1>
