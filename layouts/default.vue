@@ -2,10 +2,8 @@
 import logo from '@/assets/images/logo-new.svg';
 
 const store = useMainStore();
-const route = useRoute();
-const { language, isLoading } = storeToRefs(store);
 
-const dropdown = ref(false);
+const { language, isLoading } = storeToRefs(store);
 
 const changeLanguage = () => {
   isLoading.value = true;

@@ -1,4 +1,4 @@
-import logo from '@/assets/img/logo-new.svg';
+import logo from '@/assets/images/logo-new.svg';
 
 export const restInfo = {
   logo,
