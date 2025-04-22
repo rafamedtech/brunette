@@ -11,7 +11,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <main class="p-4">
+  <main class="p-4 pb-24 lg:pb-4">
     <AppHeading title="Acerca del restaurant" />
     <section class="text-dark-strong dark:text-base-100 lg:mt-4">
       <section class="md:mx-auto md:w-1/2">
