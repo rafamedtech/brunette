@@ -20,7 +20,7 @@ useSeoMeta({
       {{ language === 'es' ? 'Menú' : 'Menu' }}
     </h1>
 
-    <section class="grid w-full gap-8 px-2 pb-28 pt-8 md:grid-cols-2 md:px-4">
+    <section class="grid w-full gap-4 px-2 pb-28 pt-8 md:grid-cols-2 md:px-4">
       <CategoryItem v-for="category in menu" rounded :category="category" :key="category.title" />
     </section>
   </main>
