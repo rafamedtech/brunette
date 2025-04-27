@@ -1096,6 +1096,12 @@ export default [
           },
 
           {
+            name: 'Amstel Ultra',
+            description: '',
+            price: '60',
+          },
+
+          {
             name: 'Modelo clara',
             description: '',
             price: '75',
