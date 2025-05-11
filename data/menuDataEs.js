@@ -1,9 +1,9 @@
 export default [
   // Menu
   {
-    title: 'Menú principal',
+    title: '',
     slug: 'the-menu',
-    cover: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/r3i9indhf34cbjtevglw.jpg',
+    cover: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1746939120/brunette/principal_e2qmpj.jpg',
     sections: [
       {
         title: 'Entradas',
@@ -195,9 +195,9 @@ export default [
   },
   // Barra
   {
-    title: 'Barra',
+    title: '',
     slug: 'the-bar',
-    cover: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/nuhzvsydok6rhzqsxklf.jpg',
+    cover: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1746939120/brunette/barra_vdpi6q.jpg',
     sections: [
       {
         title: 'Vinos Casa Magoni',
@@ -1211,9 +1211,9 @@ export default [
   },
   // Desayunos
   {
-    title: 'Desayunos',
+    title: '',
     slug: 'desayunos',
-    cover: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1704913833/menu/zoclbz97b4zivibfpcoy.jpg',
+    cover: 'https://res.cloudinary.com/rafamed-dev/image/upload/v1746939120/brunette/desayunos_tjwfv9.jpg',
     sections: [
       {
         title: 'Chilaquiles',
