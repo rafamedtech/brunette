@@ -19,10 +19,10 @@ useHead({
 <template>
   <main class="container mt-4 lg:mt-8">
     <section class="flex items-center p-2">
-      <NuxtLink class="absolute z-10 my-auto ml-2" to="/">
+      <NuxtLink class="absolute z-10 my-auto ml-0.5" to="/">
         <Icon name="ri:arrow-left-line" class="font-bold text-base-100" size="43" />
       </NuxtLink>
-      <CategoryCover :category="category" />
+      <CategoryItem :category="category" />
     </section>
 
     <section

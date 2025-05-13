@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="flex w-full flex-col items-center rounded-xl py-4 lg:h-40 lg:rounded-xl lg:shadow-xl">
+  <div class="flex w-full flex-col items-center rounded-xl py-4 lg:h-40 lg:rounded-xl">
     <h2 class="border-b-4 border-primary font-montserrat text-2xl font-semibold uppercase lg:text-3xl">
       {{ section.title }}
     </h2>
