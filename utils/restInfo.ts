@@ -10,23 +10,23 @@ export const restInfo = {
     schedule: [
       {
         id: 1,
-        name: 'Lunes - Martes',
+        name: 'Lunes - Martes - Miércoles',
         time: 'Cerrado',
       },
       {
         id: 2,
-        name: 'Miércoles - Jueves',
-        time: '9 AM - 10 PM',
+        name: 'Jueves - Viernes',
+        time: '2 PM - 11 PM',
       },
       {
         id: 3,
-        name: 'Viernes - Sábado',
-        time: '9 AM - 12 PM',
+        name: 'Sábado',
+        time: '8 AM - 11 PM',
       },
       {
         id: 4,
         name: 'Domingo',
-        time: '8 AM - 8 PM',
+        time: '8 AM - 6 PM',
       },
     ],
     socials: [
